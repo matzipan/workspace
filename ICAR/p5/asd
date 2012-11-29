@@ -1,0 +1,6 @@
+load 1
+save B
+load 2
+
+A: .data 2 1
+B: .data 2 2
