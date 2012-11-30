@@ -1,5 +1,0 @@
-#@TODO add the notion of quantity
-#@TODO add the notion of user
-#@TODO borrow/give back
-#@TODO inputexception, outputexception, applicationexception, invalidinput -- not good at this
-#@TODO valid_numeric_choice actually tests for integer ...?!
