@@ -98,7 +98,7 @@ class CLIOutput:
 
 			for index, element in enumerate(data):
 				sum = element["price"]
-				print str(index+1) + ". " + element["name"] + " (price: "+ str(element["price"]) + ", qty: "+str(element["quantity"])+", total price:"+str(element[[quantity]*element["price"])+")"
+				print str(index+1) + ". " + element["name"] + " (price: "+ str(element["price"]) + ")"
 
 			print "Total price:"+ str(sum)
 
@@ -162,4 +162,17 @@ class CLIOutput:
 			Handle no stock message
 		"""
 
-		print "The item you are looking for is not on stock. Please choose another."
+		print "The item you are looking for is not on stock. "
+
+	def no_stock(self):
+		""" 
+			Handle no stock message
+		"""
+
+		print "The item you are looking for is not on stock. "
+
+	def insufficient_stock(self):
+		"""
+			Handle insufficient stock message
+		"""
+		print "You cannot add another item of that type. Insufficient stock."

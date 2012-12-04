@@ -306,24 +306,42 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 		"""
 			Media function to handle adding item to bill. Takes parameter the given item.
 		"""
-		self.application.add_item(data)
 
-		self.menu_stack_back()
+		if data["quantity"] == 0:
+			self.output.no_stock()
+			self.menu_stack_back()
+			self.continue_flow()
 
-		while True:
-			self.output.add_item(data)
-			item = self.input.add_item()
+		bill = self.application.get_bill()
 
-			if item==None:
-				continue
-			if item == 1:
-				self.set_menu(CONST_SHOW_BILL)
-				break
-			if item == 2: 
-				break
+		count=0
+		for i in bill:
+			if i == data:
+				count+=1
 
-		if item==2: 
-			self.continue_flow()		
+		if count>=data["quantity"]:
+			self.output.insufficient_stock()
+			self.menu_stack_back()
+			self.continue_flow()
+		else:
+			self.application.add_item(data)
+
+			self.menu_stack_back()
+
+			while True:
+				self.output.add_item(data)
+				item = self.input.add_item()
+
+				if item==None:
+					continue
+				if item == 1:
+					self.set_menu(CONST_SHOW_BILL)
+					break
+				if item == 2: 
+					break
+
+			if item==2: 
+				self.continue_flow()		
 
 	def show_menu(self,data):
 		"""
@@ -334,10 +352,6 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 			item = self.input.show_menu(data)
 
 			if item==None:
-				continue
-
-			if item == False:
-				self.output.no_stock()
 				continue
 
 			if item==0:

@@ -106,7 +106,7 @@ class CLIInput:
 
 		return None
 
-	def show_menu(self, data):
+	def show_menu(self):
 		"""
 			Input class to handle menu input. Takes parameter the available menu choices. Returns choice. Returns -1 for choice 00. Returns None on invalid input.
 		"""
@@ -114,10 +114,6 @@ class CLIInput:
 
 		if type(option) == bool and option==False: #I am doing this because i'm not sure of time coercion in python
 			return None
-
-		
-		if data[option]["quantity"] ==0: 
-			return False
 
 		if option == "00":
 			return -1
