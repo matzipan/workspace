@@ -131,7 +131,17 @@ class CLIOutput:
 
 	def no_stock(self):
 		""" 
-			Handle  no stock message
+			Handle no stock message
 		"""
 
 		print "The item you are looking for is not on stock. Please choose another."
+
+	def confirm_logout(self):
+		"""
+			Handles output for  logout
+		"""
+
+		print "Please confirm that you want to be logged out"
+
+		print "1. yes"
+		print "2. no"

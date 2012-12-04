@@ -37,7 +37,8 @@ class Application:
 			self.user_id = details
 			return True
 
-		#self.user_repository.exit() is possible at this point
+	def logout_user(self): 
+		self.user_id = None
 
 	def get_data(self):
 		"""

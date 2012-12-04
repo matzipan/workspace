@@ -13,7 +13,7 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 		self.output = output_handler 
 
 		self.stack = []
-		self.menu = 0 
+		self.menu = CONST_LOGIN
 
 	def bind_application(self,application):
 		"""
@@ -28,10 +28,7 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 
 		try: 
 
-			if not self.authenticate():
-				self.terminate()
 			
-			self.output.separator()
 
 			while True:
 				menu = self.get_menu()
@@ -50,6 +47,10 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 					self.remove_item(self.application.get_bill())
 				elif menu == CONST_CLEAR_ITEMS:
 					self.clear_items()
+				elif menu == CONST_LOGIN:
+					self.login()
+				elif menu == CONST_LOGOUT:
+					self.logout()
 
 				self.output.separator()
 		except EnvironmentError:
@@ -59,6 +60,27 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 		except StandardError:
 
 			raise RuntimeError()
+
+	def login(self):
+		"""
+			Handles user login. 
+		"""
+		if not self.authenticate():
+				self.terminate()
+		else:
+				self.set_menu(CONST_MAIN_MENU)
+			
+	def logout(self):
+		"""
+			Handles user logout
+		"""
+		self.output.confirm_logout()
+
+		if self.input.confirm():
+			self.application.logout_user()
+			self.set_menu(CONST_LOGIN)
+		else:
+			self.continue_flow()
 
 	def authenticate(self):
 		"""
