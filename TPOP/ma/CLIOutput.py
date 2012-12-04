@@ -13,7 +13,7 @@ class CLIOutput:
 			else:
 				print str(index+1)+". "+element["name"]
 
-	def continue_flow(self): 
+	def continue_flow(self, logout): 
 		"""
 			Output the option for flow continuation
 		"""
@@ -22,6 +22,10 @@ class CLIOutput:
 		print "1. continue shopping where i left" #TODO check if stack empty, then do not show
 		print "2. go to main menu"
 		print "3. exit"
+
+		if not logout: 
+			print "4. logout"
+
 
 	def choose_item(self, purpose, data):
 		"""
@@ -109,6 +113,7 @@ class CLIOutput:
 			print "0. back"
 		
 		print "00. show bill"
+		print "01. logout"
 
 	def separator(self):
 		print "------------------"

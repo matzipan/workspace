@@ -70,7 +70,7 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 		else:
 				self.set_menu(CONST_MAIN_MENU)
 			
-	def logout(self):
+	def logout(self, logout = True):
 		"""
 			Handles user logout
 		"""
@@ -80,7 +80,7 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 			self.application.logout_user()
 			self.set_menu(CONST_LOGIN)
 		else:
-			self.continue_flow()
+			self.continue_flow(logout)
 
 	def authenticate(self):
 		"""
@@ -177,13 +177,13 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 		
 		self.continue_flow()
 
-	def continue_flow(self):
+	def continue_flow(self, logout=False):
 		"""
 			Media function to handle flow continuation.
 		"""
 		while True:
-			self.output.continue_flow()
-			item = self.input.continue_flow()
+			self.output.continue_flow(logout)
+			item = self.input.continue_flow(logout)
 			
 			if item == None:
 				continue 
@@ -194,6 +194,9 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 			if item == 2: 
 				self.set_menu(CONST_MAIN_MENU)
 				break 
+			if item == 4:
+				self.set_menu(CONST_LOGOUT)
+				break
 			if item == 3:
 				self.set_menu(CONST_EXIT)
 				break
@@ -331,6 +334,9 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 				break
 			elif item==-1: 
 				self.set_menu(CONST_SHOW_BILL)
+				break
+			elif item==-2:
+				self.set_menu(CONST_LOGOUT)
 				break
 			else: 
 				self.menu_stack_add(item-1)

@@ -12,6 +12,9 @@ class CLIInput:
 		if option == "00": 
 			return "00"
 
+		if option == "01":
+			return "01"
+
 		if not valid_numeric_choice(option):
 			return None
 		
@@ -35,12 +38,14 @@ class CLIInput:
 
 		return option
 
-	def continue_flow(self):
+	def continue_flow(self, logout):
 		"""
 			Input class to handle flow continuation. Returns choice. Returns None on invalid input.
 		"""
 		option = self.wait_input()
 
+		if not logout and option ==4:
+			return 4
 		if option in [1,2,3]:
 			return option
 
@@ -108,6 +113,10 @@ class CLIInput:
 
 		if option == "00":
 			return -1
+
+
+		if option == "01":
+			return -2
 
 		if option == 0:
 			return 0
