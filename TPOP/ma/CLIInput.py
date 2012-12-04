@@ -3,7 +3,7 @@ class CLIInput:
 		Class to handle command line interface input
 	"""
 
-	def wait_input(self, message = "Please choose one of the above: "):
+	def wait_input(self, message = "Please choose one of the above: "): #@TODO this needs to be renamed to numeric input
 		"""
 			Helper class to handle input. Optional parameter the message to display. Returns choice. Returns 00 if 00 entered. Returns None on invalid input. 
 		"""
@@ -16,6 +16,13 @@ class CLIInput:
 			return None
 		
 		return int(option)
+
+	def string_input(self, message):
+		"""
+			Helper class to handle string input. Requires parameter for the message to display. Returns input.
+		"""
+
+		return raw_input(message)
 
 	def choose_item(self,data):
 		"""
@@ -120,7 +127,7 @@ class CLIInput:
 		print "This part requires authentication. Please insert your credentials below."
 
 		username = self.string_input("Username:")
-		password = self.string_input("Password:") #@TODO
+		password = self.string_input("Password:") 
 
 	def invalid_credentials(self):
 		""" 
