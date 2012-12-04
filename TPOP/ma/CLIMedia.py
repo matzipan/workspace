@@ -297,6 +297,10 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 			if item==None:
 				continue
 
+			if item == False:
+				self.output.no_stock()
+				continue
+
 			if item==0:
 				if data["name"] == "main":
 					self.set_menu(CONST_EXIT)

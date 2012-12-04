@@ -95,6 +95,10 @@ class CLIInput:
 		if type(option) == bool and option==False: #I am doing this because i'm not sure of time coercion in python
 			return None
 
+		
+		if data[option]["quantity"] ==0: 
+			return False
+
 		if option == "00":
 			return -1
 

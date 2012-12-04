@@ -14,12 +14,14 @@ class MemoryDataRepository:
 										"type":0,
 										"name": "DVD movie",
 										"id": "movie-dvd-1",
+										"quantity": 10,
 										"price": 2.5
 									},
 									{
 										"type":0,
 										"name": "BluRay movie",
 										"id": "movie-bluray-1",
+										"quantity": 2,
 										"price": 3.5
 									}
 								]
@@ -34,12 +36,14 @@ class MemoryDataRepository:
 										"type":0,
 										"name": "new game",
 										"id": "game-new-1",
+										"quantity": 1,
 										"price": 4
 									},
 									{
 										"type":0,
 										"name": "old game",
 										"id": "game-old-1",
+										"quantity", 2,
 										"price": 2.5
 									}
 								]
