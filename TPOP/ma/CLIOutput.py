@@ -121,4 +121,10 @@ class CLIOutput:
 		print "This part requires authentication. Please insert your credentials below."
 
 	def invalid_credentials(self):
-		return #@TODO
+		"""
+			Output function to handle invalid credentials
+		"""
+		print "The credentials you entered are invalid. "
+		print "Choose one of the following:"
+		print "1. retry"
+		print "2. cancel"

@@ -119,4 +119,13 @@ class CLIInput:
 		password = self.string_input("Password:") #@TODO
 
 	def invalid_credentials(self):
-		return #@TODO
+		""" 
+			Input funciton to handle invalid credentials
+		"""
+
+		option = self.wait_input("Please choose one of the above:")
+
+		if option in [1,2]
+			return option
+
+		return None

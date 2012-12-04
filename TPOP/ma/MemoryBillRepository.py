@@ -29,7 +29,7 @@ class MemoryBillRepository():
 			Marks the data as rent to user.
 		"""
 		for item in self.bill:
-			#mark items as rent
+			#@TODO mark items as rent
 			continue
 
 		self.clear()
