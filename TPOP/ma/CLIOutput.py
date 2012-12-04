@@ -150,3 +150,12 @@ class CLIOutput:
 
 		print "1. yes"
 		print "2. no"
+
+	def confirm_return_item(self):
+		"""
+			Output for confirmation of item return.
+		"""
+		print "You chose to return "+ data["name"] +". Are you sure?"
+
+		print "1. yes"
+		print "2. no"

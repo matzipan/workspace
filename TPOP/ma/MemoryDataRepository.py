@@ -50,14 +50,25 @@ class MemoryDataRepository:
 							}
 						]
 					}
+		self.borrowed_by_user = {}
 
 	def get_data(self):
 		return self.data
 
-	def lookup(self, lookup_id):
+	def get_rent_items(self, user_id):
+		"""
+			Get items rent by user
+		"""
+		
+		return map(self.borrowed_by_user[user_id], lambda x: return self.lookup(x))
+
+	def lookup(self, lookup_id, data=None):
 		"""
 			Lookup the element with a given id
 		"""
+		if data==None:
+			data = self.data
+
 		if self.data["id"] == lookup_id:
 			return self.data
 		else:
@@ -69,7 +80,7 @@ class MemoryDataRepository:
 		"""
 			Append an element to a parent with a given id
 		"""
-		parent_element = self.lookup(parent, self.data)
+		parent_element = self.lookup(parent)
 
 		if parent_element["type"] == 0:
 			raise new ValueError()
@@ -82,3 +93,43 @@ class MemoryDataRepository:
 			element["price"] = price
 
 		parent_element["children"].append(element)
+
+	def borrow_item(self, user_id, borrow_id):
+		"""
+			Mark item as borrowed by user_id
+		"""
+
+		if not user_id in self.borrowed_by_user:
+			self.borrowed_by_user[user_id] = []
+
+		t=1
+		for i,x in enumerate(self.borrowed_by_user):
+			if x["id"]==borrow_id: 
+				self.borrowed_by_user[i]["quantity"] +=1
+				t=0
+				break
+
+		if t==1: 
+			self.borrowed_by_user[user_id].append({"id": borrow_id, "quantity": 1})
+
+		element = self.lookup(borrow_id)
+
+		element.quantity -= 1
+
+	def return_item(self,user_id, borrow_id):
+		"""
+			Return item by user_id
+		"""
+
+		element = self.lookup(borrow_id)
+
+		element.quantity += 1
+
+		for i,x in enumerate(self.borrowed_by_user):
+			if x["id"]==borrow_id:
+				if x["quantity"] == 1
+					del self.borrowed_by_user[i]
+				else:
+					self.borrowed_by_user -= 1
+
+				break

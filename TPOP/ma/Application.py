@@ -46,19 +46,26 @@ class Application:
 		"""
 		return self.data_repository.get_data()
 
+	def get_rent_items(self):
+		"""
+			Gets rent items data
+		"""
+		
+		return self.data_repository.get_rent_items(self.get_user_id())
+
 	def get_bill(self):
 		"""
 			Get bill data
 		"""
 		return self.bill_repository.get_data()
 
-	def add_item(self, data):
+	def add_item(self, data): 
 		"""
 			Add item to bill. Takes parameter item data.
 		"""
 		self.bill_repository.add(data)
 
-	def remove_item(self,index):
+	def remove_item(self,index): #@TODO base this on item id
 		"""
 			Removes a given index item from bill. Takes parameter index.
 		"""
@@ -74,7 +81,19 @@ class Application:
 		"""
 			Marks the data as rent to user.
 		"""
-		self.bill_repository.checkout(self.get_user_id())
+		user_id= self.get_user_id()
+		data = self.bill_repository.get_data()
+
+		for item in data:
+			self.data_repository.borrow(user_id, item["id"])
+
+		self.bill_repository.clear()
+
+	def return_item(self, index): #@TODO base this on item id
+		"""
+			Marks the item as returned by user
+		"""
+		self.data_repository.return_item(self.get_user_id(), index)
 
 	def exit(self):
 		"""

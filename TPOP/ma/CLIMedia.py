@@ -27,9 +27,6 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 		"""
 
 		try: 
-
-			
-
 			while True:
 				menu = self.get_menu()
 
@@ -51,6 +48,8 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 					self.login()
 				elif menu == CONST_LOGOUT:
 					self.logout()
+				elif menu == CONST_RETURN:
+					self.return_items(self.application.get_rent_items())
 
 				self.output.separator()
 		except EnvironmentError:
@@ -346,3 +345,26 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 				else:
 					self.set_menu(CONST_ADD_ITEM)
 				break		
+
+	def return_items(self,data):
+		"""
+			Media function to handle returning items. Takes parameter the borrowed items. 
+		"""
+		borrowed_item = self.choose_item("Return", data)
+		
+		if borrowed_item != None:
+			while True:
+				self.output.confirm_return_item(data[borowed_item-1])
+				item = self.input.confirm()
+
+				if item == None:
+					continue
+
+				if item == True:
+					self.application.return_item(borrowed_item-1)
+					break
+
+				if item == False:
+					break
+		
+		self.continue_flow()

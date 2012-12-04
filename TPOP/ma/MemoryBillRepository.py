@@ -24,16 +24,6 @@ class MemoryBillRepository():
 		"""
 		self.bill = []
 
-	def checkout(self, user):
-		"""
-			Marks the data as rent to user.
-		"""
-		for item in self.bill:
-			#@TODO mark items as rent
-			continue
-
-		self.clear()
-
 	def exit(self):
 		"""
 			Handles graceful exit. Close db connection
