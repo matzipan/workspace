@@ -3,7 +3,7 @@ class CLIOutput:
 	"""
 		Class to handle command line interface input
 	"""
-	def print_menu(self, data): #@TODO can be abstracted a bit more
+	def print_menu(self, data): 
 		"""
 			Output helper function that handles item menu printing. Takes data parameter.
 		"""
@@ -13,15 +13,19 @@ class CLIOutput:
 			else:
 				print str(index+1)+". "+element["name"]
 
-	def continue_flow(self, logout): 
+	def continue_flow(self, stack, logout): 
 		"""
 			Output the option for flow continuation
 		"""
 		print "What do you want to do next?"
 
-		print "1. continue shopping where i left" #TODO check if stack empty, then do not show
-		print "2. go to main menu"
-		print "3. exit"
+		if not empty(stack):
+			print "1. continue shopping where i left"
+			print "2. go to main menu"
+			print "3. exit"
+		else:
+			print "1. go to main menu"
+			print "2. exit"
 
 		if not logout: 
 			print "4. logout"
@@ -38,52 +42,71 @@ class CLIOutput:
 		
 		print "0. cancel"
 
-	def confirm_remove_item(self, data): #@TODO can be abstracted and merged with the next function
+	def confirm(self, message):
 		"""
-			Output for confirmation of item removal.
+			Generic confirmation output helper
 		"""
-		print "You chose to delete "+ data["name"] +". Are you sure?"
+		print message
 
 		print "1. yes"
 		print "2. no"
+
+	def confirm_remove_item(self, data):
+		"""
+			Output for confirmation of item removal.
+		"""
+		self.confirm("You chose to delete "+ data["name"] +". Do you want to proceed?")
+
 
 	def confirm_clear_items(self): 
 		"""
 			Output for confirmation of item clearing.
 		"""
-		print "You are about to clear all the items in your cart. Do you want to proceed?"
-
-		print "1. yes"
-		print "2. no"
+		self.confirm("You are about to clear all the items in your cart. Do you want to proceed?")
 
 	def checkout(self):
 		"""
 			Output for checkout confirmation.
 		"""
-		print "You are about to checkout. Do you want to proceed?"
+		self.confirm("You are about to checkout. Do you want to proceed?")
 
-		print "1. yes"
-		print "2. no"
+	def confirm_logout(self):
+		"""
+			Handles output for  logout
+		"""
+		self.confirm("You are going to be logged out. Do you want to proceed?")
+
+	def confirm_return_item(self):
+		"""
+			Output for confirmation of item return.
+		"""
+		self.confirm("You chose to return "+ data["name"] +". Do you want to proceed?")
 
 	def show_bill(self, data):
 		"""
 			Output for showing the bill and the menu items.
 		"""
-		print "Your bill contains:" #@TODO show if no items
 
-		sum = 0	
+		if empty(data):
+			print "You have no items on your bill"
 
-		for index, element in enumerate(data):
-			sum = element["price"]
-			print str(index+1) + ". " + element["name"] + " (price: "+ str(element["price"]) + ", qty: "+str(element["quantity"])+", total price:"+str(element[[quantity]*element["price"])+")"
+			print "Choose one of the following:" 
 
-		print "Total price:"+ str(sum)
+			print "1. back"
+		else:
+			sum = 0	
 
-		print "Choose one of the following:" 
-		print "1. checkout"
-		print "2. remove an item"
-		print "3. clear items"
-		print "4. back"
+			for index, element in enumerate(data):
+				sum = element["price"]
+				print str(index+1) + ". " + element["name"] + " (price: "+ str(element["price"]) + ", qty: "+str(element["quantity"])+", total price:"+str(element[[quantity]*element["price"])+")"
+
+			print "Total price:"+ str(sum)
+
+			print "Choose one of the following:" 
+			print "1. checkout"
+			print "2. remove an item"
+			print "3. clear items"
+			print "4. back"
 
 	def add_item(self, data):
 		"""
@@ -140,22 +163,3 @@ class CLIOutput:
 		"""
 
 		print "The item you are looking for is not on stock. Please choose another."
-
-	def confirm_logout(self):
-		"""
-			Handles output for  logout
-		"""
-
-		print "Please confirm that you want to be logged out"
-
-		print "1. yes"
-		print "2. no"
-
-	def confirm_return_item(self):
-		"""
-			Output for confirmation of item return.
-		"""
-		print "You chose to return "+ data["name"] +". Are you sure?"
-
-		print "1. yes"
-		print "2. no"

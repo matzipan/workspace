@@ -181,24 +181,36 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 			Media function to handle flow continuation.
 		"""
 		while True:
-			self.output.continue_flow(logout)
-			item = self.input.continue_flow(logout)
+			stack = self.stack
+			self.output.continue_flow(stack, logout)
+			item = self.input.continue_flow(stack, logout)
 			
 			if item == None:
 				continue 
 
-			if item == 1:
-				self.set_menu(CONST_MENU)
-				break
-			if item == 2: 
-				self.set_menu(CONST_MAIN_MENU)
-				break 
-			if item == 4:
-				self.set_menu(CONST_LOGOUT)
-				break
-			if item == 3:
-				self.set_menu(CONST_EXIT)
-				break
+			if empty(stack):
+				if item == 1: 
+					self.set_menu(CONST_MAIN_MENU)
+					break 
+				if item == 3:
+					self.set_menu(CONST_LOGOUT)
+					break
+				if item == 2:
+					self.set_menu(CONST_EXIT)
+					break
+			else:
+				if item == 1:
+					self.set_menu(CONST_MENU)
+					break
+				if item == 2: 
+					self.set_menu(CONST_MAIN_MENU)
+					break 
+				if item == 4:
+					self.set_menu(CONST_LOGOUT)
+					break
+				if item == 3:
+					self.set_menu(CONST_EXIT)
+					break
 
 	def choose_item(self, purpose, data):
 		"""
@@ -266,24 +278,27 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 		"""
 		while True: 
 			self.output.show_bill(data)
-			item = self.input.show_bill()
+			item = self.input.show_bill(data)
 
 			if item == None:
 				continue
 
-			if item == 1:
-				self.set_menu(CONST_CHECKOUT)
-				break
-			if item == 2:
-				self.set_menu(CONST_REMOVE_ITEM)
-				break
-			if item == 3:
-				self.set_menu(CONST_CLEAR_ITEMS)
-				break
-			if item == 4:
-				break
-
-		if item == 4:
+			if empty(data):
+				if item == 1:
+					break
+			else:
+				if item == 1:
+					self.set_menu(CONST_CHECKOUT)
+					break
+				if item == 2:
+					self.set_menu(CONST_REMOVE_ITEM)
+					break
+				if item == 3:
+					self.set_menu(CONST_CLEAR_ITEMS)
+					break
+				if item == 4:
+					break
+		if (empty(data) and item ==1) or item == 4:
 			self.continue_flow()
 
 

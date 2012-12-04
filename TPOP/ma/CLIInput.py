@@ -3,7 +3,7 @@ class CLIInput:
 		Class to handle command line interface input
 	"""
 
-	def wait_input(self, message = "Please choose one of the above: "): #@TODO this needs to be renamed to numeric input
+	def numeric_input(self, message = "Please choose one of the above: "): 
 		"""
 			Helper class to handle input. Optional parameter the message to display. Returns choice. Returns 00 if 00 entered. Returns None on invalid input. 
 		"""
@@ -31,23 +31,27 @@ class CLIInput:
 		"""
 			Input class to take input and validate choosing an item. Takes paramter the options you can choose from. Returns choice. Returns None on invalid input.
 		"""
-		option = self.wait_input()
+		option = self.numeric_input()
 
 		if (type(option) == bool and option==False) or len(data) < option:
-			return None #@TODO consider replacing with ValueError
+			return None
 
 		return option
 
-	def continue_flow(self, logout):
+	def continue_flow(self, stack, logout):
 		"""
 			Input class to handle flow continuation. Returns choice. Returns None on invalid input.
 		"""
-		option = self.wait_input()
+		option = self.numeric_input()
 
 		if not logout and option ==4:
 			return 4
-		if option in [1,2,3]:
-			return option
+		if empty(stack):
+			if option in [1,2]
+				return option
+		else: 
+			if option in [1,2,3]:
+				return option
 
 		return None
 
@@ -55,7 +59,7 @@ class CLIInput:
 		"""
 			Input class to handle confirmation. Returns True/False. Returns None on invalid input.
 		"""
-		option = self.wait_input()
+		option = self.numeric_input()
 
 		if option == 1:
 			return True
@@ -69,7 +73,7 @@ class CLIInput:
 		"""
 			Input class to handle checkout option handling. Returns choice. Returns None on invalid input.
 		"""
-		option = self.wait_input()
+		option = self.numeric_input()
 
 		if option in [1,2]:
 			return option
@@ -80,10 +84,14 @@ class CLIInput:
 		"""
 			Input class to handle show_bill option handling. Returns choice. Returns None on invalid input.
 		"""
-		option = self.wait_input()
+		option = self.numeric_input()
 
-		if option in [1,2,3,4]:
-			return option
+		if empty(data):
+			if option == 1 
+				return option
+		else:
+			if option in [1,2,3,4]:
+				return option
 			
 		return None
 
@@ -91,7 +99,7 @@ class CLIInput:
 		"""
 			Input class to handle add_item option handling. Returns choice. Returns None on invalid input.
 		"""
-		option = self.wait_input("Please choose one of the above: ")
+		option = self.numeric_input("Please choose one of the above: ")
 
 		if option in [1,2]: 
 			return option
@@ -102,7 +110,7 @@ class CLIInput:
 		"""
 			Input class to handle menu input. Takes parameter the available menu choices. Returns choice. Returns -1 for choice 00. Returns None on invalid input.
 		"""
-		option = self.wait_input()
+		option = self.numeric_input()
 
 		if type(option) == bool and option==False: #I am doing this because i'm not sure of time coercion in python
 			return None
@@ -130,7 +138,7 @@ class CLIInput:
 			Input function to handle authentication
 		"""
 
-		option = self.wait_input("Please choose one of the above: ")
+		option = self.numeric_input("Please choose one of the above: ")
 
 
 		print "This part requires authentication. Please insert your credentials below."
@@ -143,7 +151,7 @@ class CLIInput:
 			Input funciton to handle invalid credentials
 		"""
 
-		option = self.wait_input("Please choose one of the above:")
+		option = self.numeric_input("Please choose one of the above:")
 
 		if option in [1,2]
 			return option

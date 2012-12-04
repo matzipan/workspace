@@ -65,7 +65,7 @@ class Application:
 		"""
 		self.bill_repository.add(data)
 
-	def remove_item(self,index): #@TODO base this on item id
+	def remove_item(self,index): 
 		"""
 			Removes a given index item from bill. Takes parameter index.
 		"""
@@ -89,7 +89,7 @@ class Application:
 
 		self.bill_repository.clear()
 
-	def return_item(self, index): #@TODO base this on item id
+	def return_item(self, index): 
 		"""
 			Marks the item as returned by user
 		"""
