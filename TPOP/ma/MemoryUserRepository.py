@@ -1,13 +1,12 @@
 class MemoryUserRepository:
 	def __init__(self):
-		self.data = {"andrei":{"id": 0, "password": "haha!"}]
+		self.data = {"andrei":{"id": 1, "password": "haha!"}}
 		self.next_id= 1
 
 	def authenticate_user(self,username,password):
 		"""
 			Check if user/password is correct
 		"""
-
 		if username in self.data and self.data[username]["password"] ==  password:
 			return self.data[username]["id"]
 
@@ -24,9 +23,15 @@ class MemoryUserRepository:
 		"""
 			Check if user exists, if so throw an error
 		"""
-		if username in self.data
-			raise new ValueError()
+		if username in self.data:
+			raise ValueError()
 
 		self.data[username] = {"id": self.next_id, "password": password}
 
 		self.next_id +=1 
+
+	def exit(self):
+		"""
+			Handles graceful exit. Close db connection
+		"""
+		return 

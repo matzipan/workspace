@@ -1,4 +1,5 @@
 from util import *
+import sys
 
 class CLIMedia: #should be implemented as a interface... but python does not have such a thing.
 	"""
@@ -56,7 +57,8 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 			self.output.error("Something is wrong with the environment. Sorry.")
 
 			raise RuntimeError()
-		except StandardError:
+		except StandardError,e:
+			print e
 
 			raise RuntimeError()
 
@@ -97,7 +99,7 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 
 				if item == 1:
 					continue
-				if item == 2
+				if item == 2:
 					return False
 
 
@@ -188,15 +190,16 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 			if item == None:
 				continue 
 
-			if empty(stack):
+			if not stack:
 				if item == 1: 
 					self.set_menu(CONST_MAIN_MENU)
 					break 
-				if item == 3:
-					self.set_menu(CONST_LOGOUT)
-					break
 				if item == 2:
 					self.set_menu(CONST_EXIT)
+					break
+				if item == 3:
+					self.set_menu(CONST_LOGOUT)
+					print "logou"
 					break
 			else:
 				if item == 1:
@@ -205,11 +208,11 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 				if item == 2: 
 					self.set_menu(CONST_MAIN_MENU)
 					break 
-				if item == 4:
-					self.set_menu(CONST_LOGOUT)
-					break
 				if item == 3:
 					self.set_menu(CONST_EXIT)
+					break
+				if item == 4:
+					self.set_menu(CONST_LOGOUT)
 					break
 
 	def choose_item(self, purpose, data):
@@ -283,7 +286,7 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 			if item == None:
 				continue
 
-			if empty(data):
+			if not data:
 				if item == 1:
 					break
 			else:
@@ -298,7 +301,7 @@ class CLIMedia: #should be implemented as a interface... but python does not hav
 					break
 				if item == 4:
 					break
-		if (empty(data) and item ==1) or item == 4:
+		if (not data and item ==1) or item == 4:
 			self.continue_flow()
 
 

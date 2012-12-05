@@ -43,7 +43,7 @@ class MemoryDataRepository:
 										"type":0,
 										"name": "old game",
 										"id": "game-old-1",
-										"quantity", 2,
+										"quantity": 2,
 										"price": 2.5
 									}
 								]
@@ -60,7 +60,7 @@ class MemoryDataRepository:
 			Get items rent by user
 		"""
 		
-		return map(self.borrowed_by_user[user_id], lambda x: return self.lookup(x))
+		return map(self.borrowed_by_user[user_id], lambda x: self.lookup(x))
 
 	def lookup(self, lookup_id, data=None):
 		"""
@@ -72,7 +72,11 @@ class MemoryDataRepository:
 		if self.data["id"] == lookup_id:
 			return self.data
 		else:
-			lookup_fun = lambda x: if x["id"] == lookup_id: return x elif x["type"] == 1: return map(lookup_fun, x["children"])[0]
+			def lookup_fun(x):
+				if x["id"] == lookup_id: 
+					return x 
+				elif x["type"] == 1: 
+					return map(lookup_fun, x["children"][0])
 
 			return map(lookup_fun, self.data)[0]
 
@@ -83,7 +87,7 @@ class MemoryDataRepository:
 		parent_element = self.lookup(parent)
 
 		if parent_element["type"] == 0:
-			raise new ValueError()
+			raise ValueError()
 
 		element = {"type": type_id, "name": name, "id": id_x}
 
@@ -127,9 +131,15 @@ class MemoryDataRepository:
 
 		for i,x in enumerate(self.borrowed_by_user):
 			if x["id"]==borrow_id:
-				if x["quantity"] == 1
+				if x["quantity"] == 1:
 					del self.borrowed_by_user[i]
 				else:
 					self.borrowed_by_user -= 1
 
 				break
+
+	def exit(self):
+		"""
+			Handles graceful exit. Close db connection
+		"""
+		return 

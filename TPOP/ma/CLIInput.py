@@ -1,3 +1,5 @@
+from util import *
+
 class CLIInput:
 	"""
 		Class to handle command line interface input
@@ -44,14 +46,18 @@ class CLIInput:
 		"""
 		option = self.numeric_input()
 
-		if not logout and option ==4:
-			return 4
-		if empty(stack):
-			if option in [1,2]
+
+
+		if not stack:
+			if option in [1,2]:
 				return option
+			if not logout: 
+				return 3
 		else: 
 			if option in [1,2,3]:
 				return option
+			if not logout and option ==4:
+				return 4
 
 		return None
 
@@ -80,14 +86,14 @@ class CLIInput:
 
 		return None
 
-	def show_bill(self):
+	def show_bill(self, data):
 		"""
 			Input class to handle show_bill option handling. Returns choice. Returns None on invalid input.
 		"""
 		option = self.numeric_input()
 
-		if empty(data):
-			if option == 1 
+		if not data:
+			if option == 1:
 				return option
 		else:
 			if option in [1,2,3,4]:
@@ -106,7 +112,7 @@ class CLIInput:
 
 		return None
 
-	def show_menu(self):
+	def show_menu(self, data):
 		"""
 			Input class to handle menu input. Takes parameter the available menu choices. Returns choice. Returns -1 for choice 00. Returns None on invalid input.
 		"""
@@ -117,7 +123,6 @@ class CLIInput:
 
 		if option == "00":
 			return -1
-
 
 		if option == "01":
 			return -2
@@ -133,14 +138,11 @@ class CLIInput:
 		"""
 			Input function to handle authentication
 		"""
-
-		option = self.numeric_input("Please choose one of the above: ")
-
-
-		print "This part requires authentication. Please insert your credentials below."
-
+		
 		username = self.string_input("Username:")
 		password = self.string_input("Password:") 
+
+		return username, password
 
 	def invalid_credentials(self):
 		""" 
@@ -149,7 +151,7 @@ class CLIInput:
 
 		option = self.numeric_input("Please choose one of the above:")
 
-		if option in [1,2]
+		if option in [1,2]:
 			return option
 
 		return None

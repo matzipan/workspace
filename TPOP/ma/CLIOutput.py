@@ -19,16 +19,17 @@ class CLIOutput:
 		"""
 		print "What do you want to do next?"
 
-		if not empty(stack):
+		if stack:
 			print "1. continue shopping where i left"
 			print "2. go to main menu"
 			print "3. exit"
+			if not logout: 
+				print "4. logout"
 		else:
 			print "1. go to main menu"
 			print "2. exit"
-
-		if not logout: 
-			print "4. logout"
+			if not logout: 
+				print "3. logout"
 
 
 	def choose_item(self, purpose, data):
@@ -87,7 +88,7 @@ class CLIOutput:
 			Output for showing the bill and the menu items.
 		"""
 
-		if empty(data):
+		if not data:
 			print "You have no items on your bill"
 
 			print "Choose one of the following:" 
@@ -138,6 +139,7 @@ class CLIOutput:
 		print "00. show bill"
 		print "01. logout"
 
+
 	def separator(self):
 		print "------------------"
 
@@ -155,7 +157,7 @@ class CLIOutput:
 		print "The credentials you entered are invalid. "
 		print "Choose one of the following:"
 		print "1. retry"
-		print "2. cancel"
+		print "2. exit"
 
 	def no_stock(self):
 		""" 

@@ -1,3 +1,4 @@
+
 class Application: 
 	"""
 		Class that handles application logic.
@@ -29,6 +30,7 @@ class Application:
 		"""
 			Authenticate user.
 		"""
+
 		details = self.user_repository.authenticate_user(user, password)
 
 		if details == False:

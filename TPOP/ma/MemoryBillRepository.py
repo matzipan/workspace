@@ -9,20 +9,20 @@ class MemoryBillRepository():
 		return self.data
 
 	def add(self, item):
-		self.data.append()
+		self.data.append(item)
 
 
 	def remove(self, index): 
 		"""
 			Removes a given index item from bill. Takes parameter index.
 		"""		
-		del self.bill[index]
+		del self.data[index]
 
 	def clear(self):
 		"""
 			Clear items from bill.
 		"""
-		self.bill = []
+		self.data = []
 
 	def exit(self):
 		"""
