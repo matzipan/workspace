@@ -1,0 +1,30 @@
+program philo;
+  var chopsticks : array[1..3] of semaphore;
+  var waiter : semaphore;
+  var i : integer;
+  process type philosopher(id: integer);
+  begin
+    wait(waiter);
+    wait(chopsticks[id]);
+    writeln(id,' waiting for ', id); 
+
+    wait(chopsticks[(id mod 3) + 1]);
+    writeln(id,' waiting for ', (id mod 3) + 1); 
+
+    writeln(id,' giving up ', id, (id mod 3) + 1);
+
+    signal(chopsticks[id]);
+    signal(chopsticks[(id mod 3) + 1]);
+    signal(waiter);
+  end;
+  var philos: array[1..3] of philosopher;
+begin
+  for i:=1 to 3 do
+    initial(chopsticks[i],1);
+
+  initial(waiter, 2);
+  cobegin
+    for i:=1 to 3 do 
+      philos[i](i);
+  coend;
+end.

@@ -1,0 +1,54 @@
+program barriers;
+
+  monitor barrier;
+    export wait, release;
+    var cond: condition;
+    var currentlyWaiting: integer;
+    var releaseAttempted: boolean;
+
+    procedure release;
+    begin
+      if (currentlyWaiting <> 5) and not releaseAttempted then
+        releaseAttempted:=true
+      else 
+        begin
+        while not empty(cond) do
+          resume(cond);
+
+        currentlyWaiting := 0;
+      end;
+    end;
+
+    procedure wait;
+    begin
+      currentlyWaiting := currentlyWaiting +1;
+      delay(cond);
+
+      if (currentlyWaiting = 5) and (releaseAttempted) then
+        release;
+    end;
+    begin
+      currentlyWaiting := 0;
+      releaseAttempted := false;
+  end;
+  
+  process type worker(id: integer);
+  begin
+    barrier.wait;
+
+  end;
+  process releaser;
+  begin
+    barrier.release;
+
+  end;
+  var workers: array[1..5] of worker;
+  var i: integer;
+begin
+  cobegin
+    for i:=1 to 5 do 
+      workers[i](i);
+
+    releaser;
+  coend;
+end.
