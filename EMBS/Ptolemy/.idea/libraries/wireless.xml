@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="wireless">
+    <CLASSES>
+      <root url="jar://C:/Program Files (x86)/Ptolemy/ptolemy/domains/wireless/wireless.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

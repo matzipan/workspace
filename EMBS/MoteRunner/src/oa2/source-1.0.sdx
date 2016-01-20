@@ -1,0 +1,794 @@
+A!	source-1.0.33287	2.0	Java
+
+X	c:01/000	com.ibm.saguaro.system.Assembly
+X	c:01/001	com.ibm.saguaro.system.Util
+X	c:01/002	com.ibm.saguaro.system.Timer
+X	c:01/003	com.ibm.saguaro.system.Time
+X	c:01/004	com.ibm.saguaro.system.MoteException
+X	c:01/005	com.ibm.saguaro.system.Device
+X	c:01/006	com.ibm.saguaro.system.SDev
+X	c:01/007	com.ibm.saguaro.system.CDev
+X	c:01/008	com.ibm.saguaro.system.OutOfResourcesException
+X	c:01/009	com.ibm.saguaro.system.OsException
+X	c:01/00A	com.ibm.saguaro.system.NullReferenceException
+X	c:01/00B	com.ibm.saguaro.system.SystemException
+X	c:01/00C	com.ibm.saguaro.system.Mote
+X	c:01/00D	com.ibm.saguaro.system.LIP
+X	c:01/00E	com.ibm.saguaro.system.LED
+X	c:01/00F	com.ibm.saguaro.system.InvalidCastException
+X	c:01/010	com.ibm.saguaro.system.IndexOutOfRangeException
+X	c:01/011	com.ibm.saguaro.system.I2C
+X	c:01/012	com.ibm.saguaro.system.GPIO
+X	c:01/013	com.ibm.saguaro.system.Err
+X	c:01/014	com.ibm.saguaro.system.DeviceException
+X	c:01/015	com.ibm.saguaro.system.SPI
+X	c:01/016	com.ibm.saguaro.system.Radio
+X	c:01/017	com.ibm.saguaro.system.WLIP
+X	c:01/018	com.ibm.saguaro.system.ArrayTypeMismatchException
+X	c:01/019	com.ibm.saguaro.system.ArithmException
+X	c:01/01A	com.ibm.saguaro.system.ArgumentException
+X	c:01/01B	com.ibm.saguaro.system.AccessException
+X	c:01/01C	com.ibm.saguaro.system.ADC
+X	c:02/000	com.ibm.iris.IRIS
+X	c:03/000	com.ibm.saguaro.logger.Logger
+
+C!	c:005	OA2.Source	-1	0	c:000
+R!	channels	r:OA2.ChannelState[]	0	0
+R	radioDev	r:com.ibm.saguaro.system.Radio	0	1
+F!	rxState	i	0	0
+F!	gotNChannels	i	0	1
+F!	sendChannelIndex	i	0	2
+F	discoveryChannelIndex	i	0	3
+F	auxiliaryChannelIndex	i	0	4
+F	undiscoveredChannels	z	0	5
+F	rxOn	z	0	6
+G!	STATE_DISCOVER	i	0	1
+G!	STATE_GETN	i	0	2
+M!	Source(r:OA2.Source)v	-1	m:01D7	003AE	4
+M	access$000(i,c[],i,i,l)i	-1	m:01D9	003B2	14
+M	getChannel(i)r:OA2.ChannelState	-1	m:01E0	003C0	10
+M	getCurrentChannel()r:OA2.ChannelState	-1	m:01E5	003CA	10
+M	getCurrentChannelIndex()i	-1	m:01EA	003D4	30
+M	onReceive(i,c[],i,i,l)i	-1	m:01F9	003F2	190
+M	selectNextUndiscoveredChannel()v	-1	m:0258	004B0	30
+M!	setChannel()v	-1	m:0267	004CE	8
+M	setChannel(z)v	-1	m:026B	004D6	82
+M!	setGetNOnChannelIndex(i)v	-1	m:0294	00528	16
+
+C!	c:007	OA2.ChannelState	1	1	c:000
+r	loopTimer	r:com.ibm.saguaro.system.Timer	1	0
+r	getNTimer	r:com.ibm.saguaro.system.Timer	1	1
+r	sendTimer	r:com.ibm.saguaro.system.Timer	1	2
+r	radioDev	r:com.ibm.saguaro.system.Radio	1	3
+r	xmit	c[]	1	4
+f!	id	c	1	0
+f!	pan	i	1	1
+f!	index	i	1	2
+f!	n	i	1	3
+f!	getNTimeTicks	l	1	4
+f	loopBaseTicks	l	1	6
+f	loopIncrement	i	1	8
+f	secondSamplePayload	i	1	9
+f	secondSample	l	1	10
+f	firstSamplePayload	i	1	12
+f	firstSample	l	1	13
+F	offsetCorrectionTicks	l	1	7
+m!	addChannelSampleTime(l,i)i	1	m:00E3	001C6	48	2
+m!	channelNeedsSamples()z	1	m:00FB	001F6	30	3
+m!	discardFirstAndRotate()v	1	m:010A	00214	28	4
+m!	getChannelPeriod()l	1	m:0118	00230	58	0
+m!	hasMissedGetNWindow(l)z	1	m:0135	0026A	30	11
+m!	isPeriodInconclusive()z	1	m:0144	00288	62	1
+m!	loop(c,l)v	1	m:0163	002C6	16	7
+m!	scheduleGetN(i)v	1	m:0180	00300	38	6
+m!	scheduleSend(i)v	1	m:0193	00326	26	5
+m!	send(c,l)v	1	m:01A0	00340	52	8
+m!	setGetN(c,l)v	1	m:01BA	00374	10	9
+m!	startLoop()v	1	m:01BF	0037E	48	10
+M!	ChannelState(r:OA2.ChannelState,i,i,i,r:com.ibm.saguaro.system.Radio)v	1	m:007B	000F6	208
+M	non_virt$setLoopTimer(r:OA2.ChannelState)v	1	m:016B	002D6	42
+
+C	c:012	com.ibm.saguaro.system.$tatics	-1	-1	c:01/000
+r!	OA2.Source.channels	r:OA2.ChannelState[]	-1	0
+r	OA2.Source.radioDev	r:com.ibm.saguaro.system.Radio	-1	1
+f!	OA2.Source.rxState	i	-1	0
+f!	OA2.Source.gotNChannels	i	-1	1
+f!	OA2.Source.sendChannelIndex	i	-1	2
+f	OA2.Source.discoveryChannelIndex	i	-1	3
+f	OA2.Source.auxiliaryChannelIndex	i	-1	4
+f	OA2.Source.undiscoveredChannels	z	-1	5
+f	OA2.Source.rxOn	z	-1	6
+f	OA2.ChannelState.offsetCorrectionTicks	l	-1	7
+M	__init()v	-1	m:0028	00050	166
+
+c	0005D	1	54	0	54	0	m:0028
+c	00069	0	24	0	24	0	m:0028
+c	0006D	0	26	0	26	0	m:0028
+c	00071	0	28	0	28	0	m:0028
+c	00075	0	31	0	31	0	m:0028
+c	00079	0	33	0	33	0	m:0028
+c	0007D	0	34	0	34	0	m:0028
+c	00081	0	36	0	36	0	m:0028
+c	0008B	0	42	0	42	0	m:0028
+c	0008F	0	45	0	45	0	m:0028
+c	00096	0	47	0	47	0	m:0028
+c	000A9	0	48	0	48	0	m:0028
+c	000BC	0	49	0	49	0	m:0028
+c	000CF	0	51	0	51	0	m:0028
+c	000DB	0	52	0	52	0	m:0028
+c	000E2	0	54	0	54	0	m:0028
+c	000E6	0	55	0	55	0	m:0028
+c	000EA	0	57	0	57	0	m:0028
+c	000F4	0	63	0	63	0	m:0028
+e	000F6	m:0028
+c	000F9	1	16	0	16	0	m:007B
+l!	000F9	001C5	r:OA2.ChannelState	this	m:007B	0
+l!	000F9	001C5	i	index	m:007B	1
+l!	000F9	001C5	i	id	m:007B	2
+l!	000F9	001C5	i	pan	m:007B	3
+l!	000F9	001C5	r:com.ibm.saguaro.system.Radio	radioDev	m:007B	4
+c	00101	1	18	0	18	0	m:007B
+c	00105	1	20	0	20	0	m:007B
+c	0010D	1	22	0	22	0	m:007B
+c	00111	1	25	0	25	0	m:007B
+c	00115	1	27	0	27	0	m:007B
+c	00119	1	29	0	29	0	m:007B
+c	0011D	1	32	0	32	0	m:007B
+c	00121	1	35	0	35	0	m:007B
+c	00125	1	37	0	37	0	m:007B
+c	0012D	1	40	0	40	0	m:007B
+c	00135	1	49	0	49	0	m:007B
+c	0013F	1	50	0	50	0	m:007B
+c	00149	1	51	0	51	0	m:007B
+c	00153	1	57	0	57	0	m:007B
+c	00157	1	58	0	58	0	m:007B
+c	0015C	1	59	0	59	0	m:007B
+c	00160	1	60	0	60	0	m:007B
+c	00164	1	62	0	62	0	m:007B
+c	0016A	1	63	0	63	0	m:007B
+c	00170	1	64	0	64	0	m:007B
+c	00178	1	65	0	65	0	m:007B
+c	00181	1	66	0	66	0	m:007B
+c	0018A	1	67	0	67	0	m:007B
+c	00194	1	68	0	68	0	m:007B
+c	0019E	1	69	0	69	0	m:007B
+c	001A9	1	71	0	71	0	m:007B
+c	001B2	1	77	0	77	0	m:007B
+c	001BB	1	83	0	83	0	m:007B
+c	001C4	1	88	0	88	0	m:007B
+e!	001C6	m:007B
+c	001C9	1	116	0	116	0	m:00E3
+l!	001C9	001F5	r:OA2.ChannelState	this	m:00E3	0
+l!	001C9	001F5	l	currentTime	m:00E3	1
+l	001C9	001F5	i	payload	m:00E3	3
+c	001D4	1	117	0	117	0	m:00E3
+c	001D8	1	118	0	118	0	m:00E3
+c	001DC	1	120	0	120	0	m:00E3
+c	001DE	1	121	0	121	0	m:00E3
+c	001E9	1	122	0	122	0	m:00E3
+c	001ED	1	123	0	123	0	m:00E3
+c	001F1	1	125	0	125	0	m:00E3
+c	001F3	1	128	0	128	0	m:00E3
+e!	001F6	m:00E3
+c	001F9	1	132	0	132	0	m:00FB
+l	001F9	00214	r:OA2.ChannelState	this	m:00FB	0
+e!	00214	m:00FB
+c	00217	1	136	0	136	0	m:010A
+l	00217	00230	r:OA2.ChannelState	this	m:010A	0
+c	0021D	1	137	0	137	0	m:010A
+c	00223	1	138	0	138	0	m:010A
+c	0022B	1	139	0	139	0	m:010A
+c	0022F	1	140	0	140	0	m:010A
+e!	00230	m:010A
+c	00233	1	91	0	91	0	m:0118
+l	00233	00269	r:OA2.ChannelState	this	m:0118	0
+c	0023C	1	92	0	92	0	m:0118
+l	0023C	00269	i	sampleDifference	m:0118	1
+c	00244	1	94	0	94	0	m:0118
+l	00244	00269	i	payloadDifference	m:0118	2
+c	0025C	1	96	0	96	0	m:0118
+c	00264	1	98	0	98	0	m:0118
+e!	0026A	m:0118
+c	0026D	1	226	0	226	0	m:0135
+l!	0026D	00288	r:OA2.ChannelState	this	m:0135	0
+l	0026D	00288	l	time	m:0135	1
+e!	00288	m:0135
+c	0028B	1	103	0	103	0	m:0144
+l	0028B	002C6	r:OA2.ChannelState	this	m:0144	0
+c	00294	1	104	0	104	0	m:0144
+l	00294	002C6	i	sampleDifference	m:0144	1
+c	0029C	1	107	0	107	0	m:0144
+l	0029C	002C6	i	payloadDifference	m:0144	2
+e!	002C6	m:0144
+c	002C9	1	162	0	162	0	m:0163
+l!	002C9	002D5	r:OA2.ChannelState	this	m:0163	0
+l!	002C9	002D5	c	arg0	m:0163	1
+l	002C9	002D5	l	time	m:0163	2
+c	002D0	1	163	0	163	0	m:0163
+c	002D4	1	164	0	164	0	m:0163
+e!	002D6	m:0163
+c	002D9	1	215	0	215	0	m:016B
+l	002D9	00300	r:OA2.ChannelState	this	m:016B	0
+c	002F7	1	216	0	216	0	m:016B
+c	002FF	1	217	0	217	0	m:016B
+e	00300	m:016B
+c	00303	1	151	0	151	0	m:0180
+l!	00303	00326	r:OA2.ChannelState	this	m:0180	0
+l	00303	00326	i	payload	m:0180	1
+c	00318	1	158	0	158	0	m:0180
+c	00325	1	159	0	159	0	m:0180
+e!	00326	m:0180
+c	00329	1	148	0	148	0	m:0193
+l!	00329	0033F	r:OA2.ChannelState	this	m:0193	0
+l	00329	0033F	i	payload	m:0193	1
+c	0033E	1	149	0	149	0	m:0193
+e!	00340	m:0193
+c	00343	1	171	0	171	0	m:01A0
+l!	00343	00374	r:OA2.ChannelState	this	m:01A0	0
+l!	00343	00374	c	arg0	m:01A0	1
+l	00343	00374	l	time	m:01A0	2
+c	00348	1	173	0	173	0	m:01A0
+c	0034E	1	174	0	174	0	m:01A0
+c	00351	1	176	0	176	0	m:01A0
+c	00367	1	178	0	178	0	m:01A0
+c	0036C	1	180	0	180	0	m:01A0
+c	00370	1	181	0	181	0	m:01A0
+c	00373	1	182	0	182	0	m:01A0
+e!	00374	m:01A0
+c	00377	1	185	0	185	0	m:01BA
+l!	00377	0037E	r:OA2.ChannelState	this	m:01BA	0
+l!	00377	0037E	c	arg0	m:01BA	1
+l	00377	0037E	l	time	m:01BA	2
+c	0037D	1	186	0	186	0	m:01BA
+e!	0037E	m:01BA
+c	00381	1	198	0	198	0	m:01BF
+l	00381	003AE	r:OA2.ChannelState	this	m:01BF	0
+c	00387	1	201	0	201	0	m:01BF
+c	0038B	1	204	0	204	0	m:01BF
+c	003A2	1	208	0	208	0	m:01BF
+c	003A9	1	210	0	210	0	m:01BF
+c	003AD	1	211	0	211	0	m:01BF
+e!	003AE	m:01BF
+c	003B1	0	13	0	13	0	m:01D7
+l!	003B1	003B2	r:OA2.Source	this	m:01D7	0
+e!	003B2	m:01D7
+c	003B5	0	13	0	13	0	m:01D9
+l	003B5	003BF	i	x0	m:01D9	0
+l	003B5	003BF	c[]	x1	m:01D9	1
+l	003B5	003BF	i	x2	m:01D9	2
+l	003B5	003BF	i	x3	m:01D9	3
+l	003B5	003BF	l	x4	m:01D9	4
+e	003C0	m:01D9
+c	003C3	0	175	0	175	0	m:01E0
+l	003C3	003C9	i	channelIndex	m:01E0	0
+e	003CA	m:01E0
+c	003CD	0	180	0	180	0	m:01E5
+e	003D4	m:01E5
+c	003D7	0	171	0	171	0	m:01EA
+e	003F2	m:01EA
+c	003F5	0	66	0	66	0	m:01F9
+l	003F5	004AF	i	flags	m:01F9	0
+l	003F5	004AF	c[]	data	m:01F9	1
+l	003F5	004AF	i	len	m:01F9	2
+l	003F5	004AF	i	info	m:01F9	3
+l	003F5	004AF	l	time	m:01F9	4
+c	003F8	0	67	0	67	0	m:01F9
+c	0040A	0	68	0	68	0	m:01F9
+c	0040C	0	71	0	71	0	m:01F9
+c	00413	0	72	0	72	0	m:01F9
+c	0041A	0	74	0	74	0	m:01F9
+c	0041F	0	77	0	77	0	m:01F9
+c	00425	0	79	0	79	0	m:01F9
+l	00425	004AF	i	payload	m:01F9	6
+c	0042B	0	81	0	81	0	m:01F9
+l	0042B	004AF	l	currentTime	m:01F9	7
+c	00430	0	88	0	88	0	m:01F9
+l	00430	004AF	r:OA2.ChannelState	currentChannel	m:01F9	9
+c	00440	0	90	0	90	0	m:01F9
+c	00445	0	91	0	91	0	m:01F9
+c	0044C	0	96	0	96	0	m:01F9
+c	00456	0	98	0	98	0	m:01F9
+l	00456	00467	i	sampleTimeId	m:01F9	10
+c	0045B	0	99	0	99	0	m:01F9
+c	00462	0	103	0	103	0	m:01F9
+c	00467	0	109	0	109	0	m:01F9
+c	0046E	0	119	0	119	0	m:01F9
+c	00474	0	120	0	120	0	m:01F9
+c	0047A	0	122	0	122	0	m:01F9
+c	0047F	0	127	0	127	0	m:01F9
+c	00488	0	140	0	140	0	m:01F9
+c	00490	0	148	0	148	0	m:01F9
+c	00495	0	151	0	151	0	m:01F9
+c	0049A	0	153	0	153	0	m:01F9
+c	004A2	0	156	0	156	0	m:01F9
+c	004A6	0	157	0	157	0	m:01F9
+c	004A9	0	159	0	159	0	m:01F9
+c	004AD	0	166	0	166	0	m:01F9
+e	004B0	m:01F9
+c	004B3	0	215	0	215	0	m:0258
+c	004B9	0	217	0	217	0	m:0258
+l	004B9	004CE	i	nextChannel	m:0258	0
+c	004C0	0	218	0	218	0	m:0258
+c	004C6	0	224	0	224	0	m:0258
+c	004CA	0	226	0	226	0	m:0258
+c	004CD	0	228	0	228	0	m:0258
+e	004CE	m:0258
+c	004D1	0	195	0	195	0	m:0267
+c	004D5	0	196	0	196	0	m:0267
+e!	004D6	m:0267
+c	004D9	0	199	0	199	0	m:026B
+l	004D9	00528	z	initial	m:026B	0
+c	004E1	0	200	0	200	0	m:026B
+c	004E7	0	201	0	201	0	m:026B
+c	004EB	0	205	0	205	0	m:026B
+c	004F6	0	206	0	206	0	m:026B
+c	00502	0	208	0	208	0	m:026B
+c	00511	0	209	0	209	0	m:026B
+c	00523	0	210	0	210	0	m:026B
+c	00527	0	212	0	212	0	m:026B
+e	00528	m:026B
+c	0052B	0	189	0	189	0	m:0294
+l!	0052B	00537	i	auxiliaryChannelIndex	m:0294	0
+c	0052F	0	190	0	190	0	m:0294
+c	00533	0	191	0	191	0	m:0294
+c	00536	0	192	0	192	0	m:0294
+e!	00538	m:0294
+S	C:/Users/Andrei/Desktop/Workspace/EMBS-MoteRunner/OA2/src/OA2/Source.java
+:	package OA2;
+:	
+:	import com.ibm.saguaro.system.DevCallback;
+:	import com.ibm.saguaro.system.Device;
+:	import com.ibm.saguaro.system.LED;
+:	import com.ibm.saguaro.system.Radio;
+:	import com.ibm.saguaro.system.Time;
+:	
+:	/*import com.ibm.saguaro.logger.Logger;
+:	import com.ibm.saguaro.system.Mote;
+:	import com.ibm.saguaro.system.csr;*/
+:	
+:	public class Source {
+:		public static ChannelState[] channels;
+:	
+:		// priority levels for channels:
+:		//  * send channel: 3 (highest)
+:		//  * auxiliary channel: 2 (mid)
+:		//  * discovery channel: 1 (lowest)
+:		//
+:		// higher channels always preempt activity on the lowest.
+:	
+:		// discovery is used for channel discovery
+:		private static int discoveryChannelIndex = -1;
+:		// auxiliary is used for other things, like getting the value of n
+:		private static int auxiliaryChannelIndex = -1;
+:		// send channel is used for transmitting frames
+:		public static int sendChannelIndex = -1;
+:	
+:		// number of channels for which n has been fetched
+:		public static int gotNChannels = 0;
+:	
+:		private static boolean undiscoveredChannels = true;
+:		private static boolean rxOn = false;
+:	
+:		private static Radio radioDev = new Radio();
+:	
+:		// rx state definitions
+:		public static final int STATE_DISCOVER = 1;
+:		public static final int STATE_GETN = 2;
+:	
+:		public static int rxState = STATE_DISCOVER;
+:	
+:		static {
+:			channels = new ChannelState[3];
+:	
+:			channels[0] = new ChannelState(0, 0, 0x11, radioDev);
+:			channels[1] = new ChannelState(1, 1, 0x12, radioDev);
+:			channels[2] = new ChannelState(2, 2, 0x13, radioDev);
+:	
+:			radioDev.open(Radio.DID, null, 0, 0);
+:			radioDev.setShortAddr(Radio.SADDR_BROADCAST);
+:	
+:			discoveryChannelIndex = 0;
+:			setChannel(true);
+:	
+:			radioDev.setRxHandler(new DevCallback(null){
+:				public int invoke (int flags, byte[] data, int len, int info, long time) {
+:					return Source.onReceive(flags, data, len, info, time);
+:				}
+:			});
+:	
+:		}
+:	
+:		private static int onReceive (int flags, byte[] data, int len, int info, long time) {
+:			if (data == null) {
+:				radioDev.startRx(Device.ASAP|Device.RX4EVER, 0, 0);
+:				return 0;
+:			}
+:	
+:			if (LED.getState((byte)0) == 1) {
+:				LED.setState((byte)0, (byte)0);
+:			} else {
+:				LED.setState((byte)0, (byte)1);
+:			}
+:	
+:			int payload = data[11];
+:	
+:			long currentTime = Time.currentTime(Time.MILLISECS);
+:	
+:			ChannelState currentChannel = getCurrentChannel();
+:	
+:			/*Logger.appendString(csr.s2b("Recieving on channel "));
+:	        Logger.appendInt(currentChannel.id);
+:	        Logger.flush(Mote.WARN);*/
+:	
+:	
+:			switch(rxState) {
+:				case STATE_DISCOVER:
+:					if(undiscoveredChannels) {
+:						if (currentChannel.channelNeedsSamples()) {
+:				        	/*Logger.appendString(csr.s2b("Payload  "));
+:				            Logger.appendInt(payload);
+:				            Logger.flush(Mote.WARN);*/
+:	
+:							int sampleTimeId = currentChannel.addChannelSampleTime(currentTime, payload);
+:	
+:							if(sampleTimeId == 2) {
+:								if(currentChannel.isPeriodInconclusive()) {
+:	                                	/*Logger.appendString(csr.s2b("Period is inconclusive  "));
+:	        				            Logger.flush(Mote.WARN);*/
+:	
+:									currentChannel.discardFirstAndRotate();
+:								}
+:							}
+:						}
+:	
+:						// recheck if we have both samples after addChannelSampleTime (because we can discard some if the results are inconclusive)
+:						if (!currentChannel.channelNeedsSamples()) {
+:				        	/*Logger.appendString(csr.s2b("Discovered channel "));
+:				            Logger.appendInt(currentChannel.id);
+:				        	Logger.appendString(csr.s2b(" with payload "));
+:				            Logger.appendInt(payload);
+:				        	Logger.appendString(csr.s2b(" and period "));
+:				            Logger.appendLong(currentChannel.getChannelPeriod());
+:				            Logger.appendString(csr.s2b(". Scheduling send and get n"));
+:				            Logger.flush(Mote.WARN);*/
+:	
+:							currentChannel.scheduleSend(payload);
+:							currentChannel.scheduleGetN(payload);
+:	
+:							selectNextUndiscoveredChannel();
+:						}
+:					}
+:					break;
+:				case STATE_GETN:
+:					if(currentChannel.hasMissedGetNWindow(time)) {
+:						// because the auxiliary channel might get preempted by the send channel,
+:						// we might have missed the window to get the value of n. thus, we reschedule
+:						// using the current payload.
+:	
+:						/*Logger.appendString(csr.s2b("Missed get n window on channel "));
+:			            Logger.appendInt(currentChannel.id);
+:						Logger.appendString(csr.s2b(". Handled at "));
+:			            Logger.appendLong(time);
+:						Logger.appendString(csr.s2b(" with payload "));
+:						Logger.appendInt(payload);
+:			            Logger.flush(Mote.WARN);*/
+:	
+:						currentChannel.scheduleGetN(payload);
+:					} else {
+:						/*Logger.appendString(csr.s2b("Got n on channel "));
+:			            Logger.appendInt(currentChannel.id);
+:			            Logger.appendString(csr.s2b(" with payload "));
+:						Logger.appendInt(payload);
+:			            Logger.flush(Mote.WARN);*/
+:	
+:						currentChannel.n = payload;
+:	
+:						// start the message sending loop
+:						currentChannel.startLoop();
+:	
+:						gotNChannels++;
+:					}
+:	
+:					auxiliaryChannelIndex = -1;
+:					setChannel();
+:	
+:					rxState = STATE_DISCOVER;
+:	
+:					break;
+:			}
+:	
+:	
+:	
+:			return 0;
+:		}
+:	
+:		// this function is what decides the priority levels of the given channels
+:		private static int getCurrentChannelIndex() {
+:			return sendChannelIndex != -1 ? sendChannelIndex : auxiliaryChannelIndex != -1 ? auxiliaryChannelIndex : discoveryChannelIndex;
+:		}
+:	
+:		private static ChannelState getChannel(int channelIndex) {
+:			return channels[channelIndex];
+:		}
+:	
+:	
+:		private static ChannelState getCurrentChannel() {
+:			return getChannel(getCurrentChannelIndex());
+:		}
+:	
+:		// this function is referenced from the ChannelState class as a callback for preparing to get the value of n
+:		public static void setGetNOnChannelIndex(int auxiliaryChannelIndex) {
+:			/*Logger.appendString(csr.s2b("Entering state getN on "));
+:			Logger.appendInt(auxiliaryChannelIndex);
+:	        Logger.flush(Mote.WARN);*/
+:	
+:			Source.auxiliaryChannelIndex = auxiliaryChannelIndex;
+:			rxState = Source.STATE_GETN;
+:			setChannel();
+:		}
+:	
+:		public static void setChannel() {
+:			setChannel(false);
+:		}
+:	
+:		private static void setChannel(boolean initial) {
+:			if(!initial || rxOn) {
+:				radioDev.stopRx();
+:				rxOn = false;
+:			}
+:	
+:			// no need for concurrency controls because mote runner isn't preemptive
+:			radioDev.setChannel(getCurrentChannel().id);
+:			radioDev.setPanId(getCurrentChannel().pan, false);
+:	
+:			if(sendChannelIndex == -1 && gotNChannels < channels.length) {
+:				radioDev.startRx(Device.ASAP|Device.RX4EVER, 0, 0);
+:				rxOn = true;
+:			}
+:		}
+:	
+:		private static void selectNextUndiscoveredChannel() {
+:			int nextChannel = discoveryChannelIndex + 1;
+:	
+:			if (nextChannel == channels.length) {
+:				undiscoveredChannels = false;
+:			} else {
+:	            /*Logger.appendString(csr.s2b("Selected next undiscovered channel, index"));
+:	            Logger.appendInt(nextChannel);
+:	            Logger.flush(Mote.WARN);*/
+:	
+:				discoveryChannelIndex = nextChannel;
+:	
+:				setChannel();
+:			}
+:		}
+:	}
+S	C:/Users/Andrei/Desktop/Workspace/EMBS-MoteRunner/OA2/src/OA2/ChannelState.java
+:	package OA2;
+:	
+:	import com.ibm.saguaro.system.Radio;
+:	import com.ibm.saguaro.system.Time;
+:	import com.ibm.saguaro.system.Timer;
+:	import com.ibm.saguaro.system.TimerEvent;
+:	import com.ibm.saguaro.system.Util;
+:	import com.ibm.saguaro.system.Device;
+:	import com.ibm.saguaro.system.LED;
+:	/*import com.ibm.saguaro.system.csr;
+:	import com.ibm.saguaro.logger.Logger;
+:	import com.ibm.saguaro.system.Mote;*/
+:	
+:	public class ChannelState {
+:	    // the time value in miliseconds at second first time
+:	    private long firstSample = 0;
+:	    // the payload captured with the first sample
+:	    private int firstSamplePayload = 0;
+:	    // the time value in miliseconds at second sample time
+:	    private long secondSample = 0;
+:	    // the payload captured with the second sample
+:	    private int secondSamplePayload = 0;
+:	
+:	    // channel number
+:	    public byte id = 0;
+:	    // pan id
+:	    public int pan = 0;
+:	    // for ease of use, this is the index at which this instance exists in Source.channels
+:	    public int index = 0;
+:	
+:	    // determined value for n
+:	    public int n = 0;
+:	
+:	    // counter value for the number of iterations the message sending loop has gone through
+:	    private int loopIncrement = 0;
+:	    // the ticks vlaue at the time the loop has been started, useful in preventing timer drift
+:	    private long loopBaseTicks = 0;
+:	
+:	    // the tick value at which the n value transmission window starts. the channel needs to be setup before this value.
+:	    public long getNTimeTicks = 0;
+:	
+:	    // frame container
+:	    private byte[] xmit;
+:	
+:	    // reference to Radio device passed on from Source
+:	    private Radio radioDev;
+:	
+:	    // timers
+:	    private Timer sendTimer = new Timer();
+:	    private Timer getNTimer = new Timer();
+:	    private Timer loopTimer = new Timer();
+:	
+:	    // we use this value to offset timer alarm values so we can setup before the event needs to take place
+:	    private static final long offsetCorrectionTicks = Time.toTickSpan(Time.MILLISECS, 50);
+:	
+:	    public ChannelState(int index, int id, int pan, Radio radioDev) {
+:	        this.index = index;
+:	        this.id = (byte) id;
+:	        this.pan = pan;
+:	        this.radioDev = radioDev;
+:	
+:	        xmit = new byte[12];
+:	        xmit[0] = Radio.FCF_BEACON;
+:	        xmit[1] = Radio.FCA_SRC_SADDR | Radio.FCA_DST_SADDR;
+:	        Util.set16le(xmit, 3, pan); // dest panid
+:	        Util.set16le(xmit, 5, pan); // broadcast address
+:	        Util.set16le(xmit, 7, pan); // own PAN address
+:	        Util.set16le(xmit, 9, 0x1); // own short address
+:	        xmit[11] = (byte)(11+id);
+:	
+:	        sendTimer.setCallback(new TimerEvent(this) {
+:	            public void invoke(byte arg0, long time) {
+:	                ((ChannelState)obj).send(arg0, time);
+:	            }
+:	        });
+:	
+:	        loopTimer.setCallback(new TimerEvent(this) {
+:	            public void invoke(byte arg0, long time) {
+:	                ((ChannelState)obj).loop(arg0, time);
+:	            }
+:	        });
+:	
+:	        getNTimer.setCallback(new TimerEvent(this) {
+:	            public void invoke(byte arg0, long time) {
+:	                ((ChannelState)obj).setGetN(arg0, time);
+:	            }
+:	        });
+:	    }
+:	
+:	    public long getChannelPeriod() {
+:	        int sampleDifference = (int)(secondSample - firstSample);
+:	        int payloadDifference = (int)(firstSamplePayload - secondSamplePayload);
+:	
+:	        if(firstSamplePayload <= secondSamplePayload || (firstSamplePayload > secondSamplePayload &&  (sampleDifference/payloadDifference >= 1500))) {
+:	            // assumption: we're sticking our head in the sand and hoping that we can't be delayed by more than one reception/sleep phase.
+:	            return sampleDifference/(payloadDifference + 13);
+:	        } else {
+:	            return sampleDifference/payloadDifference;
+:	        }
+:	    }
+:	
+:	    public boolean isPeriodInconclusive() {
+:	        int sampleDifference = (int)(secondSample - firstSample);
+:	        int payloadDifference = (int)(firstSamplePayload - secondSamplePayload);
+:	
+:	        // if the both linear equations below are true, then we cannot be sure which one reflects reality (as per Nyquist theorem), so we need new samples
+:	        return firstSamplePayload > secondSamplePayload &&
+:	                sampleDifference/payloadDifference <= 1500 &&
+:	                sampleDifference/(payloadDifference+13) >= 250
+:	                // also, if the period is higher than the maximum admissible t (because we met more than one reception/sleep phase), then it's clearly wrong, need new samples
+:	                || sampleDifference/(payloadDifference+13) >= 1500;
+:	    }
+:	
+:	    // store captured samples
+:	    public int addChannelSampleTime(long currentTime, int payload) {
+:	        if (firstSample == 0) {
+:	            firstSample = currentTime;
+:	            firstSamplePayload = payload;
+:	
+:	            return 1;
+:	        } else if (secondSample == 0) {
+:	            secondSample = currentTime;
+:	            secondSamplePayload = payload;
+:	
+:	            return 2;
+:	        }
+:	
+:	        return -1;
+:	    }
+:	
+:	    public boolean  channelNeedsSamples() {
+:	        return firstSample == 0 || secondSample == 0;
+:	    }
+:	
+:	    public void discardFirstAndRotate() {
+:	        firstSample = secondSample;
+:	        firstSamplePayload = secondSamplePayload;
+:	        secondSample = 0;
+:	        secondSamplePayload = 0;
+:	    }
+:	
+:	    public void scheduleSend(int payload) {
+:	        /*Logger.appendString(csr.s2b("Scheduling send at "));
+:	    	Logger.appendLong(Time.toTickSpan(Time.MILLISECS, payload*getChannelPeriod()));
+:	        Logger.flush(Mote.WARN);*/
+:	
+:	        // set timer for sending a message on this channel, plus an  offset so that we can be sure it lands inside the reception phase
+:	        sendTimer.setAlarmBySpan(Time.toTickSpan(Time.MILLISECS, payload*getChannelPeriod())+offsetCorrectionTicks);
+:	    }
+:	    public void scheduleGetN(int payload) {
+:	        getNTimeTicks = Time.currentTicks() + Time.toTickSpan(Time.MILLISECS, (payload+11)*getChannelPeriod());
+:	    	
+:	    	/*Logger.appendString(csr.s2b("Scheduling getN at "));
+:	    	Logger.appendLong(getNTimeTicks);
+:	        Logger.flush(Mote.WARN);*/
+:	
+:	        // set timer for getting the value of n, minus an offset so that we can be sure we're listening to the channel when n will be sent by the sink
+:	        getNTimer.setAlarmTime(getNTimeTicks-offsetCorrectionTicks);
+:	    }
+:	
+:	    public void loop(byte arg0, long time) {
+:	        scheduleSend(n);
+:	        setLoopTimer();
+:	    }
+:	
+:	    public void send(byte arg0, long time) {
+:	    	/*Logger.appendString(csr.s2b("Sending message on channel "));
+:	        Logger.appendInt(id);
+:	        Logger.flush(Mote.WARN);*/
+:	
+:	        LED.setState((byte)2, (byte)1);
+:	
+:	        Source.sendChannelIndex = index;
+:	        Source.setChannel();
+:	
+:	        radioDev.transmit(Device.ASAP|Radio.TXMODE_CCA, xmit, 0, xmit.length, 0);
+:	
+:	        LED.setState((byte)2, (byte)0);
+:	
+:	        Source.sendChannelIndex = -1;
+:	        Source.setChannel();
+:	    }
+:	
+:	    public void setGetN(byte arg0, long time) {
+:	        Source.setGetNOnChannelIndex(index);
+:	    }
+:	
+:	    public void startLoop() {
+:	    	/*Logger.appendString(csr.s2b("Starting loop for channel "));
+:	        Logger.appendInt(id);
+:	        Logger.flush(Mote.WARN);*/
+:	
+:	        // this function is invoked onRecieve of the n value.
+:	        // thus, we can use the time of the initial call of this function
+:	        // as an un-skewed base (synced with the Sink) for further invocations of loop.
+:	        // if we set subsequent loop alarms relative to the previous invocation we might end
+:	        // up with having an ever-increasing drift/skew/offset in our invocations
+:	        loopBaseTicks = Time.currentTicks();
+:	
+:	        // initialize the counter
+:	        loopIncrement = 1;
+:	
+:	        //  messages 2,3,4.... will have a period of n+11 starting at n
+:	        loopTimer.setAlarmTime(loopBaseTicks+Time.toTickSpan(Time.MILLISECS, n*getChannelPeriod()));
+:	
+:	        // schedule sending the first message outside of the loop. we are sending this separately,
+:	        // because it doesn't have the same period as the rest.
+:	        scheduleSend(n);
+:	
+:	        setLoopTimer();
+:	    }
+:	
+:	    private void setLoopTimer() {
+:	        // periodic sender
+:	        loopTimer.setAlarmTime(loopBaseTicks+Time.toTickSpan(Time.MILLISECS, loopIncrement*(n+11)*getChannelPeriod()));
+:	        loopIncrement++;
+:	    }
+:	
+:	    public boolean hasMissedGetNWindow(long time) {
+:	        // ideally, we're looking to compare if time == getNTime + getChannelPeriod()
+:	        // but the documentation is not very clear about what values time might take
+:	        // (and what offsets to expect), so we're taking the safe side and comparing
+:	        // if it's more than half of a period away from getNTime. so the assumption
+:	        // is that those offsets are smaller than half of a period.
+:	
+:	        return getNTimeTicks + Time.toTickSpan(Time.MILLISECS, getChannelPeriod()/2) < time;
+:	    }
+:	}

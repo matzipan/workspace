@@ -1,0 +1,70 @@
+.sxp-version 2.0
+
+.assembly source-1.0
+.requires saguaro-system-11.0 "C:\\Program Files\\moterunner\\gac\\saguaro-system-11.0.sxp" com.ibm.saguaro.system
+
+
+.namespace OA2
+
+.class#0 public Source
+
+	.field#0 static public r:OA2.ChannelState[] channels
+
+	.field#2 static public i sendChannelIndex
+
+	.field#1 static public i gotNChannels
+
+	.field static public final i STATE_DISCOVER, 1
+
+	.field static public final i STATE_GETN, 2
+
+	.field#0 static public i rxState
+
+	.method#0 static public Source(r:OA2.Source this)v
+
+	.method#1 static public setGetNOnChannelIndex(i auxiliaryChannelIndex)v
+
+	.method#2 static public setChannel()v
+.end
+
+
+.class#1 public ChannelState
+
+	.field#0 public c id
+
+	.field#1 public i pan
+
+	.field#2 public i index
+
+	.field#3 public i n
+
+	.field#4 public l getNTimeTicks
+
+	.method#0 public getChannelPeriod()l
+
+	.method#1 public isPeriodInconclusive()z
+
+	.method#2 public addChannelSampleTime(l currentTime, i payload)i
+
+	.method#3 public channelNeedsSamples()z
+
+	.method#4 public discardFirstAndRotate()v
+
+	.method#5 public scheduleSend(i payload)v
+
+	.method#6 public scheduleGetN(i payload)v
+
+	.method#7 public loop(c arg0, l time)v
+
+	.method#8 public send(c arg0, l time)v
+
+	.method#9 public setGetN(c arg0, l time)v
+
+	.method#10 public startLoop()v
+
+	.method#11 public hasMissedGetNWindow(l time)z
+
+	.method#3 static public ChannelState(r:OA2.ChannelState this, i index,i id,i pan,r:com.ibm.saguaro.system.Radio radioDev)v
+.end
+
+.end

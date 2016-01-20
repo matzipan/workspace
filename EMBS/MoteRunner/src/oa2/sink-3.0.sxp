@@ -1,0 +1,17 @@
+.sxp-version 2.0
+
+.assembly sink-3.0
+
+
+.namespace OA2
+
+.class#0 public Sink3
+
+	.method#0 static public Sink3(r:OA2.Sink3 this)v
+
+	.method#1 static public periodicSend(c param, l time)v
+
+	.method#2 static public restart(c param, l time)v
+.end
+
+.end

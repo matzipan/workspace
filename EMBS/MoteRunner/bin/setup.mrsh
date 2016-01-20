@@ -1,0 +1,7 @@
+saguaro-start
+mote-create -d iris 4
+moma-load logger-11.0
+0 moma-load source
+1 moma-load sink-1.0
+2 moma-load sink-2.0
+3 moma-load sink-3.0

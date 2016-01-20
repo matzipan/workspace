@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="jar://C:/Program Files/moterunner/gac/avrraven-system-11.0.jar!/" />
+    <libelement value="jar://C:/Program Files/moterunner/gac/dust-system-11.0.jar!/" />
+    <libelement value="jar://C:/Program Files/moterunner/gac/iris-system-11.0.jar!/" />
+    <libelement value="jar://C:/Program Files/moterunner/gac/logger-11.0.jar!/" />
+    <libelement value="jar://C:/Program Files/moterunner/gac/saguaro-system-11.0.jar!/" />
+    <libelement value="jar://C:/Program Files/moterunner/lib/asm-3.1.jar!/" />
+    <libelement value="jar://C:/Program Files/moterunner/lib/java-aux-2.0.jar!/" />
+    <libelement value="jar://C:/Program Files/moterunner/lib/mrdoclet.jar!/" />
+    <libelement value="jar://C:/Program Files/moterunner/lib/mzc.jar!/" />
+    <libelement value="jar://C:/Program Files/moterunner/lib/stubs.jar!/" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="module-library">
+      <library name="avrraven-system-11.0.jar">
+        <CLASSES>
+          <root url="jar://C:/Program Files/moterunner/gac/avrraven-system-11.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="dust-system-11.0.jar">
+        <CLASSES>
+          <root url="jar://C:/Program Files/moterunner/gac/dust-system-11.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="iris-system-11.0.jar">
+        <CLASSES>
+          <root url="jar://C:/Program Files/moterunner/gac/iris-system-11.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="logger-11.0.jar">
+        <CLASSES>
+          <root url="jar://C:/Program Files/moterunner/gac/logger-11.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="saguaro-system-11.0.jar">
+        <CLASSES>
+          <root url="jar://C:/Program Files/moterunner/gac/saguaro-system-11.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="asm-3.1.jar">
+        <CLASSES>
+          <root url="jar://C:/Program Files/moterunner/lib/asm-3.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="java-aux-2.0.jar">
+        <CLASSES>
+          <root url="jar://C:/Program Files/moterunner/lib/java-aux-2.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="mrdoclet.jar">
+        <CLASSES>
+          <root url="jar://C:/Program Files/moterunner/lib/mrdoclet.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="mzc.jar">
+        <CLASSES>
+          <root url="jar://C:/Program Files/moterunner/lib/mzc.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="stubs.jar">
+        <CLASSES>
+          <root url="jar://C:/Program Files/moterunner/lib/stubs.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>
