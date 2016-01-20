@@ -26,6 +26,8 @@ public class KLPartition {
         if(levels == -1) {
             return;
         } else {
+            System.out.println("KL - Pre: "+ a + " " + b);
+
             double sumDeltaTMax;
 
             // after the first switch, the set items become locked and this hashtable is used to signal that
@@ -109,7 +111,7 @@ public class KLPartition {
                 }
             } while(sumDeltaTMax > 0);
 
-            System.out.println(a + " " + b);
+            System.out.println("KL - Post: "+ a + " " + b);
 
             int setSize = a.size();
             optimizePartitions(a.subList(0, setSize / 2), a.subList(setSize / 2, setSize), levels - 1);

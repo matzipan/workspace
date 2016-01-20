@@ -36,7 +36,7 @@ public class KLPartitionTest {
 
         partition.optimize();
 
-        Assert.assertEquals(partition.getOrderedSet(), "[E, F, G, J, K, L, A, B, C, D, H, I]");
+        Assert.assertEquals("[E, F, G, J, K, L, A, D, B, C, H, I]", partition.getOrderedSet().toString());
     }
 
     @Test
@@ -54,7 +54,7 @@ public class KLPartitionTest {
 
         partition.optimize();
 
-        Assert.assertEquals(partition.getOrderedSet().toString(), "[C, B, A, D]");
+        Assert.assertEquals("[C, B, A, D]", partition.getOrderedSet().toString());
     }
 
     @Test
