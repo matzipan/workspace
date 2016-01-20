@@ -1,21 +1,17 @@
 package P10;
 
-import com.sun.deploy.util.ArrayUtil;
-
-import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 
 /**
  * Created by Andrei on 14/01/2016.
  */
 public class KLPartition {
-
-
-    int[][] weights;
+    KLWeights weights;
     List<Character> orderedSet;
     int levels;
 
-    public KLPartition(int[][] weights,  List<Character> orderedSet, int levels) {
+    public KLPartition(KLWeights weights,  List<Character> orderedSet, int levels) {
         this.weights = weights;
         this.orderedSet = orderedSet;
         this.levels = levels;
@@ -27,65 +23,117 @@ public class KLPartition {
     }
 
     public void optimizePartitions(List<Character> a, List<Character> b, int levels) {
-        if(levels == 0) {
+        if(levels == -1) {
             return;
         } else {
-            int deltaT;
+            double sumDeltaTMax;
+
+            // after the first switch, the set items become locked and this hashtable is used to signal that
+            Hashtable locked = new Hashtable<Character, Boolean>();
 
             do {
-                ArrayList<Integer> difference = new ArrayList<>();
+                // the deltaT values which cause a switch get recorded here
+                double[] deltaTs = new double[a.size()];
 
-                difference.addAll(calculateDifference(a, b));
-                difference.addAll(calculateDifference(b, a));
+                // the original indices of the items which got switched are recorded here
+                int[] originalIndexForA = new int[a.size()];
+                int[] originalIndexForB = new int[a.size()];
 
-                // to switch, deltaT = Da + Db - 2 ca,b needs to be maximal
-                deltaT = Integer.MIN_VALUE;
-                Character deltaTA = new Character('0');
-                Character deltaTB = new Character('0');
+                for (int i = 0; i < a.size(); i++) {
+                    double deltaT;
 
-                for (Character c : a) {
-                    for (Character d : b) {
-                        int tempDeltaT =
-                                difference.get(charToInt(c)) +
-                                        difference.get(charToInt(d)) -
-                                        weights[charToInt(c)][charToInt(d)] -
-                                        weights[charToInt(d)][charToInt(c)];
+                    Hashtable<Character, Integer> difference = new Hashtable<>();
 
-                        if (tempDeltaT > deltaT) {
-                            deltaT = tempDeltaT;
+                    difference.putAll(calculateDifference(a, b));
+                    difference.putAll(calculateDifference(b, a));
 
-                            deltaTA = c;
-                            deltaTB = d;
+                    // to switch, deltaT = Da + Db - 2 ca,b needs to be maximal
+                    deltaT = Double.NEGATIVE_INFINITY;
+                    Character deltaTA = new Character('0');
+                    Character deltaTB = new Character('0');
+
+                    // these nested loops find the "best" (local optimum) switches to be made
+                    for (Character c : a) {
+                        for (Character d : b) {
+                            if (!locked.containsKey(c) && !locked.containsKey(d)) {
+                                double tempDeltaT =
+                                        difference.get(c) + difference.get(d) - 2 * (weights.getWeight(c,d) + weights.getWeight(d,c));
+
+                                if (tempDeltaT > deltaT) {
+                                    deltaT = tempDeltaT;
+
+                                    deltaTA = c;
+                                    deltaTB = d;
+                                }
+                            }
                         }
+                    }
+
+                    // perform switch
+                    if(deltaTA!='0' && deltaTB!='0') {
+                        // keep track of where the switch has happened
+                        deltaTs[i] = deltaT;
+                        originalIndexForA[i] = a.indexOf(deltaTA);
+                        originalIndexForB[i] = b.indexOf(deltaTB);
+
+                        // switch
+                        a.set(a.indexOf(deltaTA), deltaTB);
+                        b.set(b.indexOf(deltaTB), deltaTA);
+
+                        // mark the items as locked
+                        locked.put(deltaTA, new Boolean(true));
+                        locked.put(deltaTB, new Boolean(true));
                     }
                 }
 
-                orderedSet.set(orderedSet.indexOf(deltaTA), deltaTB);
-                orderedSet.set(orderedSet.indexOf(deltaTB), deltaTA);
-            } while(deltaT >= 0); // repeat until deltaT is negative
 
-            int setSize = orderedSet.size();
-            optimizePartitions(a.subList(0,setSize/2), a.subList(setSize/2,setSize), levels-1);
-            optimizePartitions(b.subList(0,setSize/2), b.subList(setSize/2,setSize), levels-1);
+                sumDeltaTMax = 0;
+                double tempSumDeltaT = 0;
+                int maxIndex = -1;
+
+                // find the greatest partial sum starting from the first switch, again, local optimum
+                for (int i = 0; i < a.size(); i++) {
+                    tempSumDeltaT = tempSumDeltaT + deltaTs[i];
+
+                    if (tempSumDeltaT > sumDeltaTMax) {
+                        sumDeltaTMax = tempSumDeltaT;
+                        maxIndex = i;
+                    }
+                }
+
+                // revert the switches which cause the sum to decrease
+                for (int i = maxIndex + 1; i < a.size(); i++) {
+                    Character x = a.get(originalIndexForA[i]);
+                    a.set(originalIndexForA[i], b.get(originalIndexForB[i]));
+                    b.set(originalIndexForB[i], x);
+                }
+            } while(sumDeltaTMax > 0);
+
+            System.out.println(a + " " + b);
+
+            int setSize = a.size();
+            optimizePartitions(a.subList(0, setSize / 2), a.subList(setSize / 2, setSize), levels - 1);
+            optimizePartitions(b.subList(0, setSize / 2), b.subList(setSize / 2, setSize), levels - 1);
         }
     }
 
-    public ArrayList<Integer> calculateDifference(List<Character> a, List<Character> b) {
-        ArrayList<Integer> difference = new ArrayList<>();
+    public Hashtable<Character, Integer> calculateDifference(List<Character> a, List<Character> b) {
+        Hashtable<Character, Integer> difference = new Hashtable<>();
 
         // for each node, calculate internal/external cost  and then store difference E - I for both outward and inward edges
         for(Character c : a) {
             int D = 0;
-            for(int i=0; i<weights[charToInt(c)].length; i++) {
-                if(a.contains(intToChar(i))) {
-                    D -= weights[charToInt(c)][i];
-                    D -= weights[i][charToInt(c)];
-                } else if(b.contains(intToChar(i))) {
-                    D += weights[charToInt(c)][i];
-                    D += weights[i][charToInt(c)];
+            for(int i=0; i<orderedSet.size(); i++) {
+                char iChar = KLWeights.intToChar(i);
+                if(a.contains(iChar)) { // internal
+                    D -= weights.getWeight(c, iChar);
+                    D -= weights.getWeight(iChar, c);
+                } else if(b.contains(KLWeights.intToChar(i))) { // external
+                    D += weights.getWeight(c,iChar);
+                    D += weights.getWeight(iChar, c);
                 }
             }
-            difference.add(D);
+            difference.put(c, D);
         }
 
         return difference;
@@ -93,13 +141,5 @@ public class KLPartition {
 
     public List<Character> getOrderedSet() {
         return orderedSet;
-    }
-
-    public static int charToInt(Character x) {
-        return (int) x - (int) 'A';
-    }
-
-    public static Character intToChar(int x) {
-        return new Character((char) ((int) 'A' + x));
     }
 }

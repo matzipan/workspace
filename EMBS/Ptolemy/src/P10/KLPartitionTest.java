@@ -12,33 +12,54 @@ import java.util.List;
 public class KLPartitionTest {
     @Test
     public void PartitionTest() {
-        int[][] weights = {
-                {0, 0, 64, 0, 0, 8, 0, 0, 0, 0, 0, 0},
-                {0, 0, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 0, 0, 128, 0, 0, 0, 0, 0, 0, 0, 0},
-                {0, 16, 0, 0, 48, 0, 0, 48, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0},
-                {16, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8},
-                {0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24},
-                {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-        };
+        List<Character> orderedSet = Arrays.asList('A', 'B', 'G', 'J', 'K', 'L', 'C', 'D', 'E', 'F', 'H', 'I');
 
-        List<Character> orderedSet = Arrays.asList('A', 'J', 'K', 'B', 'G', 'L', 'C', 'H', 'I', 'D', 'E', 'F');
+        KLWeights weights = new KLWeights(orderedSet.size());
+
+        weights.setWeight('A', 'C', 64);
+        weights.setWeight('B', 'C', 64);
+        weights.setWeight('A', 'F', 8);
+        weights.setWeight('C', 'D', 128);
+        weights.setWeight('D', 'B', 16);
+        weights.setWeight('F', 'A', 16);
+        weights.setWeight('F', 'G', 16);
+        weights.setWeight('D', 'E', 48);
+        weights.setWeight('D', 'H', 48);
+        weights.setWeight('H', 'I', 48);
+        weights.setWeight('I', 'K', 12);
+        weights.setWeight('J', 'K', 48);
+        weights.setWeight('K', 'L', 24);
+        weights.setWeight('E', 'G', 16);
+        weights.setWeight('G', 'L', 8);
 
         KLPartition partition = new KLPartition(weights, orderedSet, 2);
 
         partition.optimize();
 
-        System.out.println(partition.getOrderedSet());
+        Assert.assertEquals(partition.getOrderedSet(), "[E, F, G, J, K, L, A, B, C, D, H, I]");
+    }
+
+    @Test
+    public void SmallPartitionTest() {
+        List<Character> orderedSet = Arrays.asList('A', 'B', 'C', 'D');
+
+        KLWeights weights = new KLWeights(orderedSet.size());
+
+        weights.setWeight('A', 'B', 10);
+        weights.setWeight('A', 'C', 64);
+        weights.setWeight('B', 'C', 200);
+
+
+        KLPartition partition = new KLPartition(weights, orderedSet, 1);
+
+        partition.optimize();
+
+        Assert.assertEquals(partition.getOrderedSet().toString(), "[C, B, A, D]");
     }
 
     @Test
     public void CharConversionTest() {
-        Assert.assertTrue(KLPartition.charToInt(new Character('A'))==0);
-        Assert.assertTrue(KLPartition.intToChar(0).charValue() == 'A');
+        Assert.assertTrue(KLWeights.charToInt(new Character('A'))==0);
+        Assert.assertTrue(KLWeights.intToChar(0).charValue() == 'A');
     }
 }
