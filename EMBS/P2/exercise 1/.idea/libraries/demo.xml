@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="demo">
+    <CLASSES>
+      <root url="jar://C:/apps/Ptolemy/ptII6.0.2/ptolemy/demo/demo.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

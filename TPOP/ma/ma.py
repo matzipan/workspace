@@ -11,7 +11,7 @@ try:
 
 	application = Application(CLIMedia(CLIInput(), CLIOutput()), MemoryUserRepository(), 
 		MemoryDataRepository(), MemoryBillRepository())
-application.run() 
+	application.run() 
 except Exception: 
 	"""
 		If your exception reaches this point, it's either you are _bad_ programmer 

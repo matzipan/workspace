@@ -1,0 +1,269 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+    "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="model" class="ptolemy.actor.TypedCompositeActor">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="6.0.2">
+    </property>
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={0, 0, 840, 1010}, maximized=false}">
+    </property>
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[617, 894]">
+    </property>
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.0">
+    </property>
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter" value="{178.8716216216217, 296.1283783783784}">
+    </property>
+    <property name="DE Director" class="ptolemy.domains.de.kernel.DEDirector">
+        <property name="stopTime" class="ptolemy.data.expr.Parameter" value="2000">
+        </property>
+        <property name="timeResolution" class="ptolemy.moml.SharedParameter" value="1E-1">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-25.0, -90.0]">
+        </property>
+    </property>
+    <port name="port" class="ptolemy.actor.TypedIOPort">
+        <property name="output"/>
+        <property name="multiport"/>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{595.0, 295.0}">
+        </property>
+    </port>
+    <port name="port2" class="ptolemy.actor.TypedIOPort">
+        <property name="input"/>
+        <property name="output"/>
+        <property name="multiport"/>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{180.0, 875.0}">
+        </property>
+    </port>
+    <entity name="Clock R" class="ptolemy.actor.lib.Clock">
+        <property name="period" class="ptolemy.data.expr.Parameter" value="200.0">
+        </property>
+        <property name="offsets" class="ptolemy.data.expr.Parameter" value="{0.0}">
+        </property>
+        <property name="values" class="ptolemy.data.expr.Parameter" value="{30.0}">
+        </property>
+        <doc>Create a set of pulses</doc>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-90.0, 260.0]">
+        </property>
+    </entity>
+    <entity name="RecordAssembler" class="ptolemy.actor.lib.RecordAssembler">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[85.0, 300.0]">
+        </property>
+        <port name="comptime" class="ptolemy.actor.TypedIOPort">
+            <property name="input"/>
+        </port>
+    </entity>
+    <entity name="CPU" class="embs.CPU">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[230.0, 565.0]">
+        </property>
+    </entity>
+    <entity name="Counter2" class="ptolemy.actor.lib.Counter">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[215.0, 290.0]">
+        </property>
+    </entity>
+    <entity name="MonitorValue2" class="ptolemy.actor.lib.MonitorValue">
+        <property name="value" class="ptolemy.data.expr.Parameter" value="41">
+        </property>
+        <doc>Monitor and display values</doc>
+        <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="20">
+        </property>
+        <property name="_icon" class="ptolemy.vergil.icon.UpdatedValueIcon">
+            <property name="attributeName" class="ptolemy.kernel.util.StringAttribute" value="value">
+            </property>
+            <property name="displayWidth" class="ptolemy.data.expr.Parameter" value="displayWidth">
+            </property>
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[380.0, 370.0]">
+        </property>
+    </entity>
+    <entity name="Clock S" class="ptolemy.actor.lib.Clock">
+        <property name="period" class="ptolemy.data.expr.Parameter" value="200.0">
+        </property>
+        <property name="offsets" class="ptolemy.data.expr.Parameter" value="{100.0}">
+        </property>
+        <property name="values" class="ptolemy.data.expr.Parameter" value="{20.0}">
+        </property>
+        <doc>Create a set of pulses</doc>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-90.0, 320.0]">
+        </property>
+    </entity>
+    <entity name="Clock T" class="ptolemy.actor.lib.Clock">
+        <property name="period" class="ptolemy.data.expr.Parameter" value="300.0">
+        </property>
+        <property name="offsets" class="ptolemy.data.expr.Parameter" value="{30.0}">
+        </property>
+        <property name="values" class="ptolemy.data.expr.Parameter" value="{140.0}">
+        </property>
+        <doc>Create a set of pulses</doc>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{-90.0, 380.0}">
+        </property>
+    </entity>
+    <entity name="CPU 1 Utilisation" class="ptolemy.actor.lib.gui.TimedPlotter">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={911, 380, 516, 282}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[500, 223]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[385.0, 520.0]">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>TimedPlotter</title>
+<xRange min="0.0" max="2000.0"/>
+<yRange min="0.0" max="100.0"/>
+</plot>?>
+        </configure>
+    </entity>
+    <entity name="Dispatcher" class="embs.Dispatcher">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[0.0, 690.0]">
+        </property>
+    </entity>
+    <entity name="CPU2" class="embs.CPU">
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[245.0, 685.0]">
+        </property>
+    </entity>
+    <entity name="CPU 2 Utilisation" class="ptolemy.actor.lib.gui.TimedPlotter">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={913, 675, 516, 282}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[500, 223]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[405.0, 680.0]">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>TimedPlotter</title>
+<xRange min="10.0" max="1970.0"/>
+<yRange min="0.0" max="100.0"/>
+</plot>?>
+        </configure>
+    </entity>
+    <entity name="Clock U" class="ptolemy.actor.lib.Clock">
+        <property name="period" class="ptolemy.data.expr.Parameter" value="100.0">
+        </property>
+        <property name="offsets" class="ptolemy.data.expr.Parameter" value="{10.0}">
+        </property>
+        <property name="values" class="ptolemy.data.expr.Parameter" value="{5.0}">
+        </property>
+        <doc>Create a set of pulses</doc>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-90.0, 435.0]">
+        </property>
+    </entity>
+    <entity name="Clock V" class="ptolemy.actor.lib.Clock">
+        <property name="period" class="ptolemy.data.expr.Parameter" value="120.0">
+        </property>
+        <property name="offsets" class="ptolemy.data.expr.Parameter" value="{0.0}">
+        </property>
+        <property name="values" class="ptolemy.data.expr.Parameter" value="{40.0}">
+        </property>
+        <doc>Create a set of pulses</doc>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[-90.0, 490.0]">
+        </property>
+    </entity>
+    <entity name="CPU 2 Queue" class="ptolemy.actor.lib.gui.TimedPlotter">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={365, 660, 516, 282}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[500, 223]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[400.0, 730.0]">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>TimedPlotter</title>
+<xRange min="10.0" max="1970.0"/>
+<yRange min="0.0" max="1.0"/>
+</plot>?>
+        </configure>
+    </entity>
+    <entity name="CPU 1 Queue" class="ptolemy.actor.lib.gui.TimedPlotter">
+        <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute" value="{bounds={402, 356, 516, 282}, maximized=false}">
+        </property>
+        <property name="_plotSize" class="ptolemy.actor.gui.SizeAttribute" value="[500, 223]">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="[400.0, 600.0]">
+        </property>
+        <configure>
+<?plotml <!DOCTYPE plot PUBLIC "-//UC Berkeley//DTD PlotML 1//EN"
+"http://ptolemy.eecs.berkeley.edu/xml/dtd/PlotML_1.dtd">
+<plot>
+<title>TimedPlotter</title>
+<xRange min="0.0" max="2000.0"/>
+<yRange min="0.0" max="1.0"/>
+</plot>?>
+        </configure>
+    </entity>
+    <relation name="relation8" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+    </relation>
+    <relation name="relation2" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+        <vertex name="vertex1" value="[40.0, 320.0]">
+        </vertex>
+    </relation>
+    <relation name="relation3" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+    </relation>
+    <relation name="relation" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+    </relation>
+    <relation name="relation4" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+    </relation>
+    <relation name="relation7" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+    </relation>
+    <relation name="relation9" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+    </relation>
+    <relation name="relation5" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+    </relation>
+    <relation name="relation6" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+        <vertex name="vertex1" value="[275.0, 625.0]">
+        </vertex>
+    </relation>
+    <relation name="relation11" class="ptolemy.actor.TypedIORelation">
+        <property name="width" class="ptolemy.data.expr.Parameter" value="1">
+        </property>
+        <vertex name="vertex1" value="[290.0, 730.0]">
+        </vertex>
+    </relation>
+    <link port="Clock R.output" relation="relation2"/>
+    <link port="RecordAssembler.output" relation="relation"/>
+    <link port="RecordAssembler.comptime" relation="relation2"/>
+    <link port="CPU.task" relation="relation9"/>
+    <link port="CPU.runningTask" relation="relation4"/>
+    <link port="CPU.utilisation" relation="relation3"/>
+    <link port="CPU.queue" relation="relation6"/>
+    <link port="Counter2.increment" relation="relation4"/>
+    <link port="Counter2.output" relation="relation8"/>
+    <link port="MonitorValue2.input" relation="relation8"/>
+    <link port="Clock S.output" relation="relation2"/>
+    <link port="Clock T.output" relation="relation2"/>
+    <link port="CPU 1 Utilisation.input" relation="relation3"/>
+    <link port="Dispatcher.input" relation="relation"/>
+    <link port="Dispatcher.update" relation="relation6"/>
+    <link port="Dispatcher.update" relation="relation11"/>
+    <link port="Dispatcher.output" relation="relation9"/>
+    <link port="Dispatcher.output" relation="relation5"/>
+    <link port="CPU2.task" relation="relation5"/>
+    <link port="CPU2.utilisation" relation="relation7"/>
+    <link port="CPU2.queue" relation="relation11"/>
+    <link port="CPU 2 Utilisation.input" relation="relation7"/>
+    <link port="Clock U.output" relation="relation2"/>
+    <link port="Clock V.output" relation="relation2"/>
+    <link port="CPU 2 Queue.input" relation="relation11"/>
+    <link port="CPU 1 Queue.input" relation="relation6"/>
+</entity>

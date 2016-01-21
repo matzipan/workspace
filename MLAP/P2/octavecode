@@ -1,0 +1,92 @@
+    6 plot(Data(:,1), Data(:,2), '*', 'markersize',2,'color','red');
+    7 [N,Columns]= size(Data); global X;
+    8 X = [ones(N,1),Data(:,1)]
+    9 global Y;
+   10 Y=Data(:,2);
+   11 ThetaTest=[0 0]'
+   12 X*ThetaTest 
+   13 Error = (Y-X*ThetaTesT)
+   14 Error = (Y-X*ThetaTest)
+   15 Error . ^2
+   16 Error . ^ 2
+   17 Error.^2
+   18 SquaredLoss = sum(Error.^2)
+   19 Error'*Error
+   20 Error*Error'
+   21 Grad = X'*Error
+   22 function [SqLoss,Grad] = squaredLoss(Theta)
+   23 global X;
+   24 global Y;
+   25 Error = Y - X*Theta;
+   26 SqLoss = Error’* Error;
+   27 if nargout > 1
+   28 Grad = -(X’ * Error);
+   29 end
+   30 endfunction
+   31 function [SqLoss,Grad] = squaredLoss(Theta)
+   32 global X;
+   33 global Y;
+   34 Error = Y - X*Theta;
+   35 SqLoss = Error’* Error;
+   36 if nargout > 1
+   37 Grad = -(X' * Error);end
+   38 endfunction
+   39 function [SqLoss,Grad] = squaredLoss(Theta)
+   40 global X;
+   41 global Y;
+   42 Error = Y - X*Theta;
+   43 SqLoss = Error'* Error;
+   44 if nargout > 1
+   45 Grad = -(X' * Error);end
+   46 endfunction
+   47 If you have a neural network (aka a multilayer perceptron) with only an input and an output layer and with no activation function, that is exactly equal to linear regression.options = optimset(‘GradObj’, ‘on’, ‘MaxIter’, 100000);
+   48 Theta0 = [0 0]’; % These are the intial values of Theta
+   49 options = optimset('GradObj', 'on', 'MaxIter', 100000);
+   50 Theta0 = [0 0]'; % These are the intial values of Theta
+   51 [Theta, TotalLoss] = fminunc(@squaredLoss, Theta0, options);
+   52 Theta
+   53 TotalLoss
+   54 P = Data(:,1);
+   55 plot(P, Theta(1) + Theta(2)*P, "color", "blue",
+   56  Data(:,1), Data(:,2), '*',"markersize", 2, "color", "red");
+   57 Data = dlmread('ageData.csv')
+   58 plot(Data(:,1), Data(:,2), '*',"markersize", 2, "color", "red");
+   59 X=[ones(N,1),Data(:,1)]
+   60 [N,Columns]= size(Data)
+   61 X=[ones(N,1),Data(:,1)]
+   62 global Y;
+   63 Y = Data(:,2);
+   64 ThetaTest=[0 0]'
+   65 options = optimset('GradObj', 'on', 'MaxIter', 100000);
+   66 Theta0 = [0 0]'; % These are the intial values of Theta
+   67 [Theta, TotalLoss] = fminunc(@squaredLoss, Theta0, options);
+   68 P = Data(:,1);
+   69 plot(P, Theta(1) + Theta(2)*P, "color", "blue",
+   70  Data(:,1), Data(:,2), ‘*’,"markersize", 2, "color", "red");
+   71 P = Data(:,1);
+   72 plot(P, Theta(1) + Theta(2)*P, "color", "blue",
+   73  Data(:,1), Data(:,2), '*',"markersize", 2, "color", "red");
+   74  Data(:,1), Data(:,2), '*',"markersize", 2, "color", "red");
+   75 X=[ones(N,1),Data(:,1),Data(:,1).^2]
+   76 Theta0 = [0 0 0]'; % These are the intial values of Theta
+   77 X=[ones(N,1),Data(:,1),Data(:,1).^2,Data(:,1).^3]
+   78 Theta0 = [0 0 0 0]'
+   79 options = optimset('GradObj', 'on', 'MaxIter', 100000);
+   80 Theta0 = [0 0]'; % These are the intial values of Theta
+   81 [Theta, TotalLoss] = fminunc(@squaredLoss, Theta0, options);
+   82 options = optimset('GradObj', 'on', 'MaxIter', 100000);
+   83 Theta0 = [0 0 0 0]'; % These are the intial values of Theta
+   84 [Theta, TotalLoss] = fminunc(@squaredLoss, Theta0, options);
+   85 plot(P, Theta(1) + Theta(2)*Data(:,1) + Theta(3)*Data(:,2) + Theta(4)*Data(:,3), "color", "blue",
+   86  Data(:,1), Data(:,2), '*',"markersize", 2, "color", "red")
+   87 plot(P, Theta(1) + Theta(2)*Data(:,1) + Theta(3)*Data(:,2) + Theta(4)*Data(:,3), "color", "blue",  Data(:,1), Data(:,2), '*',"markersize", 2, "color", "red")
+   88 plot(Data(:,1), Theta(1) + Theta(2)*Data(:,1) + Theta(3)*Data(:,2) + Theta(4)*Data(:,3), "color", "blue",  Data(:,1), Data(:,2), '*',"markersize", 2, "color", "red")
+   89 Theta0
+   90 Theta
+   91 Data
+   92 X
+   93 plot(Data(:,1), Theta(1) + Theta(2)*X(:,1) + Theta(3)*X(:,2) + Theta(4)*X(:,3), "color", "blue",  Data(:,1), Data(:,2), '*',"markersize", 2, "color", "red")
+   94 plot(Data(:,1), Theta(1) + Theta(2)*X(:,1) + Theta(3)*X(:,2) + Theta(4)*X(:,3), "color", "blue",  Data(:,1), Data(:,2), '*',"markersize", 2, "color", "red")
+   95 plot(Data(:,1), Theta(1) + Theta(2)*X(:,2) + Theta(3)*X(:,3) + Theta(4)*X(:,4), "color", "blue",  Data(:,1), Data(:,2), '*',"markersize", 2, "color", "red")
+   96 historyu
+   97 history

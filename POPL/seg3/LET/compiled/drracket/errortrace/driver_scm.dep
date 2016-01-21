@@ -1,1 +1,0 @@
-("5.3.6" ("f222b9a2908c32225a9ee1a20057d479e889177b" . "4464e329303a82e372010ffd4c083f59840fed71") #"/usr/userfs/a/az579/Desktop/POPL/seg3/LET/semantics.scm" (collects #"eopl" #"main.rkt") #"/usr/userfs/a/az579/Desktop/POPL/seg3/LET/syntax.scm" #"/usr/userfs/a/az579/Desktop/POPL/seg3/LET/data-structures.scm" (collects #"eopl" #"lang" #"reader.rkt"))
