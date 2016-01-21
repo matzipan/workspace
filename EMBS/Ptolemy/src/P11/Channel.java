@@ -1,4 +1,4 @@
-package lsi.edi;
+package P11;
 
 import java.util.Random;
 

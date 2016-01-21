@@ -295,7 +295,7 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="[140.0, -195.0]">
         </property>
     </entity>
-    <entity name="MultiTypeProcessor" class="lsi.edi.MultiTypeProcessorComms">
+    <entity name="MultiTypeProcessor" class="P11.MultiTypeProcessorComms">
         <property name="_location" class="ptolemy.kernel.util.Location" value="[942.01904296875, 703.97705078125]">
         </property>
     </entity>
@@ -318,7 +318,7 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="[1067.01904296875, 748.97705078125]">
         </property>
     </entity>
-    <entity name="MultiTypeProcessor2" class="lsi.edi.MultiTypeProcessorComms">
+    <entity name="MultiTypeProcessor2" class="P11.MultiTypeProcessorComms">
         <property name="processor type (0 - CPU, 1 - DSP, 2 - HW)" class="ptolemy.data.expr.Parameter" value="0">
         </property>
         <property name="_location" class="ptolemy.kernel.util.Location" value="[937.01904296875, 853.97705078125]">
@@ -343,7 +343,7 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="[1057.01904296875, 888.97705078125]">
         </property>
     </entity>
-    <entity name="SimpleMapper" class="lsi.edi.SimpleMapper">
+    <entity name="SimpleMapper" class="P11.SimpleMapper">
         <property name="mapping" class="ptolemy.data.expr.StringParameter" value="1,1,1,1,0,0,0,0">
         </property>
         <property name="_location" class="ptolemy.kernel.util.Location" value="[680.0, 780.0]">
@@ -1555,13 +1555,13 @@
         <property name="_location" class="ptolemy.kernel.util.Location" value="[1720.7496948242188, 788.1551208496094]">
         </property>
     </entity>
-    <entity name="Bus" class="lsi.edi.Bus">
+    <entity name="Bus" class="P11.Bus">
         <property name="bandwidth" class="ptolemy.data.expr.Parameter" value="40">
         </property>
         <property name="_location" class="ptolemy.kernel.util.Location" value="[1439.0809936523438, 783.1587829589844]">
         </property>
     </entity>
-    <entity name="Verification" class="lsi.edi.Verification">
+    <entity name="Verification" class="P11.Verification">
         <property name="_location" class="ptolemy.kernel.util.Location" value="[1604.0809936523438, 788.1587829589844]">
         </property>
     </entity>

@@ -1,4 +1,4 @@
-package lsi.edi;
+package P11;
 
 import ptolemy.actor.TypedAtomicActor;
 import ptolemy.actor.TypedIOPort;
