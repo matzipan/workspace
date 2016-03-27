@@ -1,0 +1,56 @@
+@I [HLS-10] Running '/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/bin/unwrapped/lnx64.o/vivado_hls'
+            for user 'az579' on host 'pc773s.cs.york.ac.uk' (Linux_x86_64 version 3.13.0-79-generic) on Thu Mar 03 10:28:59 GMT 2016
+            in directory '/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/divcore'
+@I [HLS-10] Opening project '/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/divcore/divcore'.
+@I [HLS-10] Adding design file 'divcore/solution1/src/toplevel.h' to the project
+@I [HLS-10] Adding design file 'divcore/solution1/src/toplevel.cpp' to the project
+@I [HLS-10] Adding test bench file 'divcore/solution1/src/testbench.cpp' to the project
+@I [HLS-10] Opening solution '/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/divcore/divcore/solution1'.
+@I [SYN-201] Setting up clock 'default' with a period of 20ns.
+@W [HLS-40] This current release of Vivado HLS is the last one supporting the following device families including any of their associated derivatives: Virtex-6, Virtex-5, Virtex-4, Spartan-6 and Spartan-3. These families will still be supported in the future but will require this current version of Vivado HLS or a previous one.
+@I [HLS-10] Setting target device to 'xc3s500efg320-4'
+@W [HLS-40] This current release of Vivado HLS is the last one supporting the following device families including any of their associated derivatives: Virtex-6, Virtex-5, Virtex-4, Spartan-6 and Spartan-3. These families will still be supported in the future but will require this current version of Vivado HLS or a previous one.
+@I [SYN-201] Setting up clock 'default' with a period of 20ns.
+@I [HLS-10] Analyzing design file 'divcore/solution1/src/toplevel.cpp' ... 
+@W [HLS-41] Resource core 'AXI4Stream' on port 'input' is deprecated. Please use the interface directive to specify the AXI interface.
+@W [HLS-41] Resource core 'AXI4Stream' on port 'output' is deprecated. Please use the interface directive to specify the AXI interface.
+@I [HLS-10] Validating synthesis directives ...
+@I [HLS-10] Starting code transformations ...
+@I [HLS-10] Checking synthesizability ...
+@I [HLS-111] Elapsed time: 3.47747 seconds; current memory usage: 64.7 MB.
+@I [HLS-10] Starting hardware synthesis ...
+@I [HLS-10] Synthesizing 'toplevel' ...
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'toplevel' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-61] Pipelining loop 'Loop 1'.
+@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)
+   between fifo read on port 'input_V_V' (divcore/solution1/src/toplevel.cpp:12) and fifo read on port 'input_V_V' (divcore/solution1/src/toplevel.cpp:11).
+@I [SCHED-61] Pipelining result: Target II: 1, Final II: 2, Depth: 38.
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.024034 seconds; current memory usage: 65.1 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'toplevel' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.023896 seconds; current memory usage: 65.4 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'toplevel' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-500] Setting interface mode on port 'toplevel/input_V_V' to 'ap_fifo'.
+@I [RTGEN-500] Setting interface mode on port 'toplevel/output_V_V' to 'ap_fifo'.
+@I [RTGEN-500] Setting interface mode on function 'toplevel' to 'ap_ctrl_none'.
+@I [RTGEN-100] Generating core module 'toplevel_udiv_32ns_32ns_32_36': 1 instance(s).
+@I [RTGEN-100] Finished creating RTL model for 'toplevel'.
+@I [HLS-111] Elapsed time: 0.043242 seconds; current memory usage: 65.7 MB.
+@I [RTMG-282] Generating pipelined core: 'toplevel_udiv_32ns_32ns_32_36_div'
+@I [HLS-10] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'toplevel'.
+@I [WVHDL-304] Generating RTL VHDL for 'toplevel'.
+@I [WVLOG-307] Generating RTL Verilog for 'toplevel'.
+@I [HLS-112] Total elapsed time: 26.525 seconds; peak memory usage: 65.7 MB.

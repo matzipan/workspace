@@ -1,0 +1,14 @@
+   Compiling ../../../src/toplevel.cpp in debug mode
+   Generating csim.exe
+0 0 0 0 0 0 0 0 1 1 
+0 0 0 0 0 0 0 0 1 1 
+0 0 0 0 0 0 0 0 0 0 
+1 1 0 0 0 0 0 0 0 0 
+1 1 1 1 1 1 0 0 0 0 
+0 0 1 1 0 1 0 0 0 0 
+0 0 0 1 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 1 0 0 
+0 0 0 0 0 0 0 1 0 0 
+Everything succeeded
+@I [SIM-1] CSim done with 0 errors.

@@ -1,0 +1,1370 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/synthesis/xst_temp_dir/
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_toplevel_top_1_wrapper_xst.prj"
+Verilog Include Directory          : {"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/pcores/" "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/" "/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }
+
+---- Target Parameters
+Target Device                      : xc3s500efg320-4
+Output File Name                   : "../implementation/system_toplevel_top_1_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_toplevel_top_1_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_k_V.v" in library toplevel_top_v1_00_a
+Module <toplevel_k_V_rom> compiled
+Compiling verilog file "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_msg_V.v" in library toplevel_top_v1_00_a
+Module <toplevel_k_V> compiled
+Module <toplevel_msg_V_ram> compiled
+Compiling verilog file "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_r_V.v" in library toplevel_top_v1_00_a
+Module <toplevel_msg_V> compiled
+Module <toplevel_r_V_rom> compiled
+Compiling verilog file "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_w_V.v" in library toplevel_top_v1_00_a
+Module <toplevel_r_V> compiled
+Module <toplevel_w_V_ram> compiled
+Compiling verilog file "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel.v" in library toplevel_top_v1_00_a
+Module <toplevel_w_V> compiled
+Compiling verilog file "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_ap_rst_if.v" in library toplevel_top_v1_00_a
+Module <toplevel> compiled
+Compiling verilog file "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_input_V_V_if.v" in library toplevel_top_v1_00_a
+Module <toplevel_ap_rst_if> compiled
+Module <toplevel_input_V_V_if> compiled
+Module <toplevel_input_V_V_fifo> compiled
+Compiling verilog file "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_output_V_V_if.v" in library toplevel_top_v1_00_a
+Module <toplevel_input_V_V_reg_slice> compiled
+Module <toplevel_output_V_V_if> compiled
+Module <toplevel_output_V_V_fifo> compiled
+Compiling verilog file "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_top.v" in library toplevel_top_v1_00_a
+Module <toplevel_output_V_V_reg_slice> compiled
+Module <toplevel_top> compiled
+Compiling verilog file "../hdl/system_toplevel_top_1_wrapper.v" in library work
+Module <system_toplevel_top_1_wrapper> compiled
+No errors in compilation
+Analysis of file <"system_toplevel_top_1_wrapper_xst.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <system_toplevel_top_1_wrapper> in library <work>.
+
+Analyzing hierarchy for module <toplevel_top> in library <toplevel_top_v1_00_a> with parameters.
+	RESET_ACTIVE_LOW = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <toplevel> in library <toplevel_top_v1_00_a> with parameters.
+	ap_ST_st10_fsm_9 = "00000000000001000000000"
+	ap_ST_st11_fsm_10 = "00000000000010000000000"
+	ap_ST_st12_fsm_11 = "00000000000100000000000"
+	ap_ST_st13_fsm_12 = "00000000001000000000000"
+	ap_ST_st14_fsm_13 = "00000000010000000000000"
+	ap_ST_st15_fsm_14 = "00000000100000000000000"
+	ap_ST_st16_fsm_15 = "00000001000000000000000"
+	ap_ST_st17_fsm_16 = "00000010000000000000000"
+	ap_ST_st18_fsm_17 = "00000100000000000000000"
+	ap_ST_st19_fsm_18 = "00001000000000000000000"
+	ap_ST_st1_fsm_0 = "00000000000000000000001"
+	ap_ST_st20_fsm_19 = "00010000000000000000000"
+	ap_ST_st21_fsm_20 = "00100000000000000000000"
+	ap_ST_st22_fsm_21 = "01000000000000000000000"
+	ap_ST_st23_fsm_22 = "10000000000000000000000"
+	ap_ST_st2_fsm_1 = "00000000000000000000010"
+	ap_ST_st3_fsm_2 = "00000000000000000000100"
+	ap_ST_st4_fsm_3 = "00000000000000000001000"
+	ap_ST_st5_fsm_4 = "00000000000000000010000"
+	ap_ST_st6_fsm_5 = "00000000000000000100000"
+	ap_ST_st7_fsm_6 = "00000000000000001000000"
+	ap_ST_st8_fsm_7 = "00000000000000010000000"
+	ap_ST_st9_fsm_8 = "00000000000000100000000"
+	ap_const_logic_0 = "0"
+	ap_const_logic_1 = "1"
+	ap_const_lv10_1 = "0000000001"
+	ap_const_lv10_2 = "0000000010"
+	ap_const_lv10_3 = "0000000011"
+	ap_const_lv10_4 = "0000000100"
+	ap_const_lv10_5 = "0000000101"
+	ap_const_lv10_6 = "0000000110"
+	ap_const_lv10_7 = "0000000111"
+	ap_const_lv1_0 = "0"
+	ap_const_lv1_1 = "1"
+	ap_const_lv2_0 = "00"
+	ap_const_lv32_0 = "00000000000000000000000000000000"
+	ap_const_lv32_1 = "00000000000000000000000000000001"
+	ap_const_lv32_10 = "00000000000000000000000000010000"
+	ap_const_lv32_10325476 = "00010000001100100101010001110110"
+	ap_const_lv32_11 = "00000000000000000000000000010001"
+	ap_const_lv32_12 = "00000000000000000000000000010010"
+	ap_const_lv32_13 = "00000000000000000000000000010011"
+	ap_const_lv32_14 = "00000000000000000000000000010100"
+	ap_const_lv32_15 = "00000000000000000000000000010101"
+	ap_const_lv32_16 = "00000000000000000000000000010110"
+	ap_const_lv32_17 = "00000000000000000000000000010111"
+	ap_const_lv32_18 = "00000000000000000000000000011000"
+	ap_const_lv32_1C = "00000000000000000000000000011100"
+	ap_const_lv32_1D = "00000000000000000000000000011101"
+	ap_const_lv32_1F = "00000000000000000000000000011111"
+	ap_const_lv32_2 = "00000000000000000000000000000010"
+	ap_const_lv32_3 = "00000000000000000000000000000011"
+	ap_const_lv32_4 = "00000000000000000000000000000100"
+	ap_const_lv32_40 = "00000000000000000000000001000000"
+	ap_const_lv32_5 = "00000000000000000000000000000101"
+	ap_const_lv32_6 = "00000000000000000000000000000110"
+	ap_const_lv32_67452301 = "01100111010001010010001100000001"
+	ap_const_lv32_7 = "00000000000000000000000000000111"
+	ap_const_lv32_8 = "00000000000000000000000000001000"
+	ap_const_lv32_9 = "00000000000000000000000000001001"
+	ap_const_lv32_98BADCFE = "10011000101110101101110011111110"
+	ap_const_lv32_A = "00000000000000000000000000001010"
+	ap_const_lv32_B = "00000000000000000000000000001011"
+	ap_const_lv32_C = "00000000000000000000000000001100"
+	ap_const_lv32_D = "00000000000000000000000000001101"
+	ap_const_lv32_E = "00000000000000000000000000001110"
+	ap_const_lv32_EFCDAB89 = "11101111110011011010101110001001"
+	ap_const_lv32_F = "00000000000000000000000000001111"
+	ap_const_lv32_FFFFFFFF = "11111111111111111111111111111111"
+	ap_const_lv3_0 = "000"
+	ap_const_lv5_0 = "00000"
+	ap_const_lv5_1 = "00001"
+	ap_const_lv5_10 = "10000"
+	ap_const_lv6_1 = "000001"
+	ap_const_lv6_37 = "110111"
+	ap_const_lv6_38 = "111000"
+	ap_const_lv7_0 = "0000000"
+	ap_const_lv7_1 = "0000001"
+	ap_const_lv7_2 = "0000010"
+	ap_const_lv7_30 = "0110000"
+	ap_const_lv7_40 = "1000000"
+	ap_const_lv8_0 = "00000000"
+	ap_const_lv8_5 = "00000101"
+	ap_const_lv8_80 = "10000000"
+	ap_true = "1"
+
+Analyzing hierarchy for module <toplevel_input_V_V_if> in library <toplevel_top_v1_00_a>.
+
+Analyzing hierarchy for module <toplevel_output_V_V_if> in library <toplevel_top_v1_00_a>.
+
+Analyzing hierarchy for module <toplevel_ap_rst_if> in library <toplevel_top_v1_00_a> with parameters.
+	RESET_ACTIVE_LOW = "00000000000000000000000000000001"
+
+Analyzing hierarchy for module <toplevel_msg_V> in library <toplevel_top_v1_00_a> with parameters.
+	AddressRange = "00000000000000000000000101000000"
+	AddressWidth = "00000000000000000000000000001001"
+	DataWidth = "00000000000000000000000000001000"
+
+Analyzing hierarchy for module <toplevel_w_V> in library <toplevel_top_v1_00_a> with parameters.
+	AddressRange = "00000000000000000000000000010000"
+	AddressWidth = "00000000000000000000000000000100"
+	DataWidth = "00000000000000000000000000100000"
+
+Analyzing hierarchy for module <toplevel_k_V> in library <toplevel_top_v1_00_a> with parameters.
+	AddressRange = "00000000000000000000000001000000"
+	AddressWidth = "00000000000000000000000000000110"
+	DataWidth = "00000000000000000000000000100000"
+
+Analyzing hierarchy for module <toplevel_r_V> in library <toplevel_top_v1_00_a> with parameters.
+	AddressRange = "00000000000000000000000001000000"
+	AddressWidth = "00000000000000000000000000000110"
+	DataWidth = "00000000000000000000000000000101"
+
+Analyzing hierarchy for module <toplevel_input_V_V_reg_slice> in library <toplevel_top_v1_00_a> with parameters.
+	N = "00000000000000000000000000100000"
+	ONE = "11"
+	TWO = "01"
+	ZERO = "10"
+
+Analyzing hierarchy for module <toplevel_input_V_V_fifo> in library <toplevel_top_v1_00_a> with parameters.
+	DATA_BITS = "00000000000000000000000000100000"
+	DEPTH = "00000000000000000000000000010000"
+	DEPTH_BITS = "00000000000000000000000000000100"
+
+Analyzing hierarchy for module <toplevel_output_V_V_reg_slice> in library <toplevel_top_v1_00_a> with parameters.
+	N = "00000000000000000000000000100000"
+	ONE = "11"
+	TWO = "01"
+	ZERO = "10"
+
+Analyzing hierarchy for module <toplevel_output_V_V_fifo> in library <toplevel_top_v1_00_a> with parameters.
+	DATA_BITS = "00000000000000000000000000100000"
+	DEPTH = "00000000000000000000000000010000"
+	DEPTH_BITS = "00000000000000000000000000000100"
+
+Analyzing hierarchy for module <toplevel_msg_V_ram> in library <toplevel_top_v1_00_a> with parameters.
+	AWIDTH = "00000000000000000000000000001001"
+	DWIDTH = "00000000000000000000000000001000"
+	MEM_SIZE = "00000000000000000000000101000000"
+
+Analyzing hierarchy for module <toplevel_w_V_ram> in library <toplevel_top_v1_00_a> with parameters.
+	AWIDTH = "00000000000000000000000000000100"
+	DWIDTH = "00000000000000000000000000100000"
+	MEM_SIZE = "00000000000000000000000000010000"
+
+Analyzing hierarchy for module <toplevel_k_V_rom> in library <toplevel_top_v1_00_a> with parameters.
+	AWIDTH = "00000000000000000000000000000110"
+	DWIDTH = "00000000000000000000000000100000"
+	MEM_SIZE = "00000000000000000000000001000000"
+
+Analyzing hierarchy for module <toplevel_r_V_rom> in library <toplevel_top_v1_00_a> with parameters.
+	AWIDTH = "00000000000000000000000000000110"
+	DWIDTH = "00000000000000000000000000000101"
+	MEM_SIZE = "00000000000000000000000001000000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <system_toplevel_top_1_wrapper>.
+Module <system_toplevel_top_1_wrapper> is correct for synthesis.
+ 
+Analyzing module <toplevel_top> in library <toplevel_top_v1_00_a>.
+	RESET_ACTIVE_LOW = 32'sb00000000000000000000000000000001
+Module <toplevel_top> is correct for synthesis.
+ 
+Analyzing module <toplevel> in library <toplevel_top_v1_00_a>.
+	ap_ST_st10_fsm_9 = 23'b00000000000001000000000
+	ap_ST_st11_fsm_10 = 23'b00000000000010000000000
+	ap_ST_st12_fsm_11 = 23'b00000000000100000000000
+	ap_ST_st13_fsm_12 = 23'b00000000001000000000000
+	ap_ST_st14_fsm_13 = 23'b00000000010000000000000
+	ap_ST_st15_fsm_14 = 23'b00000000100000000000000
+	ap_ST_st16_fsm_15 = 23'b00000001000000000000000
+	ap_ST_st17_fsm_16 = 23'b00000010000000000000000
+	ap_ST_st18_fsm_17 = 23'b00000100000000000000000
+	ap_ST_st19_fsm_18 = 23'b00001000000000000000000
+	ap_ST_st1_fsm_0 = 23'b00000000000000000000001
+	ap_ST_st20_fsm_19 = 23'b00010000000000000000000
+	ap_ST_st21_fsm_20 = 23'b00100000000000000000000
+	ap_ST_st22_fsm_21 = 23'b01000000000000000000000
+	ap_ST_st23_fsm_22 = 23'b10000000000000000000000
+	ap_ST_st2_fsm_1 = 23'b00000000000000000000010
+	ap_ST_st3_fsm_2 = 23'b00000000000000000000100
+	ap_ST_st4_fsm_3 = 23'b00000000000000000001000
+	ap_ST_st5_fsm_4 = 23'b00000000000000000010000
+	ap_ST_st6_fsm_5 = 23'b00000000000000000100000
+	ap_ST_st7_fsm_6 = 23'b00000000000000001000000
+	ap_ST_st8_fsm_7 = 23'b00000000000000010000000
+	ap_ST_st9_fsm_8 = 23'b00000000000000100000000
+	ap_const_logic_0 = 1'b0
+	ap_const_logic_1 = 1'b1
+	ap_const_lv10_1 = 10'b0000000001
+	ap_const_lv10_2 = 10'b0000000010
+	ap_const_lv10_3 = 10'b0000000011
+	ap_const_lv10_4 = 10'b0000000100
+	ap_const_lv10_5 = 10'b0000000101
+	ap_const_lv10_6 = 10'b0000000110
+	ap_const_lv10_7 = 10'b0000000111
+	ap_const_lv1_0 = 1'b0
+	ap_const_lv1_1 = 1'b1
+	ap_const_lv2_0 = 2'b00
+	ap_const_lv32_0 = 32'b00000000000000000000000000000000
+	ap_const_lv32_1 = 32'b00000000000000000000000000000001
+	ap_const_lv32_10 = 32'b00000000000000000000000000010000
+	ap_const_lv32_10325476 = 32'b00010000001100100101010001110110
+	ap_const_lv32_11 = 32'b00000000000000000000000000010001
+	ap_const_lv32_12 = 32'b00000000000000000000000000010010
+	ap_const_lv32_13 = 32'b00000000000000000000000000010011
+	ap_const_lv32_14 = 32'b00000000000000000000000000010100
+	ap_const_lv32_15 = 32'b00000000000000000000000000010101
+	ap_const_lv32_16 = 32'b00000000000000000000000000010110
+	ap_const_lv32_17 = 32'b00000000000000000000000000010111
+	ap_const_lv32_18 = 32'b00000000000000000000000000011000
+	ap_const_lv32_1C = 32'b00000000000000000000000000011100
+	ap_const_lv32_1D = 32'b00000000000000000000000000011101
+	ap_const_lv32_1F = 32'b00000000000000000000000000011111
+	ap_const_lv32_2 = 32'b00000000000000000000000000000010
+	ap_const_lv32_3 = 32'b00000000000000000000000000000011
+	ap_const_lv32_4 = 32'b00000000000000000000000000000100
+	ap_const_lv32_40 = 32'b00000000000000000000000001000000
+	ap_const_lv32_5 = 32'b00000000000000000000000000000101
+	ap_const_lv32_6 = 32'b00000000000000000000000000000110
+	ap_const_lv32_67452301 = 32'b01100111010001010010001100000001
+	ap_const_lv32_7 = 32'b00000000000000000000000000000111
+	ap_const_lv32_8 = 32'b00000000000000000000000000001000
+	ap_const_lv32_9 = 32'b00000000000000000000000000001001
+	ap_const_lv32_98BADCFE = 32'b10011000101110101101110011111110
+	ap_const_lv32_A = 32'b00000000000000000000000000001010
+	ap_const_lv32_B = 32'b00000000000000000000000000001011
+	ap_const_lv32_C = 32'b00000000000000000000000000001100
+	ap_const_lv32_D = 32'b00000000000000000000000000001101
+	ap_const_lv32_E = 32'b00000000000000000000000000001110
+	ap_const_lv32_EFCDAB89 = 32'b11101111110011011010101110001001
+	ap_const_lv32_F = 32'b00000000000000000000000000001111
+	ap_const_lv32_FFFFFFFF = 32'b11111111111111111111111111111111
+	ap_const_lv3_0 = 3'b000
+	ap_const_lv5_0 = 5'b00000
+	ap_const_lv5_1 = 5'b00001
+	ap_const_lv5_10 = 5'b10000
+	ap_const_lv6_1 = 6'b000001
+	ap_const_lv6_37 = 6'b110111
+	ap_const_lv6_38 = 6'b111000
+	ap_const_lv7_0 = 7'b0000000
+	ap_const_lv7_1 = 7'b0000001
+	ap_const_lv7_2 = 7'b0000010
+	ap_const_lv7_30 = 7'b0110000
+	ap_const_lv7_40 = 7'b1000000
+	ap_const_lv8_0 = 8'b00000000
+	ap_const_lv8_5 = 8'b00000101
+	ap_const_lv8_80 = 8'b10000000
+	ap_true = 1'b1
+Module <toplevel> is correct for synthesis.
+ 
+WARNING:Xst:38 - Value "none" of property "fsm_encoding" not applicable.
+Analyzing module <toplevel_msg_V> in library <toplevel_top_v1_00_a>.
+	AddressRange = 32'sb00000000000000000000000101000000
+	AddressWidth = 32'sb00000000000000000000000000001001
+	DataWidth = 32'sb00000000000000000000000000001000
+Module <toplevel_msg_V> is correct for synthesis.
+ 
+Analyzing module <toplevel_msg_V_ram> in library <toplevel_top_v1_00_a>.
+	AWIDTH = 32'sb00000000000000000000000000001001
+	DWIDTH = 32'sb00000000000000000000000000001000
+	MEM_SIZE = 32'sb00000000000000000000000101000000
+INFO:Xst:2546 - "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_msg_V.v" line 30: reading initialization file "./toplevel_msg_V_ram.dat".
+Module <toplevel_msg_V_ram> is correct for synthesis.
+ 
+    Set property "ram_style = block" for signal <ram>.
+Analyzing module <toplevel_w_V> in library <toplevel_top_v1_00_a>.
+	AddressRange = 32'sb00000000000000000000000000010000
+	AddressWidth = 32'sb00000000000000000000000000000100
+	DataWidth = 32'sb00000000000000000000000000100000
+Module <toplevel_w_V> is correct for synthesis.
+ 
+Analyzing module <toplevel_w_V_ram> in library <toplevel_top_v1_00_a>.
+	AWIDTH = 32'sb00000000000000000000000000000100
+	DWIDTH = 32'sb00000000000000000000000000100000
+	MEM_SIZE = 32'sb00000000000000000000000000010000
+INFO:Xst:2546 - "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_w_V.v" line 25: reading initialization file "./toplevel_w_V_ram.dat".
+Module <toplevel_w_V_ram> is correct for synthesis.
+ 
+    Set property "ram_style = distributed" for signal <ram>.
+Analyzing module <toplevel_k_V> in library <toplevel_top_v1_00_a>.
+	AddressRange = 32'sb00000000000000000000000001000000
+	AddressWidth = 32'sb00000000000000000000000000000110
+	DataWidth = 32'sb00000000000000000000000000100000
+Module <toplevel_k_V> is correct for synthesis.
+ 
+Analyzing module <toplevel_k_V_rom> in library <toplevel_top_v1_00_a>.
+	AWIDTH = 32'sb00000000000000000000000000000110
+	DWIDTH = 32'sb00000000000000000000000000100000
+	MEM_SIZE = 32'sb00000000000000000000000001000000
+INFO:Xst:2546 - "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_k_V.v" line 24: reading initialization file "./toplevel_k_V_rom.dat".
+Module <toplevel_k_V_rom> is correct for synthesis.
+ 
+    Set user-defined property "KEEP =  true" for signal <q0> in unit <toplevel_k_V_rom>.
+Analyzing module <toplevel_r_V> in library <toplevel_top_v1_00_a>.
+	AddressRange = 32'sb00000000000000000000000001000000
+	AddressWidth = 32'sb00000000000000000000000000000110
+	DataWidth = 32'sb00000000000000000000000000000101
+Module <toplevel_r_V> is correct for synthesis.
+ 
+Analyzing module <toplevel_r_V_rom> in library <toplevel_top_v1_00_a>.
+	AWIDTH = 32'sb00000000000000000000000000000110
+	DWIDTH = 32'sb00000000000000000000000000000101
+	MEM_SIZE = 32'sb00000000000000000000000001000000
+INFO:Xst:2546 - "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_r_V.v" line 24: reading initialization file "./toplevel_r_V_rom.dat".
+Module <toplevel_r_V_rom> is correct for synthesis.
+ 
+    Set property "ROM_STYLE = distributed" for unit <toplevel_r_V_rom>.
+    Set user-defined property "KEEP =  true" for signal <q0> in unit <toplevel_r_V_rom>.
+    Set property "ram_style = distributed" for signal <ram>.
+Analyzing module <toplevel_input_V_V_if> in library <toplevel_top_v1_00_a>.
+Module <toplevel_input_V_V_if> is correct for synthesis.
+ 
+Analyzing module <toplevel_input_V_V_reg_slice> in library <toplevel_top_v1_00_a>.
+	N = 32'sb00000000000000000000000000100000
+	ONE = 2'b11
+	TWO = 2'b01
+	ZERO = 2'b10
+Module <toplevel_input_V_V_reg_slice> is correct for synthesis.
+ 
+Analyzing module <toplevel_input_V_V_fifo> in library <toplevel_top_v1_00_a>.
+	DATA_BITS = 32'sb00000000000000000000000000100000
+	DEPTH = 32'sb00000000000000000000000000010000
+	DEPTH_BITS = 32'sb00000000000000000000000000000100
+Module <toplevel_input_V_V_fifo> is correct for synthesis.
+ 
+Analyzing module <toplevel_output_V_V_if> in library <toplevel_top_v1_00_a>.
+Module <toplevel_output_V_V_if> is correct for synthesis.
+ 
+Analyzing module <toplevel_output_V_V_reg_slice> in library <toplevel_top_v1_00_a>.
+	N = 32'sb00000000000000000000000000100000
+	ONE = 2'b11
+	TWO = 2'b01
+	ZERO = 2'b10
+Module <toplevel_output_V_V_reg_slice> is correct for synthesis.
+ 
+Analyzing module <toplevel_output_V_V_fifo> in library <toplevel_top_v1_00_a>.
+	DATA_BITS = 32'sb00000000000000000000000000100000
+	DEPTH = 32'sb00000000000000000000000000010000
+	DEPTH_BITS = 32'sb00000000000000000000000000000100
+Module <toplevel_output_V_V_fifo> is correct for synthesis.
+ 
+Analyzing module <toplevel_ap_rst_if> in library <toplevel_top_v1_00_a>.
+	RESET_ACTIVE_LOW = 32'sb00000000000000000000000000000001
+Module <toplevel_ap_rst_if> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <toplevel_ap_rst_if>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_ap_rst_if.v".
+Unit <toplevel_ap_rst_if> synthesized.
+
+
+Synthesizing Unit <toplevel_msg_V_ram>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_msg_V.v".
+    Found 320x8-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Found 8-bit register for signal <q0>.
+    Found 8-bit register for signal <q1>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <toplevel_msg_V_ram> synthesized.
+
+
+Synthesizing Unit <toplevel_w_V_ram>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_w_V.v".
+    Found 16x32-bit single-port RAM <Mram_ram> for signal <ram>.
+    Found 32-bit register for signal <q0>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <toplevel_w_V_ram> synthesized.
+
+
+Synthesizing Unit <toplevel_k_V_rom>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_k_V.v".
+WARNING:Xst:1781 - Signal <ram> is used but never assigned. Tied to default value.
+    Found 64x32-bit ROM for signal <$varindex0000> created at line 33.
+    Found 32-bit register for signal <q0>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <toplevel_k_V_rom> synthesized.
+
+
+Synthesizing Unit <toplevel_r_V_rom>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_r_V.v".
+WARNING:Xst:1781 - Signal <ram> is used but never assigned. Tied to default value.
+    Found 64x5-bit ROM for signal <$varindex0000> created at line 33.
+    Found 5-bit register for signal <q0>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   5 D-type flip-flop(s).
+Unit <toplevel_r_V_rom> synthesized.
+
+
+Synthesizing Unit <toplevel_input_V_V_reg_slice>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_input_V_V_if.v".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (negative)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 10                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 32-bit register for signal <data_p1>.
+    Found 32-bit register for signal <data_p2>.
+    Found 1-bit register for signal <s_ready_t>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  65 D-type flip-flop(s).
+Unit <toplevel_input_V_V_reg_slice> synthesized.
+
+
+Synthesizing Unit <toplevel_input_V_V_fifo>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_input_V_V_if.v".
+    Found 32-bit 16-to-1 multiplexer for signal <dout>.
+    Found 1-bit register for signal <empty>.
+    Found 1-bit register for signal <full>.
+    Found 4-bit updown counter for signal <index>.
+    Found 512-bit register for signal <mem>.
+INFO:Xst:738 - HDL ADVISOR - 512 flip-flops were inferred for signal <mem>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred   1 Counter(s).
+	inferred 514 D-type flip-flop(s).
+	inferred  32 Multiplexer(s).
+Unit <toplevel_input_V_V_fifo> synthesized.
+
+
+Synthesizing Unit <toplevel_output_V_V_reg_slice>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_output_V_V_if.v".
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | reset                     (negative)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 10                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 32-bit register for signal <data_p1>.
+    Found 32-bit register for signal <data_p2>.
+    Found 1-bit register for signal <s_ready_t>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  65 D-type flip-flop(s).
+Unit <toplevel_output_V_V_reg_slice> synthesized.
+
+
+Synthesizing Unit <toplevel_output_V_V_fifo>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_output_V_V_if.v".
+    Found 32-bit 16-to-1 multiplexer for signal <dout>.
+    Found 1-bit register for signal <empty>.
+    Found 1-bit register for signal <full>.
+    Found 4-bit updown counter for signal <index>.
+    Found 512-bit register for signal <mem>.
+INFO:Xst:738 - HDL ADVISOR - 512 flip-flops were inferred for signal <mem>. You may be trying to describe a RAM in a way that is incompatible with block and distributed RAM resources available on Xilinx devices, or with a specific template that is not supported. Please review the Xilinx resources documentation and the XST user manual for coding guidelines. Taking advantage of RAM resources will lead to improved device usage and reduced synthesis time.
+    Summary:
+	inferred   1 Counter(s).
+	inferred 514 D-type flip-flop(s).
+	inferred  32 Multiplexer(s).
+Unit <toplevel_output_V_V_fifo> synthesized.
+
+
+Synthesizing Unit <toplevel_input_V_V_if>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_input_V_V_if.v".
+Unit <toplevel_input_V_V_if> synthesized.
+
+
+Synthesizing Unit <toplevel_output_V_V_if>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_output_V_V_if.v".
+Unit <toplevel_output_V_V_if> synthesized.
+
+
+Synthesizing Unit <toplevel_msg_V>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_msg_V.v".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <toplevel_msg_V> synthesized.
+
+
+Synthesizing Unit <toplevel_w_V>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_w_V.v".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <toplevel_w_V> synthesized.
+
+
+Synthesizing Unit <toplevel_k_V>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_k_V.v".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <toplevel_k_V> synthesized.
+
+
+Synthesizing Unit <toplevel_r_V>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_r_V.v".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+Unit <toplevel_r_V> synthesized.
+
+
+Synthesizing Unit <toplevel>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel.v".
+WARNING:Xst:646 - Signal <tmp_V_4_reg_1716<31:24>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <tmp_V_4_reg_1716<7:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <tmp_8_fu_760_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <tmp_7_fu_825_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <tmp_42_fu_1425_p1<63:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <tmp_41_fu_1419_p1<63:6>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <tmp_2_fu_688_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <tmp_24_fu_1152_p1<63:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <tmp_22_fu_799_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <tmp_16_fu_789_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <tmp_14_fu_846_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <tmp_13_fu_841_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sum_i_cast_fu_883_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sum_i21_cast_fu_1087_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sum_i1_cast_fu_957_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sum4_i_cast_fu_933_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sum4_i23_cast_fu_1147_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sum4_i1_cast_fu_977_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sum2_i_cast_fu_923_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sum2_i22_cast_fu_1137_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <sum2_i1_cast_fu_967_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <storemerge1203_in_phi_fu_585_p6<8:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <p_sum_cast_fu_943_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <p_0489_sum_cast_fu_1076_p1<63:9>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_2> for signal <ap_CS_fsm>.
+    -----------------------------------------------------------------------
+    | States             | 23                                             |
+    | Transitions        | 37                                             |
+    | Inputs             | 12                                             |
+    | Outputs            | 23                                             |
+    | Clock              | ap_clk                    (rising_edge)        |
+    | Reset              | ap_rst                    (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00000000000000000000001                        |
+    | Power Up State     | 00000000000000000000001                        |
+    | Encoding           | automatic                                      |
+    | Implementation     | automatic                                      |
+    -----------------------------------------------------------------------
+    Found 32-bit register for signal <a_V>.
+    Found 32-bit register for signal <b_V>.
+    Found 32-bit adder for signal <b_V$addsub0000> created at line 1679.
+    Found 32-bit register for signal <c_V>.
+    Found 32-bit register for signal <d_V>.
+    Found 32-bit register for signal <f_V>.
+    Found 32-bit adder for signal <grp_fu_606_p2>.
+    Found 32-bit register for signal <h0_V>.
+    Found 32-bit register for signal <h0_V_load_reg_1843>.
+    Found 32-bit register for signal <h1_V>.
+    Found 32-bit register for signal <h1_V_load_reg_1848>.
+    Found 32-bit register for signal <h2_V>.
+    Found 32-bit register for signal <h2_V_load_reg_1853>.
+    Found 32-bit register for signal <h3_V>.
+    Found 32-bit register for signal <h3_V_load_reg_1858>.
+    Found 5-bit adder for signal <i_1_fu_662_p2>.
+    Found 5-bit register for signal <i_1_reg_1710>.
+    Found 5-bit register for signal <i_reg_433>.
+    Found 7-bit adder for signal <i_V_1_fu_1178_p2>.
+    Found 7-bit register for signal <i_V_1_reg_1886>.
+    Found 5-bit adder for signal <i_V_fu_1046_p2>.
+    Found 5-bit register for signal <i_V_reg_1822>.
+    Found 32-bit up counter for signal <initial_length_V>.
+    Found 32-bit register for signal <initial_length_V_load2_reg_446>.
+    Found 32-bit register for signal <initial_length_V_load5_reg_457>.
+    Found 32-bit register for signal <initial_length_V_load7_reg_468>.
+    Found 32-bit register for signal <initial_length_V_load_3_reg_419>.
+    Found 32-bit 4-to-1 multiplexer for signal <initial_length_V_load_3_reg_419$mux0000>.
+    Found 32-bit register for signal <lhs_V_1_reg_536>.
+    Found 32-bit register for signal <lhs_V_2_reg_524>.
+    Found 32-bit register for signal <lhs_V_3_reg_512>.
+    Found 32-bit register for signal <lhs_V_4_reg_500>.
+    Found 8-bit register for signal <msg_V_load_1_reg_1868>.
+    Found 8-bit register for signal <msg_V_load_reg_1863>.
+    Found 32-bit up accumulator for signal <op2_1_reg_547>.
+    Found 32-bit adder for signal <op2_fu_748_p2>.
+    Found 32-bit register for signal <op2_reg_1737>.
+    Found 8-bit register for signal <p_0489_sum_reg_1827<9:2>>.
+    Found 10-bit adder for signal <p_sum_fu_938_p2>.
+    Found 8-bit register for signal <phitmp3_i_reg_1801>.
+    Found 8-bit register for signal <phitmp4_i_reg_1806>.
+    Found 8-bit register for signal <phitmp_reg_1757>.
+    Found 32-bit shifter logical left for signal <r_V_20_fu_1529_p2$shift0000>.
+    Found 5-bit adder for signal <r_V_21_fu_1502_p2>.
+    Found 5-bit register for signal <r_V_21_reg_1951>.
+    Found 32-bit shifter logical right for signal <r_V_22_fu_1537_p2$shift0000>.
+    Found 32-bit xor3 for signal <r_V_7_fu_1269_p2>.
+    Found 32-bit xor2 for signal <r_V_9_fu_1228_p2>.
+    Found 5-bit register for signal <r_V_load_reg_1946>.
+    Found 32-bit up counter for signal <storemerge1200_in_reg_490>.
+    Found 32-bit up counter for signal <storemerge_in_reg_480>.
+    Found 10-bit adder for signal <sum2_i1_fu_962_p2>.
+    Found 10-bit adder for signal <sum2_i_fu_918_p2>.
+    Found 10-bit adder for signal <sum4_i1_fu_972_p2>.
+    Found 10-bit adder for signal <sum4_i_fu_928_p2>.
+    Found 10-bit adder for signal <sum_i1_fu_952_p2>.
+    Found 10-bit adder for signal <sum_i_fu_877_p2>.
+    Found 32-bit adder for signal <t_V_3_fu_830_p2>.
+    Found 5-bit register for signal <t_V_6_reg_559>.
+    Found 7-bit register for signal <t_V_7_reg_571>.
+    Found 32-bit adder for signal <this_assign_3_fu_1496_p2>.
+    Found 32-bit register for signal <this_assign_3_reg_1940>.
+    Found 32-bit adder for signal <tmp10_fu_1484_p2>.
+    Found 32-bit adder for signal <tmp11_fu_1490_p2>.
+    Found 6-bit adder for signal <tmp7_fu_1348_p2>.
+    Found 32-bit comparator less for signal <tmp_10_fu_836_p2_0$cmp_lt0000> created at line 1613.
+    Found 32-bit comparator less for signal <tmp_18_fu_982_p2_0$cmp_lt0000> created at line 1625.
+    Found 32-bit adder for signal <tmp_1_fu_728_p2>.
+    Found 3-bit register for signal <tmp_25_reg_1811>.
+    Found 32-bit adder for signal <tmp_26_fu_1430_p2>.
+    Found 32-bit adder for signal <tmp_27_fu_1441_p2>.
+    Found 32-bit adder for signal <tmp_28_fu_1452_p2>.
+    Found 32-bit adder for signal <tmp_29_fu_1463_p2>.
+    Found 10-bit register for signal <tmp_31_reg_1791>.
+    Found 8-bit adder for signal <tmp_35_fu_1358_p2>.
+    Found 7-bit comparator less for signal <tmp_36_fu_1216_p2_0$cmp_lt0000> created at line 1659.
+    Found 8-bit subtractor for signal <tmp_38_fu_1293_p2>.
+    Found 8-bit adder for signal <tmp_39_fu_1299_p2>.
+    Found 9-bit subtractor for signal <tmp_40_fu_1256_p2>.
+    Found 8-bit register for signal <tmp_6_reg_1723>.
+    Found 6-bit adder for signal <tmp_9_fu_738_p2>.
+    Found 32-bit register for signal <tmp_V_4_reg_1716>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   3 Counter(s).
+	inferred   1 Accumulator(s).
+	inferred 881 D-type flip-flop(s).
+	inferred  29 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+	inferred  32 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+	inferred  32 Xor(s).
+Unit <toplevel> synthesized.
+
+
+Synthesizing Unit <toplevel_top>.
+    Related source file is "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/toplevel_top_v1_00_a/synhdl/verilog/toplevel_top.v".
+Unit <toplevel_top> synthesized.
+
+
+Synthesizing Unit <system_toplevel_top_1_wrapper>.
+    Related source file is "../hdl/system_toplevel_top_1_wrapper.v".
+Unit <system_toplevel_top_1_wrapper> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x32-bit single-port RAM                             : 1
+ 320x8-bit dual-port RAM                               : 1
+# ROMs                                                 : 2
+ 64x32-bit ROM                                         : 1
+ 64x5-bit ROM                                          : 1
+# Adders/Subtractors                                   : 29
+ 10-bit adder                                          : 7
+ 32-bit adder                                          : 12
+ 5-bit adder                                           : 3
+ 6-bit adder                                           : 2
+ 7-bit adder                                           : 1
+ 8-bit adder                                           : 2
+ 8-bit subtractor                                      : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 5
+ 32-bit up counter                                     : 3
+ 4-bit updown counter                                  : 2
+# Accumulators                                         : 1
+ 32-bit up accumulator                                 : 1
+# Registers                                            : 95
+ 1-bit register                                        : 14
+ 10-bit register                                       : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 62
+ 5-bit register                                        : 7
+ 7-bit register                                        : 2
+ 8-bit register                                        : 8
+# Comparators                                          : 3
+ 32-bit comparator less                                : 2
+ 7-bit comparator less                                 : 1
+# Multiplexers                                         : 3
+ 32-bit 16-to-1 multiplexer                            : 2
+ 32-bit 4-to-1 multiplexer                             : 1
+# Logic shifters                                       : 2
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 2
+ 32-bit xor2                                           : 1
+ 32-bit xor3                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <toplevel_top_1/toplevel_U/ap_CS_fsm/FSM> on signal <ap_CS_fsm[1:23]> with user encoding.
+----------------------------------------------------
+ State                   | Encoding
+----------------------------------------------------
+ 00000000000000000000001 | 00000000000000000000001
+ 00000000000000000000010 | 00000000000000000000010
+ 00000000000000100000000 | 00000000000000100000000
+ 00000000000000000000100 | 00000000000000000000100
+ 00000000000000000010000 | 00000000000000000010000
+ 00000000000000000001000 | 00000000000000000001000
+ 00000000000000001000000 | 00000000000000001000000
+ 00000000000000000100000 | 00000000000000000100000
+ 00000000000000010000000 | 00000000000000010000000
+ 00000000000001000000000 | 00000000000001000000000
+ 00000000000010000000000 | 00000000000010000000000
+ 00000000000100000000000 | 00000000000100000000000
+ 00000000001000000000000 | 00000000001000000000000
+ 00000000010000000000000 | 00000000010000000000000
+ 00000000100000000000000 | 00000000100000000000000
+ 00100000000000000000000 | 00100000000000000000000
+ 00000100000000000000000 | 00000100000000000000000
+ 00000001000000000000000 | 00000001000000000000000
+ 00000010000000000000000 | 00000010000000000000000
+ 00001000000000000000000 | 00001000000000000000000
+ 00010000000000000000000 | 00010000000000000000000
+ 01000000000000000000000 | 01000000000000000000000
+ 10000000000000000000000 | 10000000000000000000000
+----------------------------------------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <toplevel_top_1/toplevel_output_V_V_if_U/rs/state/FSM> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 10    | 10
+ 11    | 11
+ 01    | 01
+-------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <toplevel_top_1/toplevel_input_V_V_if_U/rs/state/FSM> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 10    | 10
+ 11    | 11
+ 01    | 01
+-------------------
+
+Synthesizing (advanced) Unit <toplevel>.
+The following registers are absorbed into accumulator <b_V>: 1 register on signal <b_V>.
+INFO:Xst:3044 - The ROM <k_V_U/toplevel_k_V_rom_U/Mrom__varindex0000> will be implemented as a read-only BLOCK RAM, absorbing the register: <k_V_U/toplevel_k_V_rom_U/q0>.
+INFO:Xst:3225 - The RAM <k_V_U/toplevel_k_V_rom_U/Mrom__varindex0000> will be implemented as BLOCK RAM
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <ap_clk>        | rise     |
+    |     enA            | connected to signal <ap_sig_bdd_239> | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <t_V_7_reg_571> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <k_V_U/toplevel_k_V_rom_U/q0> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal k_V_q0 may hinder XST clustering optimizations.
+Unit <toplevel> synthesized (advanced).
+
+Synthesizing (advanced) Unit <toplevel_k_V_rom>.
+Unit <toplevel_k_V_rom> synthesized (advanced).
+
+Synthesizing (advanced) Unit <toplevel_msg_V_ram>.
+INFO:Xst:3226 - The RAM <Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <q0> <q1>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 320-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <ce0>           | high     |
+    |     weA            | connected to signal <we0>           | high     |
+    |     addrA          | connected to signal <addr0>         |          |
+    |     diA            | connected to signal <d0>            |          |
+    |     doA            | connected to signal <q0>            |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 320-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     enB            | connected to signal <ce1>           | high     |
+    |     weB            | connected to signal <we1>           | high     |
+    |     addrB          | connected to signal <addr1>         |          |
+    |     diB            | connected to signal <d1>            |          |
+    |     doB            | connected to signal <q1>            |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <toplevel_msg_V_ram> synthesized (advanced).
+
+Synthesizing (advanced) Unit <toplevel_r_V_rom>.
+INFO:Xst:3029 - HDL ADVISOR - LUT implementation is currently selected for the ROM <Mrom__varindex0000>. If you want the register to be removed and the ROM to be implemented as read-only block RAM, please change the ROM implementation style accordingly.
+Unit <toplevel_r_V_rom> synthesized (advanced).
+
+Synthesizing (advanced) Unit <toplevel_w_V_ram>.
+INFO:Xst:3216 - HDL ADVISOR - LUT implementation is currently selected for the RAM <Mram_ram>. If you want the register to be removed and the RAM to be implemented as block RAM, please change the RAM implementation style accordingly.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <we0_0>         | high     |
+    |     addrA          | connected to signal <addr0>         |          |
+    |     diA            | connected to signal <d0>            |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <toplevel_w_V_ram> synthesized (advanced).
+
+Synthesizing (advanced) Unit <toplevel_input_V_V_fifo>.
+	Found 16-bit dynamic shift register for signal <dout<0>>.
+	Found 16-bit dynamic shift register for signal <dout<1>>.
+	Found 16-bit dynamic shift register for signal <dout<2>>.
+	Found 16-bit dynamic shift register for signal <dout<3>>.
+	Found 16-bit dynamic shift register for signal <dout<4>>.
+	Found 16-bit dynamic shift register for signal <dout<5>>.
+	Found 16-bit dynamic shift register for signal <dout<6>>.
+	Found 16-bit dynamic shift register for signal <dout<7>>.
+	Found 16-bit dynamic shift register for signal <dout<8>>.
+	Found 16-bit dynamic shift register for signal <dout<9>>.
+	Found 16-bit dynamic shift register for signal <dout<10>>.
+	Found 16-bit dynamic shift register for signal <dout<11>>.
+	Found 16-bit dynamic shift register for signal <dout<12>>.
+	Found 16-bit dynamic shift register for signal <dout<13>>.
+	Found 16-bit dynamic shift register for signal <dout<14>>.
+	Found 16-bit dynamic shift register for signal <dout<15>>.
+	Found 16-bit dynamic shift register for signal <dout<16>>.
+	Found 16-bit dynamic shift register for signal <dout<17>>.
+	Found 16-bit dynamic shift register for signal <dout<18>>.
+	Found 16-bit dynamic shift register for signal <dout<19>>.
+	Found 16-bit dynamic shift register for signal <dout<20>>.
+	Found 16-bit dynamic shift register for signal <dout<21>>.
+	Found 16-bit dynamic shift register for signal <dout<22>>.
+	Found 16-bit dynamic shift register for signal <dout<23>>.
+	Found 16-bit dynamic shift register for signal <dout<24>>.
+	Found 16-bit dynamic shift register for signal <dout<25>>.
+	Found 16-bit dynamic shift register for signal <dout<26>>.
+	Found 16-bit dynamic shift register for signal <dout<27>>.
+	Found 16-bit dynamic shift register for signal <dout<28>>.
+	Found 16-bit dynamic shift register for signal <dout<29>>.
+	Found 16-bit dynamic shift register for signal <dout<30>>.
+	Found 16-bit dynamic shift register for signal <dout<31>>.
+Unit <toplevel_input_V_V_fifo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <toplevel_output_V_V_fifo>.
+	Found 16-bit dynamic shift register for signal <dout<0>>.
+	Found 16-bit dynamic shift register for signal <dout<1>>.
+	Found 16-bit dynamic shift register for signal <dout<2>>.
+	Found 16-bit dynamic shift register for signal <dout<3>>.
+	Found 16-bit dynamic shift register for signal <dout<4>>.
+	Found 16-bit dynamic shift register for signal <dout<5>>.
+	Found 16-bit dynamic shift register for signal <dout<6>>.
+	Found 16-bit dynamic shift register for signal <dout<7>>.
+	Found 16-bit dynamic shift register for signal <dout<8>>.
+	Found 16-bit dynamic shift register for signal <dout<9>>.
+	Found 16-bit dynamic shift register for signal <dout<10>>.
+	Found 16-bit dynamic shift register for signal <dout<11>>.
+	Found 16-bit dynamic shift register for signal <dout<12>>.
+	Found 16-bit dynamic shift register for signal <dout<13>>.
+	Found 16-bit dynamic shift register for signal <dout<14>>.
+	Found 16-bit dynamic shift register for signal <dout<15>>.
+	Found 16-bit dynamic shift register for signal <dout<16>>.
+	Found 16-bit dynamic shift register for signal <dout<17>>.
+	Found 16-bit dynamic shift register for signal <dout<18>>.
+	Found 16-bit dynamic shift register for signal <dout<19>>.
+	Found 16-bit dynamic shift register for signal <dout<20>>.
+	Found 16-bit dynamic shift register for signal <dout<21>>.
+	Found 16-bit dynamic shift register for signal <dout<22>>.
+	Found 16-bit dynamic shift register for signal <dout<23>>.
+	Found 16-bit dynamic shift register for signal <dout<24>>.
+	Found 16-bit dynamic shift register for signal <dout<25>>.
+	Found 16-bit dynamic shift register for signal <dout<26>>.
+	Found 16-bit dynamic shift register for signal <dout<27>>.
+	Found 16-bit dynamic shift register for signal <dout<28>>.
+	Found 16-bit dynamic shift register for signal <dout<29>>.
+	Found 16-bit dynamic shift register for signal <dout<30>>.
+	Found 16-bit dynamic shift register for signal <dout<31>>.
+Unit <toplevel_output_V_V_fifo> synthesized (advanced).
+WARNING:Xst:2677 - Node <tmp_V_4_reg_1716_0> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <tmp_V_4_reg_1716_1> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <tmp_V_4_reg_1716_2> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <tmp_V_4_reg_1716_3> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <tmp_V_4_reg_1716_4> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <tmp_V_4_reg_1716_5> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <tmp_V_4_reg_1716_6> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <tmp_V_4_reg_1716_7> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <tmp_V_4_reg_1716_24> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <tmp_V_4_reg_1716_25> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <tmp_V_4_reg_1716_26> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <tmp_V_4_reg_1716_27> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <tmp_V_4_reg_1716_28> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <tmp_V_4_reg_1716_29> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <tmp_V_4_reg_1716_30> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <tmp_V_4_reg_1716_31> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <tmp_31_reg_1791_9> of sequential type is unconnected in block <toplevel>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x32-bit single-port distributed RAM                 : 1
+ 320x8-bit dual-port block RAM                         : 1
+ 64x32-bit single-port block RAM                       : 1
+# ROMs                                                 : 1
+ 64x5-bit ROM                                          : 1
+# Adders/Subtractors                                   : 27
+ 32-bit adder                                          : 11
+ 4-bit adder                                           : 1
+ 4-bit adder carry in                                  : 1
+ 4-bit subtractor                                      : 2
+ 5-bit adder                                           : 3
+ 6-bit adder                                           : 1
+ 7-bit adder                                           : 1
+ 9-bit adder                                           : 7
+# Counters                                             : 5
+ 32-bit up counter                                     : 3
+ 4-bit updown counter                                  : 2
+# Accumulators                                         : 2
+ 32-bit up accumulator                                 : 1
+ 32-bit up loadable accumulator                        : 1
+# Registers                                            : 1029
+ Flip-Flops                                            : 1029
+# Shift Registers                                      : 64
+ 16-bit dynamic shift register                         : 64
+# Comparators                                          : 3
+ 32-bit comparator less                                : 2
+ 7-bit comparator less                                 : 1
+# Multiplexers                                         : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+# Logic shifters                                       : 2
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 2
+ 32-bit xor2                                           : 1
+ 32-bit xor3                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <op2_1_reg_547_0> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op2_1_reg_547_1> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op2_1_reg_547_2> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op2_1_reg_547_3> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op2_1_reg_547_4> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <op2_1_reg_547_5> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_6> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_7> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_8> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_9> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_10> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_11> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_12> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_13> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_14> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_15> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_16> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_17> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_18> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_19> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_20> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_21> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_22> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_23> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_24> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_25> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_26> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_27> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_28> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_29> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_30> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:2677 - Node <storemerge_in_reg_480_31> of sequential type is unconnected in block <toplevel>.
+WARNING:Xst:1710 - FF/Latch <op2_reg_1737_0> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tmp_31_reg_1791_0> (without init value) has a constant value of 0 in block <toplevel>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <r_V_21_reg_1951_0> in Unit <toplevel> is equivalent to the following FF/Latch, which will be removed : <r_V_load_reg_1946_0> 
+
+Optimizing unit <system_toplevel_top_1_wrapper> ...
+
+Optimizing unit <toplevel_w_V_ram> ...
+
+Optimizing unit <toplevel_input_V_V_reg_slice> ...
+
+Optimizing unit <toplevel_input_V_V_fifo> ...
+
+Optimizing unit <toplevel_output_V_V_reg_slice> ...
+
+Optimizing unit <toplevel_output_V_V_fifo> ...
+
+Optimizing unit <toplevel> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+FlipFlop toplevel_top_1/toplevel_U/r_V_21_reg_1951_0 has been replicated 2 time(s)
+FlipFlop toplevel_top_1/toplevel_U/r_V_21_reg_1951_1 has been replicated 1 time(s)
+FlipFlop toplevel_top_1/toplevel_U/r_V_load_reg_1946_1 has been replicated 1 time(s)
+FlipFlop toplevel_top_1/toplevel_U/t_V_7_reg_571_4 has been replicated 1 time(s)
+FlipFlop toplevel_top_1/toplevel_U/t_V_7_reg_571_5 has been replicated 1 time(s)
+FlipFlop toplevel_top_1/toplevel_U/t_V_7_reg_571_6 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1169
+ Flip-Flops                                            : 1169
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+Top Level Output File Name         : ../implementation/system_toplevel_top_1_wrapper.ngc
+Output Format                      : ngc
+Optimization Goal                  : speed
+Keep Hierarchy                     : no
+
+Design Statistics
+# IOs                              : 70
+
+Cell Usage :
+# BELS                             : 3241
+#      GND                         : 1
+#      INV                         : 58
+#      LUT1                        : 239
+#      LUT2                        : 303
+#      LUT3                        : 627
+#      LUT3_D                      : 17
+#      LUT3_L                      : 20
+#      LUT4                        : 660
+#      LUT4_D                      : 20
+#      LUT4_L                      : 107
+#      MULT_AND                    : 31
+#      MUXCY                       : 516
+#      MUXF5                       : 162
+#      VCC                         : 1
+#      XORCY                       : 479
+# FlipFlops/Latches                : 1169
+#      FDCE                        : 2
+#      FDE                         : 1070
+#      FDPE                        : 10
+#      FDR                         : 17
+#      FDRE                        : 58
+#      FDRS                        : 8
+#      FDRSE                       : 1
+#      FDS                         : 3
+# RAMS                             : 34
+#      RAM16X1S                    : 32
+#      RAMB16_S36                  : 1
+#      RAMB16_S9_S9                : 1
+# Shift Registers                  : 64
+#      SRL16E                      : 64
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     1247  out of   4656    26%  
+ Number of Slice Flip Flops:           1169  out of   9312    12%  
+ Number of 4 input LUTs:               2147  out of   9312    23%  
+    Number used as logic:              2051
+    Number used as Shift registers:      64
+    Number used as RAMs:                 32
+ Number of IOs:                          70
+ Number of bonded IOBs:                   0  out of    232     0%  
+ Number of BRAMs:                         2  out of     20    10%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                         | Load  |
+-----------------------------------+---------------------------------------------------------------+-------+
+aclk                               | NONE(toplevel_top_1/toplevel_input_V_V_if_U/rs/state_FSM_FFd1)| 1267  |
+-----------------------------------+---------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------------------------------------------+------------------------------------------------------------------+-------+
+Control Signal                                                                                   | Buffer(FF name)                                                  | Load  |
+-------------------------------------------------------------------------------------------------+------------------------------------------------------------------+-------+
+toplevel_top_1/sig_toplevel_ap_rst(toplevel_top_1/toplevel_output_V_V_if_U/rs/reset_inv1_INV_0:O)| NONE(toplevel_top_1/toplevel_input_V_V_if_U/input_V_V_fifo/empty)| 12    |
+-------------------------------------------------------------------------------------------------+------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 11.173ns (Maximum Frequency: 89.501MHz)
+   Minimum input arrival time before clock: 2.880ns
+   Maximum output required time after clock: 2.734ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'aclk'
+  Clock period: 11.173ns (frequency: 89.501MHz)
+  Total number of paths / destination ports: 277589 / 2965
+-------------------------------------------------------------------------
+Delay:               11.173ns (Levels of Logic = 38)
+  Source:            toplevel_top_1/toplevel_U/r_V_21_reg_1951_0_1 (FF)
+  Destination:       toplevel_top_1/toplevel_U/b_V_31 (FF)
+  Source Clock:      aclk rising
+  Destination Clock: aclk rising
+
+  Data Path: toplevel_top_1/toplevel_U/r_V_21_reg_1951_0_1 to toplevel_top_1/toplevel_U/b_V_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.591   0.968  toplevel_top_1/toplevel_U/r_V_21_reg_1951_0_1 (toplevel_top_1/toplevel_U/r_V_21_reg_1951_0_1)
+     LUT3_L:I2->LO         1   0.704   0.104  toplevel_top_1/toplevel_U/Sh29_SW0 (N190)
+     LUT4:I3->O            5   0.704   0.668  toplevel_top_1/toplevel_U/Sh29 (toplevel_top_1/toplevel_U/Sh29)
+     LUT3:I2->O            1   0.704   0.000  toplevel_top_1/toplevel_U/Sh4929_G (N324)
+     MUXF5:I1->O           2   0.321   0.451  toplevel_top_1/toplevel_U/Sh4929 (toplevel_top_1/toplevel_U/Sh49)
+     LUT4_L:I3->LO         1   0.704   0.104  toplevel_top_1/toplevel_U/h1_V<1>10 (toplevel_top_1/toplevel_U/h1_V<1>10)
+     LUT4:I3->O            1   0.704   0.455  toplevel_top_1/toplevel_U/h1_V<1>174 (toplevel_top_1/toplevel_U/h1_V<1>1)
+     LUT3:I2->O            1   0.704   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_lut<1> (toplevel_top_1/toplevel_U/Maccum_b_V_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<1> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<2> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<3> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<4> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<5> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<6> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<7> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<8> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<9> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<10> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<11> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<12> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<13> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<14> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<15> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<16> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<17> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<18> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<19> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<20> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<21> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<22> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<23> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<24> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<25> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<26> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<27> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<28> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<29> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<29>)
+     MUXCY:CI->O           0   0.059   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_cy<30> (toplevel_top_1/toplevel_U/Maccum_b_V_cy<30>)
+     XORCY:CI->O           1   0.804   0.000  toplevel_top_1/toplevel_U/Maccum_b_V_xor<31> (toplevel_top_1/toplevel_U/Result<31>4)
+     FDE:D                     0.308          toplevel_top_1/toplevel_U/b_V_31
+    ----------------------------------------
+    Total                     11.173ns (8.423ns logic, 2.750ns route)
+                                       (75.4% logic, 24.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'aclk'
+  Total number of paths / destination ports: 197 / 195
+-------------------------------------------------------------------------
+Offset:              2.880ns (Levels of Logic = 1)
+  Source:            aresetn (PAD)
+  Destination:       toplevel_top_1/toplevel_input_V_V_if_U/rs/state_FSM_FFd1 (FF)
+  Destination Clock: aclk rising
+
+  Data Path: aresetn to toplevel_top_1/toplevel_input_V_V_if_U/rs/state_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     INV:I->O             41   0.704   1.265  toplevel_top_1/toplevel_output_V_V_if_U/rs/reset_inv1_INV_0 (toplevel_top_1/sig_toplevel_ap_rst)
+     FDR:R                     0.911          toplevel_top_1/toplevel_U/ap_CS_fsm_FSM_FFd21
+    ----------------------------------------
+    Total                      2.880ns (1.615ns logic, 1.265ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'aclk'
+  Total number of paths / destination ports: 35 / 34
+-------------------------------------------------------------------------
+Offset:              2.734ns (Levels of Logic = 1)
+  Source:            toplevel_top_1/toplevel_output_V_V_if_U/rs/state_FSM_FFd1 (FF)
+  Destination:       output_V_V_TVALID (PAD)
+  Source Clock:      aclk rising
+
+  Data Path: toplevel_top_1/toplevel_output_V_V_if_U/rs/state_FSM_FFd1 to output_V_V_TVALID
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             39   0.591   1.439  toplevel_top_1/toplevel_output_V_V_if_U/rs/state_FSM_FFd1 (toplevel_top_1/toplevel_output_V_V_if_U/rs/state_FSM_FFd1)
+     LUT2:I0->O            0   0.704   0.000  toplevel_top_1/toplevel_output_V_V_if_U/rs/m_valid1 (output_V_V_TVALID)
+    ----------------------------------------
+    Total                      2.734ns (1.295ns logic, 1.439ns route)
+                                       (47.4% logic, 52.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 28.00 secs
+Total CPU time to Xst completion: 26.86 secs
+ 
+--> 
+
+
+Total memory usage is 585748 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   82 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
+

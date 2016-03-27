@@ -1,0 +1,25 @@
+#!/bin/csh -f
+###########################################
+# Script file to run the flow 
+# 
+###########################################
+#
+# Command line for ngdbuild
+#
+ngdbuild -p xc3s500efg320-4 -nt timestamp -bm P6.bmm "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6.ngc" -uc P6.ucf P6.ngd 
+
+#
+# Command line for map
+#
+map -o P6_map.ncd -pr b -ol high -timing -detail P6.ngd P6.pcf 
+
+#
+# Command line for par
+#
+par -w -ol high P6_map.ncd P6.ncd P6.pcf 
+
+#
+# Command line for post_par_trce
+#
+trce -e 3 -xml P6.twx P6.ncd P6.pcf 
+

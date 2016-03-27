@@ -1,0 +1,1230 @@
+Xilinx Platform Studio (XPS)
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Assigned Driver tmrctr 2.05.a for instance xps_timer_0
+xps_timer_0 has been added to the project
+WARNING:EDK:2137 - Peripheral xps_timer_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+WARNING:EDK:2137 - Peripheral xps_timer_0 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) LEDs_8Bit	mb_plb
+  (0x81420000-0x8142ffff) DIP_Switches_4Bit	mb_plb
+  (0x81440000-0x8144ffff) Buttons_4Bit	mb_plb
+  (0x83c00000-0x83c0ffff) xps_timer_0	mb_plb
+  (0x84000000-0x8400ffff) RS232_DTE	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+Generated Addresses Successfully
+
+********************************************************************************
+At Local date and time: Wed Feb 10 13:01:45 2016
+ make -f system.make bits started...
+****************************************************
+Creating system netlist for hardware specification..
+****************************************************
+platgen -p xc3s500efg320-4 -lang vhdl -intstyle default    -msg __xps/ise/xmsgprops.lst -parallel yes system.mhs
+
+Release 14.7 - platgen Xilinx EDK 14.7 Build EDK_P.20131013
+ (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+
+Command Line: platgen -p xc3s500efg320-4 -lang vhdl -intstyle default -msg
+__xps/ise/xmsgprops.lst -parallel yes system.mhs 
+
+Parse /usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs ...
+
+Read MPD definitions ...
+
+Overriding IP level properties ...
+
+Computing clock values...
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   ilmb_cntlr:BRAM_Clk_A. Clock DRCs will not be performed on this core and
+   cores connected to it. 
+INFO:EDK:740 - Cannot determine the input clock associated with port :
+   dlmb_cntlr:BRAM_Clk_A. Clock DRCs will not be performed on this core and
+   cores connected to it. 
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+Address Map for Processor microblaze_0
+  (0000000000-0x00003fff) dlmb_cntlr	dlmb
+  (0000000000-0x00003fff) ilmb_cntlr	ilmb
+  (0x81400000-0x8140ffff) LEDs_8Bit	mb_plb
+  (0x81420000-0x8142ffff) DIP_Switches_4Bit	mb_plb
+  (0x81440000-0x8144ffff) Buttons_4Bit	mb_plb
+  (0x83c00000-0x83c0ffff) xps_timer_0	mb_plb
+  (0x84000000-0x8400ffff) RS232_DTE	mb_plb
+  (0x84400000-0x8440ffff) mdm_0	mb_plb
+INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
+   C_PLBV46_NUM_MASTERS value to 2 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/plb_v46_v1_05_a/data/plb_v46_v2_1_0.mpd line 79 
+INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
+   C_PLBV46_NUM_SLAVES value to 6 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/plb_v46_v1_05_a/data/plb_v46_v2_1_0.mpd line 80 
+INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
+   C_PLBV46_MID_WIDTH value to 1 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/plb_v46_v1_05_a/data/plb_v46_v2_1_0.mpd line 81 
+INFO:EDK:4130 - IPNAME: plb_v46, INSTANCE:mb_plb - tool is overriding PARAMETER
+   C_PLBV46_DWIDTH value to 32 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/plb_v46_v1_05_a/data/plb_v46_v2_1_0.mpd line 83 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:ilmb - tool is overriding PARAMETER
+   C_LMB_NUM_SLAVES value to 1 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/lmb_v10_v2_00_b/data/lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: lmb_v10, INSTANCE:dlmb - tool is overriding PARAMETER
+   C_LMB_NUM_SLAVES value to 1 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/lmb_v10_v2_00_b/data/lmb_v10_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: bram_block, INSTANCE:lmb_bram - tool is overriding
+   PARAMETER C_MEMSIZE value to 0x4000 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/bram_block_v1_00_a/data/bram_block_v2_1_0.mpd line
+   78 
+INFO:EDK:4130 - IPNAME: xps_uartlite, INSTANCE:RS232_DTE - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/xps_uartlite_v1_02_a/data/xps_uartlite_v2_1_0.mpd
+   line 84 
+INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:LEDs_8Bit - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/xps_gpio_v2_00_a/data/xps_gpio_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:DIP_Switches_4Bit - tool is
+   overriding PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/xps_gpio_v2_00_a/data/xps_gpio_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: xps_gpio, INSTANCE:Buttons_4Bit - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/xps_gpio_v2_00_a/data/xps_gpio_v2_1_0.mpd line 82 
+INFO:EDK:4130 - IPNAME: mdm, INSTANCE:mdm_0 - tool is overriding PARAMETER
+   C_SPLB_MID_WIDTH value to 1 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/mdm_v2_10_a/data/mdm_v2_1_0.mpd line 118 
+INFO:EDK:4130 - IPNAME: mdm, INSTANCE:mdm_0 - tool is overriding PARAMETER
+   C_SPLB_NUM_MASTERS value to 2 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/mdm_v2_10_a/data/mdm_v2_1_0.mpd line 119 
+INFO:EDK:4130 - IPNAME: xps_timer, INSTANCE:xps_timer_0 - tool is overriding
+   PARAMETER C_SPLB_MID_WIDTH value to 1 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/xps_timer_v1_02_a/data/xps_timer_v2_1_0.mpd line 87
+    
+INFO:EDK:4130 - IPNAME: xps_timer, INSTANCE:xps_timer_0 - tool is overriding
+   PARAMETER C_SPLB_NUM_MASTERS value to 2 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/xps_timer_v1_02_a/data/xps_timer_v2_1_0.mpd line 88
+    
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: plb_v46, INSTANCE: mb_plb - 2 master(s) : 6 slave(s) 
+IPNAME: lmb_v10, INSTANCE: ilmb - 1 master(s) : 1 slave(s) 
+IPNAME: lmb_v10, INSTANCE: dlmb - 1 master(s) : 1 slave(s) 
+
+Checking port drivers...
+WARNING:EDK:4181 - PORT: Peripheral_Reset, CONNECTOR: sys_periph_reset -
+   floating connection -
+   /usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs line 177 
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_D_PLB value to 1 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line
+   233 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_I_PLB value to 1 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line
+   236 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_ADDR_TAG_BITS value to 0 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line
+   337 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_DCACHE_ADDR_TAG value to 0 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line
+   367 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_USE_EXT_BRK value to 1 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line
+   402 
+INFO:EDK:4130 - IPNAME: microblaze, INSTANCE:microblaze_0 - tcl is overriding
+   PARAMETER C_USE_EXT_NM_BRK value to 1 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/microblaze_v8_50_c/data/microblaze_v2_1_0.mpd line
+   403 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:dlmb_cntlr - tcl is
+   overriding PARAMETER C_MASK value to 0x80000000 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/data/lmb_bram_if_cntlr_v2
+   _1_0.mpd line 92 
+INFO:EDK:4130 - IPNAME: lmb_bram_if_cntlr, INSTANCE:ilmb_cntlr - tcl is
+   overriding PARAMETER C_MASK value to 0x80000000 -
+   /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/Xi
+   linxProcessorIPLib/pcores/lmb_bram_if_cntlr_v3_10_c/data/lmb_bram_if_cntlr_v2
+   _1_0.mpd line 92 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+INFO: The microblaze_0 core has constraints automatically generated by XPS in
+implementation/microblaze_0_wrapper/microblaze_0_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO: The ilmb core has constraints automatically generated by XPS in
+implementation/ilmb_wrapper/ilmb_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+INFO: The dlmb core has constraints automatically generated by XPS in
+implementation/dlmb_wrapper/dlmb_wrapper.ucf.
+It can be overridden by constraints placed in the system.ucf file.
+
+
+Modify defaults ...
+
+Creating stub ...
+
+Processing licensed instances ...
+Completion time: 0.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+
+Managing cache ...
+
+Elaborating instances ...
+IPNAME:bram_block INSTANCE:lmb_bram -
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs line 80 - elaborating
+IP
+IPNAME:clock_generator INSTANCE:clock_generator_0 -
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs line 140 - elaborating
+IP
+ClkGen elaborate status: PASSED
+----------------------------------------
+----------------------------------------
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 1.00 seconds
+
+Constructing platform-level connectivity ...
+Completion time: 0.00 seconds
+
+Writing (top-level) BMM ...
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+
+INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
+INFO:EDK:4194 - Running XST parallelly on 2 processors
+INSTANCE:microblaze_0 - /usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs
+line 27 - Running XST synthesis
+INSTANCE:mb_plb - /usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs line
+41 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+INSTANCE:ilmb - /usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs line 48
+- Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+INSTANCE:dlmb - /usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs line 55
+- Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+INSTANCE:dlmb_cntlr - /usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs
+line 62 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+INSTANCE:ilmb_cntlr - /usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs
+line 71 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+INSTANCE:lmb_bram - /usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs
+line 80 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+INSTANCE:rs232_dte - /usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs
+line 87 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+INSTANCE:leds_8bit - /usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs
+line 101 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+INSTANCE:dip_switches_4bit -
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs line 114 - Running XST
+synthesis
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+INSTANCE:buttons_4bit - /usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs
+line 127 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+INSTANCE:clock_generator_0 -
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs line 140 - Running XST
+synthesis
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+INSTANCE:mdm_0 - /usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs line
+155 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+INSTANCE:proc_sys_reset_0 -
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs line 167 - Running XST
+synthesis
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+INSTANCE:xps_timer_0 - /usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs
+line 180 - Running XST synthesis
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+
+Running NGCBUILD ...
+IPNAME:system_microblaze_0_wrapper INSTANCE:microblaze_0 -
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs line 27 - Running
+NGCBUILD
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+
+Command Line:
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/bin/lin6
+4/unwrapped/ngcbuild -p xc3s500efg320-4 -intstyle silent -i -sd ..
+system_microblaze_0_wrapper.ngc ../system_microblaze_0_wrapper
+
+Reading NGO file
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/microblaze_0_wrapp
+er/system_microblaze_0_wrapper.ngc" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../system_microblaze_0_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  3 sec
+Total CPU time to NGCBUILD completion:   2 sec
+
+Writing NGCBUILD log file "../system_microblaze_0_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:system_ilmb_wrapper INSTANCE:ilmb -
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs line 48 - Running
+NGCBUILD
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+
+Command Line:
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/bin/lin6
+4/unwrapped/ngcbuild -p xc3s500efg320-4 -intstyle silent -i -sd ..
+system_ilmb_wrapper.ngc ../system_ilmb_wrapper
+
+Reading NGO file
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/ilmb_wrapper/syste
+m_ilmb_wrapper.ngc" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../system_ilmb_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  2 sec
+Total CPU time to NGCBUILD completion:   2 sec
+
+Writing NGCBUILD log file "../system_ilmb_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:system_dlmb_wrapper INSTANCE:dlmb -
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs line 55 - Running
+NGCBUILD
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+
+Command Line:
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/bin/lin6
+4/unwrapped/ngcbuild -p xc3s500efg320-4 -intstyle silent -i -sd ..
+system_dlmb_wrapper.ngc ../system_dlmb_wrapper
+
+Reading NGO file
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/dlmb_wrapper/syste
+m_dlmb_wrapper.ngc" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../system_dlmb_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  2 sec
+Total CPU time to NGCBUILD completion:   2 sec
+
+Writing NGCBUILD log file "../system_dlmb_wrapper.blc"...
+
+NGCBUILD done.
+IPNAME:system_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/system.mhs line 140 - Running
+NGCBUILD
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+
+Command Line:
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/bin/lin6
+4/unwrapped/ngcbuild -p xc3s500efg320-4 -intstyle silent -i -sd ..
+system_clock_generator_0_wrapper.ngc ../system_clock_generator_0_wrapper
+
+Reading NGO file
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/clock_generator_0_
+wrapper/system_clock_generator_0_wrapper.ngc" ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Writing NGC file "../system_clock_generator_0_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  2 sec
+Total CPU time to NGCBUILD completion:   2 sec
+
+Writing NGCBUILD log file "../system_clock_generator_0_wrapper.blc"...
+
+NGCBUILD done.
+INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
+   If any constraint needs to be overridden, this should be done by modifying
+   the data/system.ucf file.
+
+Rebuilding cache ...
+
+Total run time: 515.00 seconds
+Running synthesis...
+bash -c "cd synthesis; ./synthesis.sh"
+xst -ifn system_xst.scr -intstyle silent
+Running XST synthesis ...
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+XST completed
+*********************************************
+Running Xilinx Implementation tools..
+*********************************************
+xflow -wd implementation -p xc3s500efg320-4 -implement xflow.opt system.ngc
+Release 14.7 - Xflow P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+xflow -wd implementation -p xc3s500efg320-4 -implement xflow.opt system.ngc  
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+.... Copying flowfile
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/xilinx/d
+ata/fpga.flw into working directory
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation 
+
+Using Flow File:
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/fpga.flw 
+Using Option File(s): 
+ /usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/xflow.opt 
+
+Creating Script File ... 
+
+#----------------------------------------------#
+# Starting program ngdbuild
+# ngdbuild -p xc3s500efg320-4 -nt timestamp -bm system.bmm
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system.ngc" -uc
+system.ucf system.ngd 
+#----------------------------------------------#
+Release 14.7 - ngdbuild P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3/data/spartan3.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3/data/spartan3.acd>
+
+Command Line:
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/bin/lin6
+4/unwrapped/ngdbuild -p xc3s500efg320-4 -nt timestamp -bm system.bmm
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system.ngc -uc
+system.ucf system.ngd
+
+Reading NGO file
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system.ngc" ...
+Loading design module
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system_microblaze_
+0_wrapper.ngc"...
+Loading design module
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system_mb_plb_wrap
+per.ngc"...
+Loading design module
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system_ilmb_wrappe
+r.ngc"...
+Loading design module
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system_dlmb_wrappe
+r.ngc"...
+Loading design module
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system_dlmb_cntlr_
+wrapper.ngc"...
+Loading design module
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system_ilmb_cntlr_
+wrapper.ngc"...
+Loading design module
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system_lmb_bram_wr
+apper.ngc"...
+Loading design module
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system_rs232_dte_w
+rapper.ngc"...
+Loading design module
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system_leds_8bit_w
+rapper.ngc"...
+Loading design module
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system_dip_switche
+s_4bit_wrapper.ngc"...
+Loading design module
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system_buttons_4bi
+t_wrapper.ngc"...
+Loading design module
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system_clock_gener
+ator_0_wrapper.ngc"...
+Loading design module
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system_mdm_0_wrapp
+er.ngc"...
+Loading design module
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system_proc_sys_re
+set_0_wrapper.ngc"...
+Loading design module
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/implementation/system_xps_timer_0
+_wrapper.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "system.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into DCM_SP instance
+   clock_generator_0/DCM0_INST/Using_Virtex.DCM_INST. The following new TNM
+   groups and period specifications were generated at the DCM_SP output(s): 
+   CLK0: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_DCM0_CLK0 = PERIOD
+   "clock_generator_0_clock_generator_0_SIG_DCM0_CLK0" TS_sys_clk_pin HIGH 50%>
+
+Done...
+
+Processing BMM file "system.bmm" ...
+
+Checking expanded design ...
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[20].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[19].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[18].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[17].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[16].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[15].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[14].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[13].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[12].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[11].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[10].TCSR1_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[9].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[8].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[7].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[6].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[5].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[4].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[3].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[2].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[1].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR1_GENERATE[0].TCSR1_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[20].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[19].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[18].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[17].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[16].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[15].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[14].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[13].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[12].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[11].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[10].TCSR0_F
+   F_I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[9].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[8].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[7].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[6].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[5].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[4].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[3].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[2].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[1].TCSR0_FF
+   _I' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'xps_timer_0/xps_timer_0/TC_CORE_I/TIMER_CONTROL_I/TCSR0_GENERATE[0].TCSR0_FF
+   _I' has unconnected output pin
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  42
+
+Writing NGD file "system.ngd" ...
+Total REAL time to NGDBUILD completion:  19 sec
+Total CPU time to NGDBUILD completion:   18 sec
+
+Writing NGDBUILD log file "system.bld"...
+
+NGDBUILD done.
+
+
+
+#----------------------------------------------#
+# Starting program map
+# map -o system_map.ncd -pr b -ol high -timing -detail system.ngd system.pcf 
+#----------------------------------------------#
+Release 14.7 - Map P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/data/Xd
+h_PrimTypeLib.xda> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/data/Xd
+h_PrimTypeLib.xda>
+Using target part "3s500efg320-4".
+Mapping design into LUTs...
+Writing file system_map.ngm...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 12 secs 
+Total CPU  time at the beginning of Placer: 8 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:5442d627) REAL time: 15 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:5442d627) REAL time: 15 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:b624e497) REAL time: 15 secs 
+
+Phase 4.2  Initial Clock and IO Placement
+
+Phase 4.2  Initial Clock and IO Placement (Checksum:cb43976) REAL time: 17 secs 
+
+Phase 5.30  Global Clock Region Assignment
+Phase 5.30  Global Clock Region Assignment (Checksum:cb43976) REAL time: 17 secs 
+
+Phase 6.36  Local Placement Optimization
+Phase 6.36  Local Placement Optimization (Checksum:cb43976) REAL time: 17 secs 
+
+Phase 7.8  Global Placement
+...........................
+.................................................
+..
+.............................................
+................
+................
+Phase 7.8  Global Placement (Checksum:7ef0684a) REAL time: 26 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:7ef0684a) REAL time: 26 secs 
+
+Phase 9.18  Placement Optimization
+Phase 9.18  Placement Optimization (Checksum:c984742a) REAL time: 34 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:c984742a) REAL time: 34 secs 
+
+Total REAL time to Placer completion: 34 secs 
+Total CPU  time to Placer completion: 28 secs 
+Running post-placement packing...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    2
+Logic Utilization:
+  Number of Slice Flip Flops:         1,610 out of   9,312   17%
+  Number of 4 input LUTs:             2,607 out of   9,312   27%
+Logic Distribution:
+  Number of occupied Slices:          1,932 out of   4,656   41%
+    Number of Slices containing only related logic:   1,932 out of   1,932 100%
+    Number of Slices containing unrelated logic:          0 out of   1,932   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:       2,686 out of   9,312   28%
+    Number used as logic:             2,205
+    Number used as a route-thru:         79
+    Number used for Dual Port RAMs:     256
+      (Two LUTs used per Dual Port RAM)
+    Number used as Shift registers:     146
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 20 out of     232    8%
+    IOB Flip Flops:                      10
+  Number of RAMB16s:                      8 out of      20   40%
+  Number of BUFGMUXs:                     2 out of      24    8%
+  Number of DCMs:                         1 out of       4   25%
+  Number of BSCANs:                       1 out of       1  100%
+  Number of MULT18X18SIOs:                3 out of      20   15%
+
+Average Fanout of Non-Clock Nets:                3.57
+
+Peak Memory Usage:  756 MB
+Total REAL time to MAP completion:  36 secs 
+Total CPU time to MAP completion:   30 secs 
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.
+
+
+
+#----------------------------------------------#
+# Starting program par
+# par -w -ol high system_map.ncd system.ncd system.pcf 
+#----------------------------------------------#
+Release 14.7 - par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/data/parBmgr.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/data/parBmgr.acd>
+
+
+
+Constraints file: system.pcf.
+Loading device for application Rf_Device from file '3s500e.nph' in environment
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/:/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_
+x86-64-1/14.7/ISE_DS/EDK.
+   "system" is an NCD, version 3.2, device xc3s500e, package fg320, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.320 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.27 2013-10-13".
+
+
+
+Design Summary Report:
+
+ Number of External IOBs                          20 out of 232     8%
+
+   Number of External Input IOBs                 11
+
+      Number of External Input IBUFs             11
+        Number of LOCed External Input IBUFs     11 out of 11    100%
+
+
+   Number of External Output IOBs                 9
+
+      Number of External Output IOBs              9
+        Number of LOCed External Output IOBs      9 out of 9     100%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of BSCANs                          1 out of 1     100%
+   Number of BUFGMUXs                        2 out of 24      8%
+   Number of DCMs                            1 out of 4      25%
+   Number of MULT18X18SIOs                   3 out of 20     15%
+   Number of RAMB16s                         8 out of 20     40%
+   Number of Slices                       1932 out of 4656   41%
+      Number of SLICEMs                    216 out of 2328    9%
+
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 6 secs 
+Finished initial Timing Analysis.  REAL time: 6 secs 
+
+WARNING:Par:288 - The signal dlmb_LMB_ABus<30> has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal dlmb_LMB_ABus<31> has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 14202 unrouted;      REAL time: 10 secs 
+
+Phase  2  : 12370 unrouted;      REAL time: 11 secs 
+
+Phase  3  : 4220 unrouted;      REAL time: 12 secs 
+
+Phase  4  : 4220 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 13 secs 
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 16 secs 
+
+Updating file: system.ncd with current fully routed design.
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 19 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 19 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 20 secs 
+WARNING:Route:455 - CLK Net:fpga_0_clk_1_sys_clk_pin_IBUFG may have excessive skew because 
+      1 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:mdm_0/Dbg_Update_1 may have excessive skew because 
+      7 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+
+Total REAL time to Router completion: 20 secs 
+Total CPU time to Router completion: 19 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|      clk_50_0000MHz | BUFGMUX_X1Y10| No   | 1317 |  0.087     |  0.204      |
++---------------------+--------------+------+------+------------+-------------+
+|     mdm_0/Dbg_Clk_1 |  BUFGMUX_X1Y0| No   |  158 |  0.083     |  0.201      |
++---------------------+--------------+------+------+------------+-------------+
+|fpga_0_clk_1_sys_clk |              |      |      |            |             |
+|          _pin_IBUFG |         Local|      |    5 |  0.009     |  2.172      |
++---------------------+--------------+------+------+------------+-------------+
+|  mdm_0/Dbg_Update_1 |         Local|      |   37 |  1.765     |  3.731      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  TS_clock_generator_0_clock_generator_0_SI | SETUP       |     4.171ns|    15.829ns|       0|           0
+  G_DCM0_CLK0 = PERIOD TIMEGRP         "clo | HOLD        |     0.730ns|            |       0|           0
+  ck_generator_0_clock_generator_0_SIG_DCM0 |             |            |            |        |            
+  _CLK0" TS_sys_clk_pin         HIGH 50% |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |    17.993ns|     2.007ns|       0|           0
+  pin" 50 MHz HIGH 50% | HOLD        |     1.000ns|            |       0|           0
+                                            | MINLOWPULSE |    14.000ns|     6.000ns|       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk_pin                 |     20.000ns|      6.000ns|     15.829ns|            0|            0|            3|       167862|
+| TS_clock_generator_0_clock_gen|     20.000ns|     15.829ns|          N/A|            0|            0|       167862|            0|
+| erator_0_SIG_DCM0_CLK0        |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 21 secs 
+Total CPU time to PAR completion: 20 secs 
+
+Peak Memory Usage:  584 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 6
+Number of info messages: 0
+
+Writing design to file system.ncd
+
+
+
+PAR done!
+
+
+
+#----------------------------------------------#
+# Starting program post_par_trce
+# trce -e 3 -xml system.twx system.ncd system.pcf 
+#----------------------------------------------#
+Release 14.7 - Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3e/data/spartan3e.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3e/data/spartan3e.acd>
+Loading device for application Rf_Device from file '3s500e.nph' in environment
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/:/opt/yo
+rk/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK.
+   "system" is an NCD, version 3.2, device xc3s500e, package fg320, speed -4
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/bin/lin
+64/unwrapped/trce
+-e 3 -xml system.twx system.ncd system.pcf
+
+
+Design file:              system.ncd
+Physical constraint file: system.pcf
+Device,speed:             xc3s500e,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             error report
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on a
+   50 Ohm transmission line loading model.  For the details of this model, and
+   for more information on accounting for different loading conditions, please
+   see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
+   'Phase Error' calculations, these terms will be zero in the Clock Uncertainty
+   calculation.  Please make appropriate modification to SYSTEM_JITTER to
+   account for the unsupported Discrete Jitter and Phase Error.
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0 (Setup/Max: 0, Hold: 0)
+
+Constraints cover 167865 paths, 0 nets, and 12684 connections
+
+Design statistics:
+   Minimum period:  15.829ns (Maximum frequency:  63.175MHz)
+
+
+Analysis completed Wed Feb 10 13:13:24 2016
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 0
+Number of info messages: 5
+Total time: 4 secs 
+
+
+xflow done!
+touch __xps/system_routed
+xilperl /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/data/fpga_impl/observe_par.pl -error yes implementation/system.par
+Analyzing implementation/system.par
+*********************************************
+Running Bitgen..
+*********************************************
+cd implementation ; bitgen -w -f bitgen.ut system ; cd ..
+Release 14.7 - Bitgen P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/spartan
+3e/data/spartan3e.acd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/spartan
+3e/data/spartan3e.acd>
+Loading device for application Rf_Device from file '3s500e.nph' in environment
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/:/opt/yo
+rk/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK.
+   "system" is an NCD, version 3.2, device xc3s500e, package fg320, speed -4
+Opened constraints file system.pcf.
+
+Wed Feb 10 13:13:28 2016
+
+
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb16_s4_s4_0' at 'RAMB16_X0Y6' location successfully updated with design data.
+
+
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb16_s4_s4_1' at 'RAMB16_X0Y7' location successfully updated with design data.
+
+
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb16_s4_s4_2' at 'RAMB16_X0Y9' location successfully updated with design data.
+
+
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb16_s4_s4_3' at 'RAMB16_X0Y8' location successfully updated with design data.
+
+
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb16_s4_s4_4' at 'RAMB16_X0Y3' location successfully updated with design data.
+
+
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb16_s4_s4_5' at 'RAMB16_X0Y2' location successfully updated with design data.
+
+
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb16_s4_s4_6' at 'RAMB16_X0Y5' location successfully updated with design data.
+
+
+INFO::100 - BRAM 'lmb_bram/lmb_bram/ramb16_s4_s4_7' at 'RAMB16_X0Y4' location successfully updated with design data.
+
+Running DRC.
+WARNING:PhysDesignRules:367 - The signal <dlmb_LMB_ABus<30>> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <dlmb_LMB_ABus<31>> is incomplete. The
+   signal does not drive any load pins in the design.
+DRC detected 0 errors and 2 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
+Creating bit map...
+Saving bit stream in "system.bit".
+Bitstream generation is complete.
+Done!
+
+********************************************************************************
+At Local date and time: Wed Mar  9 12:50:00 2016
+ make -f system.make clean started...
+rm -f implementation/system.ngc
+rm -f implementation/system_microblaze_0_wrapper.ngc implementation/system_mb_plb_wrapper.ngc implementation/system_ilmb_wrapper.ngc implementation/system_dlmb_wrapper.ngc implementation/system_dlmb_cntlr_wrapper.ngc implementation/system_ilmb_cntlr_wrapper.ngc implementation/system_lmb_bram_wrapper.ngc implementation/system_rs232_dte_wrapper.ngc implementation/system_leds_8bit_wrapper.ngc implementation/system_dip_switches_4bit_wrapper.ngc implementation/system_buttons_4bit_wrapper.ngc implementation/system_clock_generator_0_wrapper.ngc implementation/system_mdm_0_wrapper.ngc implementation/system_proc_sys_reset_0_wrapper.ngc implementation/system_xps_timer_0_wrapper.ngc
+rm -f platgen.log
+rm -f __xps/ise/_xmsgs/platgen.xmsgs
+rm -f implementation/system.bmm
+rm -rf implementation/cache
+rm -f implementation/system.bit
+rm -f implementation/system.ncd
+rm -f implementation/system_bd.bmm 
+rm -f implementation/system_map.ncd 
+rm -f implementation/download.bit 
+rm -f __xps/system_bits
+rm -rf implementation synthesis xst hdl
+rm -rf xst.srp system.srp
+rm -f __xps/ise/_xmsgs/bitinit.xmsgs
+rm -rf __xps/ps7_instance.mhs
+rm -rf simulation/behavioral
+rm -f simgen.log
+rm -f __xps/ise/_xmsgs/simgen.xmsgs
+rm -f _impact.cmd
+Done!
+Writing filter settings....
+Done writing filter settings to:
+	/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/etc/system.filters
+Done writing Tab View settings to:
+	/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/etc/system.gui

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="system_bd.bmm" key="T2_hw_platform-bmmFile"/>
+	<item value="/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T1/bla/Debug/bla.elf" key="T2_hw_platform-microblaze_0-initElf"/>
+	<item value="system.bit" key="T2_hw_platform-bitFile"/>
+</section>

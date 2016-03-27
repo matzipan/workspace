@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_39' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:19.039+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_38' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:19.026+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_37' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:19.012+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_36' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.995+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_35' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.980+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_34' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.959+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_33' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.902+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_32' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.889+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_31' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.874+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_30' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.860+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_29' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.807+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_28' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.787+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_27' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.760+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_26' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.745+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_25' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.719+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_24' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.703+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_23' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.686+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_22' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.673+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_21' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.655+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_20' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.640+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_19' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.628+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_18' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.611+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_17' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.599+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_16' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.584+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_15' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.568+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_14' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.556+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_13' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.543+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_12' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.527+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_11' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.515+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_10' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.498+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_9' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.480+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_8' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.469+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_7' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.459+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_6' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.436+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_5' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.423+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_4' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.402+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_3' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.390+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_2' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.375+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_1' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.362+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'inputdata_V_0' will not be exposed as RTL port." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:18.348+0000" type="Warning"/>
+        <logs message="@W [HLS-41] Resource core 'AXI4Stream' on port 'output' is deprecated. Please use the interface directive to specify the AXI interface." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:12.028+0000" type="Warning"/>
+        <logs message="@W [HLS-41] Resource core 'AXI4Stream' on port 'input' is deprecated. Please use the interface directive to specify the AXI interface." projectName="bla" solutionName="solution1" date="2016-02-18T12:02:10.400+0000" type="Warning"/>
+        <logs message="@W [HLS-40] This current release of Vivado HLS is the last one supporting the following device families including any of their associated derivatives: Virtex-6, Virtex-5, Virtex-4, Spartan-6 and Spartan-3. These families will still be supported in the future but will require this current version of Vivado HLS or a previous one." projectName="bla" solutionName="solution1" date="2016-02-18T12:01:54.509+0000" type="Warning"/>
+        <logs message="@W [HLS-40] This current release of Vivado HLS is the last one supporting the following device families including any of their associated derivatives: Virtex-6, Virtex-5, Virtex-4, Spartan-6 and Spartan-3. These families will still be supported in the future but will require this current version of Vivado HLS or a previous one." projectName="bla" solutionName="solution1" date="2016-02-18T12:01:54.447+0000" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)&#xA;   between fifo read on port 'input_V_V' (divcore/solution1/src/toplevel.cpp:12) and fifo read on port 'input_V_V' (divcore/solution1/src/toplevel.cpp:11)." projectName="divcore" solutionName="solution1" date="2016-03-03T10:29:23.363+0000" type="Warning"/>
+        <logs message="@W [HLS-41] Resource core 'AXI4Stream' on port 'output' is deprecated. Please use the interface directive to specify the AXI interface." projectName="divcore" solutionName="solution1" date="2016-03-03T10:29:19.690+0000" type="Warning"/>
+        <logs message="@W [HLS-41] Resource core 'AXI4Stream' on port 'input' is deprecated. Please use the interface directive to specify the AXI interface." projectName="divcore" solutionName="solution1" date="2016-03-03T10:29:18.118+0000" type="Warning"/>
+        <logs message="@W [HLS-40] This current release of Vivado HLS is the last one supporting the following device families including any of their associated derivatives: Virtex-6, Virtex-5, Virtex-4, Spartan-6 and Spartan-3. These families will still be supported in the future but will require this current version of Vivado HLS or a previous one." projectName="divcore" solutionName="solution1" date="2016-03-03T10:29:00.073+0000" type="Warning"/>
+        <logs message="@W [HLS-40] This current release of Vivado HLS is the last one supporting the following device families including any of their associated derivatives: Virtex-6, Virtex-5, Virtex-4, Spartan-6 and Spartan-3. These families will still be supported in the future but will require this current version of Vivado HLS or a previous one." projectName="divcore" solutionName="solution1" date="2016-03-03T10:29:00.031+0000" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

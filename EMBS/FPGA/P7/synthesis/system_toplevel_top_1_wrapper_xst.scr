@@ -1,0 +1,14 @@
+set -tmpdir /usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/synthesis/xst_temp_dir/
+run
+-opt_mode speed
+-netlist_hierarchy as_optimized
+-opt_level 1
+-p xc3s500efg320-4
+-top system_toplevel_top_1_wrapper
+-ifmt MIXED
+-ifn system_toplevel_top_1_wrapper_xst.prj
+-ofn ../implementation/system_toplevel_top_1_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}
+-vlgincdir {"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/pcores/" "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/impl/pcores/" "/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/XilinxBFMinterface/pcores/" "/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/" }

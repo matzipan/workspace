@@ -1,0 +1,25 @@
+@I [HLS-10] Running '/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/bin/unwrapped/lnx64.o/vivado_hls'
+            for user 'az579' on host 'pc780s.cs.york.ac.uk' (Linux_x86_64 version 3.13.0-79-generic) on Fri Mar 11 16:25:43 GMT 2016
+            in directory '/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core'
+@I [HLS-10] Opening project '/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core'.
+@I [HLS-10] Opening solution '/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1'.
+@I [SYN-201] Setting up clock 'default' with a period of 20ns.
+@W [HLS-40] This current release of Vivado HLS is the last one supporting the following device families including any of their associated derivatives: Virtex-6, Virtex-5, Virtex-4, Spartan-6 and Spartan-3. These families will still be supported in the future but will require this current version of Vivado HLS or a previous one.
+@I [HLS-10] Setting target device to 'xc3s500efg320-4'
+   Compiling ../../src/toplevel.cpp in debug mode
+   Generating csim.exe
+Failed
+a807d00404dacf5d60a9c85cca0ffe97
+128ecf542a35ac5270a87dc740918404@E Simulation failed: Function 'main' returns nonzero value '1'.
+@E [SIM-1] 'csim_design' failed: nonzero return value.
+4
+    while executing
+"source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/csim.tcl"
+    invoked from within
+"hls::main /usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/md5core/md5core/solution1/csim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"

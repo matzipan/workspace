@@ -1,0 +1,199 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'toplevel'" level="0">
+<item name = "Date">Thu Feb 18 12:02:18 2016
+</item>
+<item name = "Version">2015.4 (Build 1412921 on Wed Nov 18 09:58:55 AM 2015)</item>
+<item name = "Project">bla</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">spartan3e</item>
+<item name = "Target device">xc3s1600efg320-4</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">20.00</item>
+<item name = "Clock uncertainty (ns)">2.50</item>
+<item name = "Estimated clock period (ns)">16.88</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">41, 41, 42, 42, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, FF, LUT, MULT18x18</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, 0, 1664, -</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, -, -</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, 158, -</column>
+<column name="Register">-, 874, -, -</column>
+<specialColumn name="Available">36, 29504, 29504, 36</specialColumn>
+<specialColumn name="Utilization (%)">0, 2, 6, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="grp_fu_133_p2">+, 0, 0, 32, 32, 32</column>
+<column name="grp_fu_139_p2">+, 0, 0, 32, 32, 32</column>
+<column name="grp_fu_145_p2">+, 0, 0, 32, 32, 32</column>
+<column name="grp_fu_155_p2">+, 0, 0, 32, 32, 32</column>
+<column name="grp_fu_165_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp19_fu_665_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp1_fu_290_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp2_fu_221_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp3_fu_205_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp4_fu_216_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp5_fu_211_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp_V_41_fu_670_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp_fu_434_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp_V_fu_659_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_10_fu_353_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_11_fu_358_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_12_fu_364_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_13_fu_382_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_14_fu_387_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_15_fu_411_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_16_fu_416_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_17_fu_422_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_18_fu_445_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_19_fu_450_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_1_fu_233_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_20_fu_474_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_21_fu_479_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_22_fu_485_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_23_fu_503_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_24_fu_508_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_25_fu_532_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_26_fu_537_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_27_fu_543_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_28_fu_561_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_29_fu_566_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_2_fu_238_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_30_fu_590_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_31_fu_595_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_32_fu_601_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_33_fu_619_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_34_fu_624_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_35_fu_648_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_36_fu_653_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_3_fu_243_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_4_fu_261_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_5_fu_266_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_6_fu_295_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_7_fu_300_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_8_fu_306_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_9_fu_324_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_fu_227_p2">-, 0, 0, 32, 32, 32</column>
+<column name="total_V_2_s_fu_329_p2">-, 0, 0, 32, 32, 32</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">126, 43, 1, 43</column>
+<column name="output_V_V_din">32, 3, 32, 96</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">42, 0, 42, 0</column>
+<column name="reg_125">32, 0, 32, 0</column>
+<column name="reg_129">32, 0, 32, 0</column>
+<column name="reg_151">32, 0, 32, 0</column>
+<column name="reg_161">32, 0, 32, 0</column>
+<column name="reg_171">32, 0, 32, 0</column>
+<column name="tmp1_reg_703">32, 0, 32, 0</column>
+<column name="tmp29_reg_773">32, 0, 32, 0</column>
+<column name="tmp2_reg_688">32, 0, 32, 0</column>
+<column name="tmp_V_2_reg_676">32, 0, 32, 0</column>
+<column name="tmp_V_3_reg_682">32, 0, 32, 0</column>
+<column name="tmp_V_reg_778">32, 0, 32, 0</column>
+<column name="tmp_reg_733">32, 0, 32, 0</column>
+<column name="total_V_2_12_reg_718">32, 0, 32, 0</column>
+<column name="total_V_2_14_reg_723">32, 0, 32, 0</column>
+<column name="total_V_2_17_reg_728">32, 0, 32, 0</column>
+<column name="total_V_2_19_reg_738">32, 0, 32, 0</column>
+<column name="total_V_2_22_reg_743">32, 0, 32, 0</column>
+<column name="total_V_2_24_reg_748">32, 0, 32, 0</column>
+<column name="total_V_2_27_reg_753">32, 0, 32, 0</column>
+<column name="total_V_2_29_reg_758">32, 0, 32, 0</column>
+<column name="total_V_2_32_reg_763">32, 0, 32, 0</column>
+<column name="total_V_2_34_reg_768">32, 0, 32, 0</column>
+<column name="total_V_2_3_reg_693">32, 0, 32, 0</column>
+<column name="total_V_2_5_reg_698">32, 0, 32, 0</column>
+<column name="total_V_2_8_reg_708">32, 0, 32, 0</column>
+<column name="total_V_2_s_reg_713">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_none, toplevel, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_none, toplevel, return value</column>
+<column name="input_V_V_dout">in, 32, ap_fifo, input_V_V, pointer</column>
+<column name="input_V_V_empty_n">in, 1, ap_fifo, input_V_V, pointer</column>
+<column name="input_V_V_read">out, 1, ap_fifo, input_V_V, pointer</column>
+<column name="output_V_V_din">out, 32, ap_fifo, output_V_V, pointer</column>
+<column name="output_V_V_full_n">in, 1, ap_fifo, output_V_V, pointer</column>
+<column name="output_V_V_write">out, 1, ap_fifo, output_V_V, pointer</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">16.88</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'total_V_2', bla/src/toplevel.cpp:44->bla/src/toplevel.cpp:25">sub, 4.22, 4.22, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'total_V_2_1', bla/src/toplevel.cpp:44->bla/src/toplevel.cpp:25">sub, 4.22, 8.44, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'total_V_2_2', bla/src/toplevel.cpp:44->bla/src/toplevel.cpp:25">sub, 4.22, 12.66, -, -, -, -, -, -, -, -, -, -, -</column>
+<column name="'total_V_2_3', bla/src/toplevel.cpp:44->bla/src/toplevel.cpp:25">sub, 4.22, 16.88, -, -, -, -, -, -, -, -, -, -, -</column>
+</table>
+</item>
+</section>
+</profile>

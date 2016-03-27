@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="toplevel.h" path="/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/divcore/divcore/solution1/src/toplevel.h"/>
+    <originFiles name="toplevel.cpp" path="/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/divcore/divcore/solution1/src/toplevel.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="testbench.cpp" path="/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/divcore/divcore/solution1/src/testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

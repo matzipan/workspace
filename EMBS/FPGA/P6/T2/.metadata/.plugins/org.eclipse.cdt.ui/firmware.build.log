@@ -1,0 +1,6 @@
+16:07:45 **** Incremental Build of configuration Release for project firmware ****
+make all 
+make: Nothing to be done for `all'.
+
+16:07:45 Build Finished (took 174ms)
+

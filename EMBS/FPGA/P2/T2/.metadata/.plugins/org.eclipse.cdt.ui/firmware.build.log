@@ -1,0 +1,29 @@
+11:53:45 **** Build of configuration Debug for project firmware ****
+make all 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   3150	    268	   2084	   5502	   157e	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../T2_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../T2_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+
+11:53:46 Build Finished (took 1s.781ms)
+

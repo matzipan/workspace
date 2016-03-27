@@ -1,0 +1,6 @@
+   Compiling ../../src/toplevel.cpp in debug mode
+   Generating csim.exe
+Failed
+a807d00404dacf5d60a9c85cca0ffe97
+128ecf542a35ac5270a87dc740918404
+@E [SIM-1] 'csim_design' failed: nonzero return value.

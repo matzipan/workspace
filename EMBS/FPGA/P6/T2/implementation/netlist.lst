@@ -1,0 +1,19 @@
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6.ngc 1457539234
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_microblaze_0_wrapper.ngc 1457539067
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_mb_plb_wrapper.ngc 1457538709
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_ilmb_wrapper.ngc 1457539072
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_dlmb_wrapper.ngc 1457539077
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_dlmb_cntlr_wrapper.ngc 1457538734
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_ilmb_cntlr_wrapper.ngc 1457538744
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_lmb_bram_wrapper.ngc 1457538752
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_rs232_dte_wrapper.ngc 1457538773
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_leds_8bit_wrapper.ngc 1457538793
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_dip_switches_4bit_wrapper.ngc 1457538812
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_buttons_4bit_wrapper.ngc 1457538832
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_ddr_sdram_wrapper.ngc 1457539083
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_xps_timer_0_wrapper.ngc 1457538955
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_clock_generator_0_wrapper.ngc 1457539087
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_mdm_0_wrapper.ngc 1457538983
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_proc_sys_reset_0_wrapper.ngc 1457538993
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/implementation/P6_toplevel_top_0_wrapper.ngc 1457539058
+OK

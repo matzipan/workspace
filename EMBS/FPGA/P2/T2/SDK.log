@@ -1,0 +1,30 @@
+13:28:38.902 INFO  - Processing command line option -hwspec /usr/userfs/a/az579/Workspace/EMBS/FPGA/P1/T2/SDK/SDK_Export/hw/system.xml. 
+13:48:04.172 INFO  - Successfully generated /usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T1/bla/src/lscript.ld. 
+13:48:04.175 INFO  - Applying linker script to all configurations of project bla. 
+13:48:04.177 INFO  - Setting rebuild state to true for all configurations of project bla. 
+13:51:43.399 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T1/T2_hw_platform/download.bit" 
+13:52:53.423 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:40:43.635 WARN  - Unable to obtain port 2350 for use by XMD, java.net.BindException: Address already in use 
+11:40:48.797 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/T2_hw_platform/download.bit" 
+11:44:24.598 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/T2_hw_platform/download.bit" 
+11:44:47.776 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/T2_hw_platform/download.bit" 
+11:45:23.218 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/T2_hw_platform/download.bit" 
+11:48:33.448 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/T2_hw_platform/download.bit" 
+11:49:32.746 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/T2_hw_platform/download.bit" 
+11:50:18.183 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/T2_hw_platform/download.bit" 
+11:53:28.637 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/T2_hw_platform/download.bit" 
+11:53:49.566 ERROR - FPGA Configuration failed.Connection to Board Failed
+
+
+    Failed to connect to Xilinx hw_server. Check if the
+    hw_server is running and correct TCP port is used.
+ 
+11:53:58.460 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/T2_hw_platform/download.bit" 
+11:54:05.280 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/T2_hw_platform/download.bit" 
+11:54:58.410 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/T2_hw_platform/download.bit" 
+11:57:17.115 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/T2_hw_platform/download.bit" 
+11:57:37.177 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/T2_hw_platform/download.bit" 
+11:58:15.913 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/T2_hw_platform/download.bit" 
+11:59:25.691 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/T2_hw_platform/download.bit" 
+12:08:08.698 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P2/T2/T2_hw_platform/download.bit" 
+12:12:33.876 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

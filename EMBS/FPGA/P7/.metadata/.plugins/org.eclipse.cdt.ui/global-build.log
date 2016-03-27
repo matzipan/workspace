@@ -1,0 +1,3394 @@
+11:34:31 **** Build of project standalone_bsp_0 ****
+make -k all 
+libgen -hw ../P6_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../P6_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'gmake -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'gmake -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+Compiling common
+Compiling lldma
+Compiling standalone
+Compiling gpio
+Compiling mpmc
+Compiling bram
+Compiling uartlite
+Compiling tmrctr
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+11:35:32 **** Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.cc
+Invoking: MicroBlaze g++ compiler
+mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cc"
+Finished building: ../src/main.cc
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze g++ linker
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   1754	    268	   2090	   4112	   1010	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+
+**** Build of configuration Debug for project firmware ****
+
+Nothing to build for project firmware
+11:36:18 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2: ld returned 1 exit status
+make: *** [firmware.elf] Error 1
+11:36:24 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6226	    272	   2086	   8584	   2188	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+11:37:17 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6226	    272	   2086	   8584	   2188	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+12:24:13 **** Clean-only build of configuration Debug for project firmware ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  firmware.elf.size  firmware.elf.elfcheck  firmware.elf
+ 
+12:24:14 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6646	    288	   2088	   9022	   233e	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+12:26:00 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7150	    288	   2088	   9526	   2536	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+12:32:07 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7446	    288	   2088	   9822	   265e	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+12:34:07 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7806	    288	   2088	  10182	   27c6	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+12:35:01 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7826	    288	   2094	  10208	   27e0	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+12:35:18 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7826	    288	   2094	  10208	   27e0	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+12:36:17 **** Clean-only build of configuration Debug for project firmware ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  firmware.elf.size  firmware.elf.elfcheck  firmware.elf
+ 
+12:36:17 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7826	    288	   2094	  10208	   27e0	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+12:36:46 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+12:37:13 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7826	    288	   2094	  10208	   27e0	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+12:37:19 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+12:39:27 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7822	    288	   2088	  10198	   27d6	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+12:39:30 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7842	    288	   2094	  10224	   27f0	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+12:39:36 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+12:40:05 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7666	    288	   2094	  10048	   2740	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+12:40:23 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7646	    288	   2088	  10022	   2726	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+12:40:38 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+12:41:02 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7822	    288	   2088	  10198	   27d6	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+12:41:09 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+12:41:21 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7822	    288	   2088	  10198	   27d6	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+12:41:29 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7822	    288	   2088	  10198	   27d6	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+13:13:47 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7666	    288	   2094	  10048	   2740	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+13:14:00 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7666	    288	   2094	  10048	   2740	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+14:49:51 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7666	    288	   2094	  10048	   2740	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+14:50:54 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:39:5: error: 'data' undeclared (first use in this function)
+../src/main.c:39:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:40:5: error: 'rv' undeclared (first use in this function)
+../src/main.c:40:5: error: invalid lvalue in asm output 0
+make: *** [src/main.o] Error 1
+14:52:03 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:40:10: error: redeclaration of 'i' with no linkage
+../src/main.c:17:9: note: previous declaration of 'i' was here
+../src/main.c:40:2: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:40:2: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/main.c:41:3: error: 'to_hw' undeclared (first use in this function)
+../src/main.c:41:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:45:10: error: redefinition of 'i'
+../src/main.c:40:10: note: previous definition of 'i' was here
+../src/main.c:45:2: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:46:3: error: unknown type name 'uint32'
+../src/main.c:46:19: error: expected expression before 'asm'
+../src/main.c:53:5: error: 'data' undeclared (first use in this function)
+make: *** [src/main.o] Error 1
+14:52:22 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:40:10: error: redeclaration of 'i' with no linkage
+../src/main.c:17:9: note: previous declaration of 'i' was here
+../src/main.c:40:2: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:40:2: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/main.c:45:10: error: redefinition of 'i'
+../src/main.c:40:10: note: previous definition of 'i' was here
+../src/main.c:45:2: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:46:3: error: unknown type name 'uint32'
+../src/main.c:46:19: error: expected expression before 'asm'
+make: *** [src/main.o] Error 1
+14:52:37 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:40:9: error: redeclaration of 'i' with no linkage
+../src/main.c:17:9: note: previous declaration of 'i' was here
+../src/main.c:47:3: error: unknown type name 'uint32'
+../src/main.c:47:19: error: expected expression before 'asm'
+make: *** [src/main.o] Error 1
+14:52:53 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:40:9: error: redeclaration of 'i' with no linkage
+../src/main.c:17:9: note: previous declaration of 'i' was here
+../src/main.c:47:3: error: unknown type name 'uint32'
+../src/main.c:47:19: error: expected expression before 'asm'
+make: *** [src/main.o] Error 1
+14:53:04 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:46:3: error: unknown type name 'uint32'
+../src/main.c:46:19: error: expected expression before 'asm'
+make: *** [src/main.o] Error 1
+14:53:07 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:46:17: error: expected expression before 'asm'
+make: *** [src/main.o] Error 1
+14:53:36 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:46:17: error: expected expression before 'asm'
+make: *** [src/main.o] Error 1
+14:53:58 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: firmware.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: region `ilmb_cntlr_dlmb_cntlr' overflowed by 51960 bytes
+collect2: ld returned 1 exit status
+make: *** [firmware.elf] Error 1
+14:54:53 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:39:10: error: redefinition of 'init_val'
+../src/main.c:23:10: note: previous definition of 'init_val' was here
+../src/main.c:54:10: error: redefinition of 'final_val'
+../src/main.c:27:10: note: previous definition of 'final_val' was here
+make: *** [src/main.o] Error 1
+14:55:14 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: firmware.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: region `ilmb_cntlr_dlmb_cntlr' overflowed by 52112 bytes
+collect2: ld returned 1 exit status
+make: *** [firmware.elf] Error 1
+14:55:27 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8046	    288	   2088	  10422	   28b6	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+14:55:45 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+14:56:11 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8050	    288	   2094	  10432	   28c0	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+14:56:13 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8050	    288	   2094	  10432	   28c0	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+14:56:22 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8054	    288	   2088	  10430	   28be	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+14:56:31 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+14:56:43 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7926	    288	   2088	  10302	   283e	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+14:57:21 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7810	    288	   2094	  10192	   27d0	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+14:57:28 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+14:57:32 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7926	    288	   2088	  10302	   283e	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+14:57:37 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+14:58:19 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7934	    288	   2088	  10310	   2846	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+14:58:27 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+14:59:36 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7938	    288	   2094	  10320	   2850	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+14:59:43 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+15:00:19 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7934	    288	   2088	  10310	   2846	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+15:00:25 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+15:03:23 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7998	    288	   2088	  10374	   2886	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+15:03:30 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+15:03:38 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7998	    288	   2088	  10374	   2886	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+15:03:48 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+15:04:02 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7998	    288	   2088	  10374	   2886	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+15:04:05 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7998	    288	   2088	  10374	   2886	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+15:04:07 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7998	    288	   2088	  10374	   2886	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+15:04:13 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+10:24:31 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+10:46:19 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+10:46:23 **** Clean-only build of project standalone_bsp_0 ****
+make -k clean 
+rm -rf microblaze_0
+10:46:24 **** Clean-only build of configuration Debug for project firmware ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  firmware.elf.size  firmware.elf.elfcheck  firmware.elf
+ 
+10:46:25 **** Build of project standalone_bsp_0 ****
+make -k all 
+libgen -hw ../P6_hw_platform/system.xml\
+	       \
+	       -pe microblaze_0 \
+	       -log libgen.log \
+	       system.mss
+libgen
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: libgen -hw ../P6_hw_platform/system.xml -pe microblaze_0 -log
+libgen.log system.mss 
+
+
+Staging source files.
+Running DRCs.
+Running generate.
+Running post_generate.
+Running include - 'gmake -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+
+Running libs - 'gmake -s libs "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
+"COMPILER_FLAGS=-mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare
+-mcpu=v8.50.c  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections
+-fdata-sections"'.
+Compiling common
+Compiling lldma
+Compiling standalone
+Compiling gpio
+Compiling mpmc
+Compiling bram
+Compiling uartlite
+Compiling tmrctr
+Compiling cpu
+Running execs_generate.
+Finished building libraries
+10:46:46 **** Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7998	    288	   2088	  10374	   2886	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+10:47:03 **** Clean-only build of configuration Debug for project firmware ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  firmware.elf.size  firmware.elf.elfcheck  firmware.elf
+ 
+10:47:03 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7998	    288	   2088	  10374	   2886	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+10:47:12 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+10:47:44 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7934	    288	   2088	  10310	   2846	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+10:47:50 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+10:50:50 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7886	    288	   2088	  10262	   2816	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+10:50:58 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+11:15:21 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7886	    288	   2088	  10262	   2816	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+11:15:24 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7886	    288	   2088	  10262	   2816	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+15:10:43 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+15:11:03 **** Clean-only build of configuration Debug for project firmware ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  firmware.elf.size  firmware.elf.elfcheck  firmware.elf
+ 
+15:11:03 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7886	    288	   2088	  10262	   2816	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+15:28:06 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: error: 'testdata' undeclared (first use in this function)
+../src/main.c:29:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:36:16: error: 'expectedresults' undeclared (first use in this function)
+make: *** [src/main.o] Error 1
+15:28:34 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:30:6: error: 'testdata' undeclared (first use in this function)
+../src/main.c:30:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:37:16: error: 'expectedresults' undeclared (first use in this function)
+../src/main.c:24:10: warning: unused variable 'string' [-Wunused-variable]
+make: *** [src/main.o] Error 1
+15:28:44 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:30:6: error: 'testdata' undeclared (first use in this function)
+../src/main.c:30:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:37:16: error: 'expectedresults' undeclared (first use in this function)
+../src/main.c:24:10: warning: unused variable 'str' [-Wunused-variable]
+make: *** [src/main.o] Error 1
+15:29:09 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: error: 'testdata' undeclared (first use in this function)
+../src/main.c:29:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:38:16: error: 'expectedresults' undeclared (first use in this function)
+../src/main.c:23:10: warning: unused variable 'str' [-Wunused-variable]
+make: *** [src/main.o] Error 1
+15:34:08 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:7:8: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'inline'
+../src/main.c:8:0: warning: ignoring #pragma HLS INLINE [-Wunknown-pragmas]
+../src/main.c: In function 'main':
+../src/main.c:35:17: error: 'NUMTESTS' undeclared (first use in this function)
+../src/main.c:35:17: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:36:6: error: 'testdata' undeclared (first use in this function)
+../src/main.c:45:16: error: 'expectedresults' undeclared (first use in this function)
+../src/main.c:30:10: warning: unused variable 'str' [-Wunused-variable]
+make: *** [src/main.o] Error 1
+15:37:07 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:7:8: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'inline'
+../src/main.c:8:0: warning: ignoring #pragma HLS INLINE [-Wunknown-pragmas]
+../src/main.c: In function 'main':
+../src/main.c:36:6: warning: implicit declaration of function 'pack' [-Wimplicit-function-declaration]
+../src/main.c:42:17: error: 'NUMTESTS' undeclared (first use in this function)
+../src/main.c:42:17: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:45:16: error: 'expectedresults' undeclared (first use in this function)
+make: *** [src/main.o] Error 1
+15:37:28 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'pack':
+../src/main.c:8:0: warning: ignoring #pragma HLS INLINE [-Wunknown-pragmas]
+../src/main.c:10:11: error: 'uint32' undeclared (first use in this function)
+../src/main.c:10:11: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:10:19: error: expected ')' before 'bytes'
+../src/main.c:11:22: error: expected ')' before 'bytes'
+../src/main.c:12:22: error: expected ')' before 'bytes'
+../src/main.c:13:21: error: expected ';' before 'bytes'
+../src/main.c: In function 'main':
+../src/main.c:42:17: error: 'NUMTESTS' undeclared (first use in this function)
+../src/main.c:45:16: error: 'expectedresults' undeclared (first use in this function)
+../src/main.c: In function 'pack':
+../src/main.c:14:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/main.o] Error 1
+15:37:29 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'pack':
+../src/main.c:8:11: error: 'uint32' undeclared (first use in this function)
+../src/main.c:8:11: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:8:19: error: expected ')' before 'bytes'
+../src/main.c:9:22: error: expected ')' before 'bytes'
+../src/main.c:10:22: error: expected ')' before 'bytes'
+../src/main.c:11:21: error: expected ';' before 'bytes'
+../src/main.c: In function 'main':
+../src/main.c:40:17: error: 'NUMTESTS' undeclared (first use in this function)
+../src/main.c:43:16: error: 'expectedresults' undeclared (first use in this function)
+../src/main.c: In function 'pack':
+../src/main.c:12:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/main.o] Error 1
+15:41:34 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:40:17: error: 'NUMTESTS' undeclared (first use in this function)
+../src/main.c:40:17: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:43:16: error: 'expectedresults' undeclared (first use in this function)
+make: *** [src/main.o] Error 1
+15:55:14 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:27:6: warning: implicit declaration of function 'pack' [-Wimplicit-function-declaration]
+../src/main.c:33:17: error: 'NUMTESTS' undeclared (first use in this function)
+../src/main.c:33:17: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:36:16: error: 'expectedresults' undeclared (first use in this function)
+make: *** [src/main.o] Error 1
+15:56:33 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:25:5: error: 'packed' undeclared (first use in this function)
+../src/main.c:25:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:32:6: warning: implicit declaration of function 'pack' [-Wimplicit-function-declaration]
+../src/main.c:38:17: error: 'NUMTESTS' undeclared (first use in this function)
+../src/main.c:41:16: error: 'expectedresults' undeclared (first use in this function)
+make: *** [src/main.o] Error 1
+16:06:12 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:45:17: error: 'NUMTESTS' undeclared (first use in this function)
+../src/main.c:45:17: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:48:16: error: 'expectedresults' undeclared (first use in this function)
+make: *** [src/main.o] Error 1
+16:10:11 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:47:6: error: 'result' undeclared (first use in this function)
+../src/main.c:47:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:47:16: error: 'expectedresults' undeclared (first use in this function)
+../src/main.c:56:13: error: redeclaration of 'i' with no linkage
+../src/main.c:19:9: note: previous declaration of 'i' was here
+../src/main.c:56:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:56:5: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/main.c:58:3: error: unknown type name 'uint32'
+../src/main.c:58:24: error: expected expression before 'asm'
+../src/main.c:57:11: warning: unused variable 'result' [-Wunused-variable]
+../src/main.c:80:13: error: redefinition of 'i'
+../src/main.c:56:13: note: previous definition of 'i' was here
+../src/main.c:80:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:81:6: warning: implicit declaration of function 'hex_to_binary' [-Wimplicit-function-declaration]
+../src/main.c:85:10: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:92:12: error: redefinition of 'i'
+../src/main.c:85:18: note: previous definition of 'i' was here
+../src/main.c:92:4: error: 'for' loop initial declarations are only allowed in C99 mode
+make: *** [src/main.o] Error 1
+16:17:40 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:13: error: redeclaration of 'i' with no linkage
+../src/main.c:19:9: note: previous declaration of 'i' was here
+../src/main.c:48:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:48:5: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/main.c:52:19: error: 'byte_packet' undeclared (first use in this function)
+../src/main.c:52:19: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:72:13: error: redefinition of 'i'
+../src/main.c:48:13: note: previous definition of 'i' was here
+../src/main.c:72:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:73:6: warning: implicit declaration of function 'hex_to_binary' [-Wimplicit-function-declaration]
+../src/main.c:77:10: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:84:12: error: redefinition of 'i'
+../src/main.c:77:18: note: previous definition of 'i' was here
+../src/main.c:84:4: error: 'for' loop initial declarations are only allowed in C99 mode
+make: *** [src/main.o] Error 1
+16:17:51 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:13: error: redeclaration of 'i' with no linkage
+../src/main.c:19:9: note: previous declaration of 'i' was here
+../src/main.c:48:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:48:5: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/main.c:53:27: error: 'byte_packet' undeclared (first use in this function)
+../src/main.c:53:27: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:72:13: error: redefinition of 'i'
+../src/main.c:48:13: note: previous definition of 'i' was here
+../src/main.c:72:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:73:6: warning: implicit declaration of function 'hex_to_binary' [-Wimplicit-function-declaration]
+../src/main.c:77:10: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:84:12: error: redefinition of 'i'
+../src/main.c:77:18: note: previous definition of 'i' was here
+../src/main.c:84:4: error: 'for' loop initial declarations are only allowed in C99 mode
+make: *** [src/main.o] Error 1
+16:18:01 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:53:27: error: 'byte_packet' undeclared (first use in this function)
+../src/main.c:53:27: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:72:13: error: redeclaration of 'i' with no linkage
+../src/main.c:19:9: note: previous declaration of 'i' was here
+../src/main.c:72:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:72:5: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/main.c:73:6: warning: implicit declaration of function 'hex_to_binary' [-Wimplicit-function-declaration]
+../src/main.c:77:10: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:84:12: error: redefinition of 'i'
+../src/main.c:77:18: note: previous definition of 'i' was here
+../src/main.c:84:4: error: 'for' loop initial declarations are only allowed in C99 mode
+make: *** [src/main.o] Error 1
+16:18:06 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:72:13: error: redeclaration of 'i' with no linkage
+../src/main.c:19:9: note: previous declaration of 'i' was here
+../src/main.c:72:5: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:72:5: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/main.c:73:6: warning: implicit declaration of function 'hex_to_binary' [-Wimplicit-function-declaration]
+../src/main.c:77:10: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:84:12: error: redefinition of 'i'
+../src/main.c:77:18: note: previous definition of 'i' was here
+../src/main.c:84:4: error: 'for' loop initial declarations are only allowed in C99 mode
+make: *** [src/main.o] Error 1
+16:18:33 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:73:6: warning: implicit declaration of function 'hex_to_binary' [-Wimplicit-function-declaration]
+../src/main.c:77:10: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:77:10: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/main.c:84:12: error: redefinition of 'i'
+../src/main.c:77:18: note: previous definition of 'i' was here
+../src/main.c:84:4: error: 'for' loop initial declarations are only allowed in C99 mode
+make: *** [src/main.o] Error 1
+16:18:40 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:73:6: warning: implicit declaration of function 'hex_to_binary' [-Wimplicit-function-declaration]
+../src/main.c:77:10: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:77:10: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/main.c:84:12: error: redefinition of 'i'
+../src/main.c:77:18: note: previous definition of 'i' was here
+../src/main.c:84:4: error: 'for' loop initial declarations are only allowed in C99 mode
+make: *** [src/main.o] Error 1
+16:25:01 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:73:6: warning: implicit declaration of function 'hex_to_binary' [-Wimplicit-function-declaration]
+../src/main.c:77:10: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:77:10: note: use option -std=c99 or -std=gnu99 to compile your code
+../src/main.c:84:12: error: redefinition of 'i'
+../src/main.c:77:18: note: previous definition of 'i' was here
+../src/main.c:84:4: error: 'for' loop initial declarations are only allowed in C99 mode
+make: *** [src/main.o] Error 1
+16:25:17 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:73:6: warning: implicit declaration of function 'hex_to_binary' [-Wimplicit-function-declaration]
+../src/main.c:77:14: error: 'j' undeclared (first use in this function)
+../src/main.c:77:14: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:84:4: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:84:4: note: use option -std=c99 or -std=gnu99 to compile your code
+make: *** [src/main.o] Error 1
+16:25:27 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:73:6: warning: implicit declaration of function 'hex_to_binary' [-Wimplicit-function-declaration]
+../src/main.c:84:4: error: 'for' loop initial declarations are only allowed in C99 mode
+../src/main.c:84:4: note: use option -std=c99 or -std=gnu99 to compile your code
+make: *** [src/main.o] Error 1
+16:25:41 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:73:6: warning: implicit declaration of function 'hex_to_binary' [-Wimplicit-function-declaration]
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: firmware.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: region `ilmb_cntlr_dlmb_cntlr' overflowed by 53496 bytes
+./src/main.o: In function `main':
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/firmware/Debug/../src/main.c:73: undefined reference to `hex_to_binary'
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/firmware/Debug/../src/main.c:74: undefined reference to `hex_to_binary'
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/firmware/Debug/../src/main.c:85: undefined reference to `hex_to_binary'
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/firmware/Debug/../src/main.c:85: undefined reference to `hex_to_binary'
+collect2: ld returned 1 exit status
+make: *** [firmware.elf] Error 1
+16:25:52 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:73:6: warning: implicit declaration of function 'hex_to_binary' [-Wimplicit-function-declaration]
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: firmware.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: region `ilmb_cntlr_dlmb_cntlr' overflowed by 10448 bytes
+./src/main.o: In function `main':
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/firmware/Debug/../src/main.c:73: undefined reference to `hex_to_binary'
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/firmware/Debug/../src/main.c:74: undefined reference to `hex_to_binary'
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/firmware/Debug/../src/main.c:85: undefined reference to `hex_to_binary'
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/firmware/Debug/../src/main.c:85: undefined reference to `hex_to_binary'
+collect2: ld returned 1 exit status
+make: *** [firmware.elf] Error 1
+16:26:12 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: firmware.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: region `ilmb_cntlr_dlmb_cntlr' overflowed by 10656 bytes
+collect2: ld returned 1 exit status
+make: *** [firmware.elf] Error 1
+16:26:22 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:33:33: warning: unused variable 'bla' [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: firmware.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: region `ilmb_cntlr_dlmb_cntlr' overflowed by 10656 bytes
+collect2: ld returned 1 exit status
+make: *** [firmware.elf] Error 1
+16:26:33 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:33:33: warning: variable 'bla' set but not used [-Wunused-but-set-variable]
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: firmware.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: region `ilmb_cntlr_dlmb_cntlr' overflowed by 10656 bytes
+collect2: ld returned 1 exit status
+make: *** [firmware.elf] Error 1
+16:26:37 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:33:33: warning: variable 'bla' set but not used [-Wunused-but-set-variable]
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: firmware.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: region `ilmb_cntlr_dlmb_cntlr' overflowed by 10664 bytes
+collect2: ld returned 1 exit status
+make: *** [firmware.elf] Error 1
+16:26:39 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:33:33: warning: variable 'bla' set but not used [-Wunused-but-set-variable]
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: firmware.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: region `ilmb_cntlr_dlmb_cntlr' overflowed by 10664 bytes
+collect2: ld returned 1 exit status
+make: *** [firmware.elf] Error 1
+16:26:56 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: firmware.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: region `ilmb_cntlr_dlmb_cntlr' overflowed by 6104 bytes
+collect2: ld returned 1 exit status
+make: *** [firmware.elf] Error 1
+16:27:32 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: firmware.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: region `ilmb_cntlr_dlmb_cntlr' overflowed by 6104 bytes
+collect2: ld returned 1 exit status
+make: *** [firmware.elf] Error 1
+16:27:38 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: firmware.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: region `ilmb_cntlr_dlmb_cntlr' overflowed by 6104 bytes
+collect2: ld returned 1 exit status
+make: *** [firmware.elf] Error 1
+16:27:49 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:56:7: warning: variable 'msg' set but not used [-Wunused-but-set-variable]
+../src/main.c:54:10: warning: unused variable 'expected_result' [-Wunused-variable]
+../src/main.c:29:12: warning: unused variable 'j' [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7318	    288	   2088	   9694	   25de	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:27:53 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:56:7: warning: variable 'msg' set but not used [-Wunused-but-set-variable]
+../src/main.c:54:10: warning: unused variable 'expected_result' [-Wunused-variable]
+../src/main.c:29:12: warning: unused variable 'j' [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7318	    288	   2088	   9694	   25de	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:27:55 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: firmware.elf section `.text' will not fit in region `ilmb_cntlr_dlmb_cntlr'
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/bin/ld: region `ilmb_cntlr_dlmb_cntlr' overflowed by 6104 bytes
+collect2: ld returned 1 exit status
+make: *** [firmware.elf] Error 1
+16:28:50 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8082	    288	   2094	  10464	   28e0	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:29:41 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+16:30:26 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8110	    288	   2088	  10486	   28f6	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:30:35 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+16:32:58 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:57:7: warning: unused variable 'msg' [-Wunused-variable]
+../src/main.c:56:7: warning: unused variable 'initial_length' [-Wunused-variable]
+../src/main.c:55:10: warning: unused variable 'expected_result' [-Wunused-variable]
+../src/main.c:30:20: warning: variable 'final_val' set but not used [-Wunused-but-set-variable]
+../src/main.c:30:10: warning: variable 'init_val' set but not used [-Wunused-but-set-variable]
+../src/main.c:29:33: warning: unused variable 'bla' [-Wunused-variable]
+../src/main.c:29:12: warning: unused variable 'j' [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6950	    288	   2088	   9326	   246e	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:33:07 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+16:33:13 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:57:7: warning: unused variable 'msg' [-Wunused-variable]
+../src/main.c:56:7: warning: unused variable 'initial_length' [-Wunused-variable]
+../src/main.c:55:10: warning: unused variable 'expected_result' [-Wunused-variable]
+../src/main.c:30:20: warning: variable 'final_val' set but not used [-Wunused-but-set-variable]
+../src/main.c:30:10: warning: variable 'init_val' set but not used [-Wunused-but-set-variable]
+../src/main.c:29:33: warning: unused variable 'bla' [-Wunused-variable]
+../src/main.c:29:12: warning: unused variable 'j' [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6950	    288	   2088	   9326	   246e	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:33:32 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:111:1: error: expected declaration or statement at end of input
+../src/main.c:57:7: warning: variable 'msg' set but not used [-Wunused-but-set-variable]
+../src/main.c:55:10: warning: unused variable 'expected_result' [-Wunused-variable]
+../src/main.c:29:12: warning: unused variable 'j' [-Wunused-variable]
+../src/main.c:111:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [src/main.o] Error 1
+16:33:40 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:57:7: warning: variable 'msg' set but not used [-Wunused-but-set-variable]
+../src/main.c:55:10: warning: unused variable 'expected_result' [-Wunused-variable]
+../src/main.c:29:12: warning: unused variable 'j' [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7346	    288	   2094	   9728	   2600	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:35:37 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+16:37:22 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8110	    288	   2088	  10486	   28f6	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:37:29 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+16:38:00 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8114	    288	   2094	  10496	   2900	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:38:08 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+16:38:16 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+16:38:38 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8114	    288	   2094	  10496	   2900	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:38:46 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+16:39:00 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8118	    288	   2088	  10494	   28fe	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:39:04 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8118	    288	   2088	  10494	   28fe	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:39:12 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8090	    288	   2094	  10472	   28e8	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:39:14 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8090	    288	   2094	  10472	   28e8	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:39:29 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+16:39:46 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8090	    288	   2094	  10472	   28e8	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:39:53 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+16:40:25 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:106:15: warning: 'final_val' is used uninitialized in this function [-Wuninitialized]
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8062	    288	   2088	  10438	   28c6	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:40:29 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8090	    288	   2094	  10472	   28e8	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:40:38 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+16:40:53 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8090	    288	   2094	  10472	   28e8	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:48:28 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:5: error: 'initial_length' undeclared (first use in this function)
+../src/main.c:48:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:51:18: error: 'result' undeclared (first use in this function)
+make: *** [src/main.o] Error 1
+16:48:34 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:48:5: error: 'initial_length' undeclared (first use in this function)
+../src/main.c:48:5: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Error 1
+16:48:51 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8298	    288	   2094	  10680	   29b8	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:50:01 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+16:50:48 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+16:51:47 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8298	    288	   2094	  10680	   29b8	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:51:57 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+16:52:36 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8326	    288	   2088	  10702	   29ce	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:54:00 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+16:54:29 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8326	    288	   2088	  10702	   29ce	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+16:54:35 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+17:00:43 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8426	    288	   2094	  10808	   2a38	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+17:00:46 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8426	    288	   2094	  10808	   2a38	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+17:00:51 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+17:01:12 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8430	    288	   2088	  10806	   2a36	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+17:01:18 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+17:02:25 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8442	    288	   2094	  10824	   2a48	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+17:02:33 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+17:03:13 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8102	    288	   2088	  10478	   28ee	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+17:04:24 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:67:17: error: 'result' undeclared (first use in this function)
+../src/main.c:67:17: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:55:7: warning: variable 'results' set but not used [-Wunused-but-set-variable]
+make: *** [src/main.o] Error 1
+17:04:29 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+17:04:33 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:67:20: error: 'result' undeclared (first use in this function)
+../src/main.c:67:20: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:55:7: warning: variable 'results' set but not used [-Wunused-but-set-variable]
+make: *** [src/main.o] Error 1
+17:04:58 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8326	    288	   2088	  10702	   29ce	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+17:05:05 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+17:05:49 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8342	    288	   2088	  10718	   29de	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+17:05:53 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8342	    288	   2088	  10718	   29de	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+17:06:03 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+11:48:45 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+11:52:50 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8442	    288	   2094	  10824	   2a48	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+11:52:57 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+11:53:23 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8442	    288	   2094	  10824	   2a48	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+11:54:46 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8406	    288	   2088	  10782	   2a1e	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+11:54:57 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8406	    288	   2088	  10782	   2a1e	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+11:55:03 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: firmware.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size firmware.elf  |tee "firmware.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8406	    288	   2088	  10782	   2a1e	firmware.elf
+Finished building: firmware.elf.size
+ 
+Invoking: Xilinx ELF Check
+elfcheck firmware.elf -hw ../../P6_hw_platform/system.xml -pe microblaze_0  |tee "firmware.elf.elfcheck"
+elfcheck
+Xilinx EDK 14.7 Build EDK_P.20131013
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../P6_hw_platform/system.xml -pe microblaze_0
+firmware.elf 
+
+ELF file	: firmware.elf
+elfcheck passed.
+Finished building: firmware.elf.elfcheck
+ 
+11:55:24 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+12:16:44 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+12:30:23 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+12:30:32 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+12:31:15 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+12:40:10 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries
+12:40:22 **** Auto Build of project standalone_bsp_0 ****
+make -k all 
+Finished building libraries

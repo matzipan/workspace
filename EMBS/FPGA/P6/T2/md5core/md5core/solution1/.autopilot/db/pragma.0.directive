@@ -1,0 +1,77 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="left_rotate" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="to_bytes_big_endian" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="to_int32_big_endian" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="pack_little_endian" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="big_endian_to_little_endian" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="msg"/>
+<option name="cyclic" positionalBoolean="type" value=""/>
+<option name="factor" value="4"/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="input"/>
+<option name="core" value="AXI4Stream"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="output"/>
+<option name="core" value="AXI4Stream"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="INTERFACE">
+<option name="ap_ctrl_none" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="300"/>
+<option name="max" value="300"/>
+<option name="avg" value="300"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="448"/>
+<option name="max" value="448"/>
+<option name="avg" value="448"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="100"/>
+<option name="max" value="100"/>
+<option name="avg" value="100"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="UNROLL">
+<option name="factor" value="3"/>
+</pragma>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

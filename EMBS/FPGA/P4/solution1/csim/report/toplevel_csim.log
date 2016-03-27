@@ -1,0 +1,6 @@
+   Compiling ../../../src/testbench.cpp in debug mode
+   Compiling ../../../src/toplevel.cpp in debug mode
+   Generating csim.exe
+Sum of input: 2780
+Values 1 to 39 subtracted from value 0: 1220
+@I [SIM-1] CSim done with 0 errors.

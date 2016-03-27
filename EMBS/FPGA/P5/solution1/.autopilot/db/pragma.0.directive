@@ -1,0 +1,55 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="get_neighbour" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="matrix"/>
+<option name="dim" value="2"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="matrix"/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="input"/>
+<option name="core" value="AXI4Stream"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="output"/>
+<option name="core" value="AXI4Stream"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="INTERFACE">
+<option name="ap_ctrl_none" positionalBoolean="mode" value=""/>
+<option name="port" positionalBoolean="4" value="return"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="LOOP_UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="LOOP_UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="LOOP_UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="LOOP_UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="toplevel" label="">
+<pragma name="PIPELINE"/>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

@@ -1,0 +1,100 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "xparameters.h"
+#include "xtmrctr.h"
+#include "fsl.h"
+
+int main(void) {
+	XTmrCtr timer;
+	XTmrCtr_Initialize(&timer, XPAR_TMRCTR_0_DEVICE_ID);
+
+	XTmrCtr_SetResetValue(&timer, 0, 0); // Set the value that the timer resets to (in this case, 0 -second value-)
+	XTmrCtr_Reset(&timer, 0); // Reset timer 0
+	XTmrCtr_Start(&timer, 0); // Start timer 0
+
+	//@TODO Reads the resulting hash (it should be 15b669c0e5490d8d4335ca0d274f2bbb).
+	//@TODO Stops the timer.
+	//@TODO Prints out the hash and the time taken.
+
+    int i, j, packed, sent = 0;
+    uint init_val, final_val;
+    char str[] = "This is my entry into the EMBS MD5 challenge";
+
+    init_val = XTmrCtr_GetValue(&timer, 0);
+
+    for(i = 0; str[i] != 0; i++) {
+    	if(i % 4 == 0) {
+    		packed = 0;
+    	}
+
+    	packed |= str[i] << (3 - i%4) * 8;
+
+    	if(i % 4 == 0 && i != 0) {
+    		putfslx(packed, 0 , FSL_DEFAULT);
+    		sent++;
+    	}
+    }
+
+    for(i = sent; i < 16; i++) {
+		putfslx(0, 0 , FSL_DEFAULT);
+    }
+
+	final_val = XTmrCtr_GetValue(&timer, 0);
+
+    char expected_result[] = "128ecf542a35ac5270a87dc740918404";
+	uint initial_length = 0;
+	uint msg[16];
+
+    for(i = 0; i < 4; i++) {
+    	uint result;
+		getfslx(result, 0, FSL_DEFAULT);
+
+		if(0xFF000000 & result) {
+			msg[initial_length] = (result & 0xFF000000) >> 24;
+			initial_length++;
+		}
+
+		if(0xFF0000 & result) {
+			msg[initial_length] = (result & 0xFF0000) >> 16;
+			initial_length++;
+		}
+
+		if(0xFF00 & result) {
+			msg[initial_length] = (result & 0xFF00) >> 8;
+			initial_length++;
+		}
+		if(0xFF & result) {
+			msg[initial_length] = result & 0xFF;
+			initial_length++;
+		}
+	}
+
+    for(i = 0; i < 16; i++) {
+    	if((char) ((msg[i] & 0xF0) >> 4) != hex_to_binary(expected_result[2*i]) ||
+    	   (char) (msg[i] & 0xF) != hex_to_binary(expected_result[2*i + 1])) {
+    	    printf("Failed\n");
+
+    	    for(j=0; j<16; j++) {
+				printf("%x%x", (msg[i] & 0xF0) >> 4, msg[i] & 0xF);
+			}
+
+			printf("\n");
+
+
+			for(j=0; j<16; i++) {
+				printf("%x%x", hex_to_binary(expected_result[2*i]), hex_to_binary(expected_result[2*i+1]));
+			}
+
+    		return 1;
+    	}
+    }
+
+    printf("Succeeded\n");
+
+
+    xil_printf("md5core took %d ns \n\r", final_val-init_val);
+
+
+
+    return 0;
+}

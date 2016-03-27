@@ -1,0 +1,24 @@
+#  Spartan-3E Starter Board
+Net fpga_0_RS232_DTE_RX_pin LOC=U8  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_RS232_DTE_TX_pin LOC=M13  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_LEDs_8Bit_GPIO_IO_O_pin<0> LOC=F9  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_LEDs_8Bit_GPIO_IO_O_pin<1> LOC=E9  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_LEDs_8Bit_GPIO_IO_O_pin<2> LOC=D11  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_LEDs_8Bit_GPIO_IO_O_pin<3> LOC=C11  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_LEDs_8Bit_GPIO_IO_O_pin<4> LOC=F11  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_LEDs_8Bit_GPIO_IO_O_pin<5> LOC=E11  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_LEDs_8Bit_GPIO_IO_O_pin<6> LOC=E12  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_LEDs_8Bit_GPIO_IO_O_pin<7> LOC=F12  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_DIP_Switches_4Bit_GPIO_IO_I_pin<0> LOC=N17 | PULLDOWN  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_DIP_Switches_4Bit_GPIO_IO_I_pin<1> LOC=H18 | PULLDOWN  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_DIP_Switches_4Bit_GPIO_IO_I_pin<2> LOC=L14 | PULLDOWN  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_DIP_Switches_4Bit_GPIO_IO_I_pin<3> LOC=L13 | PULLDOWN  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_Buttons_4Bit_GPIO_IO_I_pin<0> LOC=D18 | PULLDOWN  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_Buttons_4Bit_GPIO_IO_I_pin<1> LOC=H13 | PULLDOWN  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_Buttons_4Bit_GPIO_IO_I_pin<2> LOC=V4 | PULLDOWN  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_Buttons_4Bit_GPIO_IO_I_pin<3> LOC=V16 | PULLDOWN  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_clk_1_sys_clk_pin TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 50000 kHz;
+Net fpga_0_clk_1_sys_clk_pin LOC=c9  |  IOSTANDARD = LVCMOS33;
+Net fpga_0_rst_1_sys_rst_pin TIG;
+Net fpga_0_rst_1_sys_rst_pin LOC=K17  |  IOSTANDARD = LVCMOS33  |  PULLDOWN;

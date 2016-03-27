@@ -1,0 +1,505 @@
+@I [HLS-0] Workspace /usr/userfs/a/az579/bla/solution1 opened at Thu Feb 18 12:01:53 GMT 2016
+@I [HLS-100] Command "config_clock -quiet -name default -period 20 -default=false "
+@I [SYN-201] Setting up clock 'default' with a period of 20ns.
+@I [HLS-100] Command 'config_clock' returned 0; elapsed 0.000135Total elapsed time: 2.150 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 8e-05Total elapsed time: 2.155 sec.
+@I [HLS-100] Command "import_lib /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx.lib "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/xilinx_interface.lib "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/plb46.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00101Total elapsed time: 2.182 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/fsl.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000709Total elapsed time: 2.187 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/axi4.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000878Total elapsed time: 2.196 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/maxi.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000722Total elapsed time: 2.201 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/saxilite.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000616Total elapsed time: 2.206 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005225Total elapsed time: 2.206 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/dsp48.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000642Total elapsed time: 2.212 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/dds_compiler.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000567Total elapsed time: 2.220 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfft.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000557Total elapsed time: 2.225 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfir.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000558Total elapsed time: 2.230 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.014044Total elapsed time: 2.235 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_old.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001999Total elapsed time: 2.243 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx.hlp "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/target_info.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000724Total elapsed time: 2.259 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/xilinx_interface.hlp "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/maxi.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000637Total elapsed time: 2.269 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/saxilite.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000654Total elapsed time: 2.275 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002034Total elapsed time: 2.275 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/dsp48.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001825Total elapsed time: 2.282 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.007521Total elapsed time: 2.283 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.3e-05Total elapsed time: 2.283 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 8672} {LUT 17344}  {FF 17344} {MULT18x18 28} {BRAM 28}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 3.6e-05Total elapsed time: 2.284 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed medium "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 1e-05Total elapsed time: 2.284 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.030531Total elapsed time: 2.286 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002108Total elapsed time: 2.305 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001362Total elapsed time: 2.311 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005029Total elapsed time: 2.320 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008764Total elapsed time: 2.338 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009265Total elapsed time: 2.351 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.018794Total elapsed time: 2.351 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.011045Total elapsed time: 2.367 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008673Total elapsed time: 2.380 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004667Total elapsed time: 2.389 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000589Total elapsed time: 2.393 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.104704Total elapsed time: 2.502 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/tps/tcl/tcllib1.11.1/struct/list.tcl "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002049Total elapsed time: 2.532 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004401Total elapsed time: 2.534 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/tps/tcl/tcllib1.11.1/math/bignum.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001184Total elapsed time: 2.555 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.044954Total elapsed time: 2.561 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.203715Total elapsed time: 2.561 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000712Total elapsed time: 2.567 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.207137Total elapsed time: 2.567 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.207776Total elapsed time: 2.567 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 8e-06Total elapsed time: 2.568 sec.
+@I [HLS-100] Command "import_lib /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e_fpv5 "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_fpv5_old.lib "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_fpv5.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002606Total elapsed time: 2.586 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004111Total elapsed time: 2.587 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.010289Total elapsed time: 2.595 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e_fpv5.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_fpv5.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001359Total elapsed time: 2.605 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001971Total elapsed time: 2.605 sec.
+@I [HLS-100] Command "set_part xc3s1600efg320-4 "
+@W [HLS-40] This current release of Vivado HLS is the last one supporting the following device families including any of their associated derivatives: Virtex-6, Virtex-5, Virtex-4, Spartan-6 and Spartan-3. These families will still be supported in the future but will require this current version of Vivado HLS or a previous one.
+@I [HLS-100] Command "add_library xilinx/spartan3e/spartan3e:xc3s1600e:fg320:-4 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.1e-05Total elapsed time: 2.614 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.1e-05Total elapsed time: 2.626 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 14752} {LUT 29504} {FF 29504} {MULT18x18 36} {BRAM 36}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 3.6e-05Total elapsed time: 2.626 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed medium "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 1e-05Total elapsed time: 2.626 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.005473Total elapsed time: 2.635 sec.
+@I [HLS-100] Command "add_library xilinx/spartan3e/spartan3e_fpv5 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 5e-06Total elapsed time: 2.637 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.002293Total elapsed time: 2.646 sec.
+@I [HLS-10] Setting target device to 'xc3s1600efg320-4'
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.012876Total elapsed time: 2.646 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1e-05Total elapsed time: 2.646 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 14752} {LUT 29504} {FF 29504} {MULT18x18 36} {BRAM 36}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 2.1e-05Total elapsed time: 2.646 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed medium "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 8e-06Total elapsed time: 2.647 sec.
+@I [HLS-100] Command 'open_solution' returned 0; elapsed 0.281844Total elapsed time: 2.650 sec.
+@I [HLS-100] Command "set_part xc3s1600efg320-4 "
+@W [HLS-40] This current release of Vivado HLS is the last one supporting the following device families including any of their associated derivatives: Virtex-6, Virtex-5, Virtex-4, Spartan-6 and Spartan-3. These families will still be supported in the future but will require this current version of Vivado HLS or a previous one.
+@I [HLS-100] Command "add_library xilinx/spartan3e/spartan3e:xc3s1600e:fg320:-4 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.2e-05Total elapsed time: 2.657 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.7e-05Total elapsed time: 2.673 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 14752} {LUT 29504} {FF 29504} {MULT18x18 36} {BRAM 36}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 2.5e-05Total elapsed time: 2.674 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed medium "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 7e-06Total elapsed time: 2.674 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.004766Total elapsed time: 2.681 sec.
+@I [HLS-100] Command "add_library xilinx/spartan3e/spartan3e_fpv5 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.3e-05Total elapsed time: 2.683 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.002801Total elapsed time: 2.693 sec.
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.009539Total elapsed time: 2.693 sec.
+@I [HLS-100] Command "create_clock -period 20 -name default "
+@I [HLS-100] Command 'create_clock' returned 0; elapsed 0.002092Total elapsed time: 2.700 sec.
+@I [HLS-100] Command "csynth_design "
+@I [HLS-100] Command "elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 "
+@I [HLS-10] Analyzing design file 'bla/src/toplevel.cpp' ... 
+@0 [HLS-0] Analyzing design file 'bla/src/toplevel.cpp' ... 
+@I [HLS-0] Compiling one TU...
+@I [HLS-0] 
+Checking before pre-process: exec clang -fno-limit-debug-info -gcc-toolchain "/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit   -I "/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lnx64/tools/systemc/include" -I "/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/include" -I "/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/include/ap_sysc" -fexceptions -I "/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/autopilot" -include etc/autopilot_ssdm_op.h "bla/src/toplevel.cpp"  -o "/usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.pp.00.o"
+
+@I [HLS-100] Command "is_encrypted /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.pp.00.o "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.000516Total elapsed time: 4.68 sec.
+@I [HLS-0] Syntax Checker time: 1 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "bla/src/toplevel.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/autopilot" -I "/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.pp.0.cpp"
+
+@I [HLS-0] GCC PP time: 0 seconds per iteration
+@I [HLS-100] Command "list_core -type functional_unit "
+@I [HLS-100] Command 'list_core' returned 0; elapsed 0.00013Total elapsed time: 4.735 sec.
+@I [HLS-0] Marker-Pragma convertor: /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.pp.0.cpp /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.pp.0.cpp.ap-line.cpp /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.pp.0.cpp.ap-line.cpp.CXX 1
+@I [HLS-0] 
+Source processor: exec /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/tps/lnx64/jre/bin/java -Xmx512m -classpath   "/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lib/classes/autopilot.sourceprocessor.jar:/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lib/classes/org.eclipse.cdt.core_5.3.0.xilinx_patch.jar:/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lib/classes/org.eclipse.core.runtime_3.7.0.v20110110.jar:/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lib/classes/org.eclipse.equinox.common_3.6.0.v20110523.jar:/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lib/classes/com.ibm.icu_4.4.2.v20110208.jar:/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lib/classes/jargs.jar:/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lnx64/tools/eclipse/plugins/org.eclipse.emf.common_2.10.1.v20150123-0348.jar:/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore_2.10.2.v20150123-0348.jar:/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lnx64/tools/eclipse/plugins/org.eclipse.emf.ecore.xmi_2.10.2.v20150123-0348.jar:/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.directiveFileModel_1.0.0.jar:/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lnx64/tools/eclipse/plugins/com.autoesl.autopilot.ui.common_1.0.0.jar"  autopilot.sourceprocessor.CParser  "/usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.pp.0.cpp.ap-line.cpp"  -m "toplevel" -o "/usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.pp.0.cpp.ap-cdt.cpp" --pp --directive /usr/userfs/a/az579/bla/solution1/solution1.directive --source /usr/userfs/a/az579/bla/src/toplevel.cpp --error /usr/userfs/a/az579/bla/solution1/.autopilot/db --funcunit "AddSub AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S MulnS MuxnS" --ve --vetcl /usr/userfs/a/az579/bla/solution1/.autopilot/db --ca --es --gf --df --pd --p2d /usr/userfs/a/az579/bla/solution1/.autopilot/db --sd --scff /usr/userfs/a/az579/bla/solution1/.autopilot/db/.systemc_flag --ad
+
+@I [HLS-0] Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __value;
+Error:Syntax error in source:for (__decltype(__n + 0) __niter = __n;
+Error:Missing ; in source:t
+Error:Syntax error in source:)
+ *__first = __tmp;
+@I [HLS-0] Marker-Pragma convertor: /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.pp.0.cpp.ap-cdt.cpp /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.pragma.0.cpp /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.pragma.0.cpp.ap-line.CXX 0
+@I [HLS-100] Command "source /usr/userfs/a/az579/bla/solution1/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00038Total elapsed time: 17.507 sec.
+@I [HLS-0] CDT processor time: 12 seconds per iteration
+@W [HLS-41] Resource core 'AXI4Stream' on port 'input' is deprecated. Please use the interface directive to specify the AXI interface.
+@W [HLS-1] Resource core 'AXI4Stream' on port 'input' is deprecated. Please use the interface directive to specify the AXI interface.
+@W [HLS-41] Resource core 'AXI4Stream' on port 'output' is deprecated. Please use the interface directive to specify the AXI interface.
+@W [HLS-1] Resource core 'AXI4Stream' on port 'output' is deprecated. Please use the interface directive to specify the AXI interface.
+@I [HLS-0] Pragma handling time: 1 seconds per iteration
+@I [HLS-0] 
+Source preprocessing: exec clang -fno-limit-debug-info -gcc-toolchain "/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lnx64/tools/gcc" -hls -fno-exceptions  -D__llvm__  -CC -E "/usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/autopilot" -I "/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h  -o "/usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.pragma.2.cpp"
+
+@I [HLS-0] exec clang -fno-limit-debug-info -gcc-toolchain /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/autopilot" -I "/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -g -o "/usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.g.bc"
+@I [HLS-100] Command "source /usr/userfs/a/az579/bla/solution1/.autopilot/db/ve_warning.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000451Total elapsed time: 20.229 sec.
+@I [HLS-10] Validating synthesis directives ...
+@0 [HLS-0] Validating synthesis directives ...
+@I [HLS-100] Command "source /usr/userfs/a/az579/bla/solution1/.autopilot/db/pragma.status.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000278Total elapsed time: 20.233 sec.
+@I [HLS-0] Linking all ...
+@I [HLS-0] exec llvm-ld  "/usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.bc"  -disable-opt  -L/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lnx64/lib -lm_basic -o "/usr/userfs/a/az579/bla/solution1/.autopilot/db/a.o.pre"
+@I [HLS-0] Link time: 0 seconds per iteration
+@I [HLS-0] Linking all ...
+@I [HLS-0] exec llvm-ld  "/usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.g.bc"  -disable-opt  -L/usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/lnx64/lib -lm_basic -o "/usr/userfs/a/az579/bla/solution1/.autopilot/db/a.g.pre"
+@I [HLS-0] Link time: 0 seconds per iteration
+@I [HLS-100] Command "opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 "
+@I [HLS-100] Command "cleanup_all_models "
+@I [HLS-100] Command 'cleanup_all_models' returned 0; elapsed 1.5e-05Total elapsed time: 21.503 sec.
+@I [HLS-10] Starting code transformations ...
+@0 [HLS-0] Starting code transformations ...
+@I [HLS-0] std xform: transform -hls -share-std-xform -always-inline -promote-dbg-pointer  -interface-preproc  -scalarrepl -mem2reg -keep-read-access -instcombine -dce  -promote-dbg-pointer  -bitop-raise  -indvars -loop-simplify -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -basicaa  -simplifycfg -mem2reg -globalopt  -global-constprop -deadargelim -instcombine -simplifycfg  -prune-eh -simplifycfg  -scalarrepl -instcombine -reassociate -licm  -simplifycfg -loop-simplify -indvars -instcombine  -simplifycfg -mem2reg -loop-simplify -indvars -instcombine  -gvn -gvn -instcombine -adce  -break-crit-edges  -simplifycfg -loop-delete  -global-array-opt -dce -dse -adce  -find-syn-modules -top toplevel  -deadargelim  -mem2reg -instcombine -dce  -presyn-prepare -auto-rom-infer  -interface-preproc  -syn-check -check-rec-only  -find-region -simplifycfg -func-extr -function-inline  -globaldce -mem2reg -instcombine -dce   -gvn -globaldce -adce -adse  -constprop -instcombine -bit-constprop  -instcombine -dce -simplifycfg -bitop-raise  -simplifycfg -dce -loop-delete -reassociate  -globalopt -global-privatize -mem2reg -dce  -global-constprop -pointer-simplify -constprop -dce  -func-inst -deadargelim  -promote-dbg-pointer  -norm-name   /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.g.0.bc -o /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.g.1.bc -f  -phase std-opt
+@I [XFORM-603] Inlining function 'addall' into 'toplevel' (bla/src/toplevel.cpp:23).
+@I [XFORM-603] Inlining function 'subfromfirst' into 'toplevel' (bla/src/toplevel.cpp:25).
+@I [HLS-0] Std xform time: 0 seconds per iteration
+@I [HLS-100] Command "is_encrypted /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.g.1.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.000317Total elapsed time: 21.912 sec.
+@I [HLS-10] Checking synthesizability ...
+@0 [HLS-0] Checking synthesizability ...
+@I [HLS-0] syn check 1/2: transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine  -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce  -array-normalize -instcombine -dce  -array-seg-normalize -instcombine -dce  -array-flatten -instcombine -dce  -array-burst -dce  -deadargelim -promote-global-argument  -function-inline -globaldce -dce  -doublePtrSimplify -doublePtrElim -dce  -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -dse -adse -instcombine  -ptrLegalization  -simplifycfg -dce -instcombine  -pointer-simplify -ptrArgReplace -dce -instcombine   -disaggr -scalarrepl -norm-name -dce  -mem2reg -instcombine -ptrLegalization   -simplifycfg -deadargelim  -instcombine -dce -inst-simplify  -function-uniquify -directive-preproc -mem2reg -dse -dce  -globaldce    /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.g.1.bc -o /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.g.2.prechk.bc -f
+@I [HLS-0] Syn check 1/2 time: 0 seconds per iteration
+@I [HLS-0] syn check 2/2: transform -syn-check   /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.g.2.prechk.bc -o /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.g.2.bc -f  -phase syn-check
+@I [HLS-0] Syn check 2/2 time: 0 seconds per iteration
+@I [HLS-0] Compiler optimizing ...
+@I [HLS-0] Share syncheck's 1.bc for syn flow: copy /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.g.1.bc to /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.o.1.bc
+@I [HLS-0] presyn 1: transform -hls -tmp /usr/userfs/a/az579/bla/solution1/.autopilot/db -type-info  -function-uniquify -directive-preproc -mem2reg -dse -dce  -disaggr -scalarrepl -norm-name -deadargelim  -mem2reg -instcombine -dce -auto-rom-infer -dce -function-uniquify  -resource-proc  -clib-intrinsic-prepare -dce  -func-buffer -dce -array-normalize  -func-legal -instcombine -gvn -constprop -dce   -ptrArgReplace -mem2reg -instcombine -dce  -array-seg-normalize -deadargelim  -instcombine -dce  -pointer-simplify -dce  -port-alignment -dce  -interface-preproc  -data-pack -instcombine -dce   -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -loop-simplify -indvars -instcombine  -gvn -loop-simplify -mem2reg -dce -simplifycfg  -find-region -instcombine  -auto-loop-pipeline  -inst-simplify  -interface-preproc  -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll  -constprop -instcombine -simplifycfg -indvars  -simplifycfg -dce -globaldce  -attach-range  -gvn -inst-simplify  -constprop -simplifycfg -dce  -pointer-simplify -dce  -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce  -auto-par -instcombine -dce  -array-transform-check  -array-reshape -instcombine -simplifycfg -dce  -ptrArgReplace -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -duplicate-dataflow-processes -globaldce  -array-partition -instcombine -simplifycfg -dce  -ptrArgReplace -global-constprop -deadargelim -mem2reg  -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg  -instcombine -simplifycfg -dce   -globalopt -constprop -dce  -array-promote -constprop -instcombine -dce  -ptrArgReplace -mem2reg  -instcombine -simplifycfg -dce   -mem-intrinsic-preproc -dce  -global-privatize  -mem2reg -globaldce  -promote-global-argument  -ptrArgReplace -mem2reg -instcombine -dce  -globalopt -mergereturn -simplify-global-access -mem2reg -dce  -pointer-simplify -dce  -functionattrs  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -inst-simplify -dce -norm-name  -function-inline -globaldce  -func-inst -constprop -instcombine -simplifycfg -dce  -func-legal -dce   -loop-bound  -arraycheck -bitwidthmin -on-by-dataflow  -loop-delete -instcombine -simplifycfg  -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments  -loop-stream -instcombine -simplifycfg -dce -globaldce  -stream-intrinsic-preproc -dce  -check-ap-stream -loop-simplify -eliminate-keepreads  -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim  -check-dataflow-syntax  -legalize-stream-variable -legalize-global -legalize-global-1  -extract-subproc -dce -dead-channel-elimination  -canonicalize-gep -globaldce -dce -gvn -deadargelim  -scalar-propagation -deadargelim -globaldce -mem2reg  -check-dataflow-channels -function-stream -dce -globaldce  -prop-fifo-spec -internal-stream-gen  -canonicalize-gep -globaldce -dce -gvn -deadargelim   -mergereturn -indvars -loop-simplify  -array-stream -instcombine -simplifycfg -dce  -bundle-memfifo-ops -deadargelim    -function-uniquify -directive-preproc -mem2reg -dse -dce  -group-axi-access    -licm -simplifycfg -dce -loop-delete  -norm-name  /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.o.1.bc -o /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.o.1.tmp.bc -f
+@I [XFORM-501] Unrolling loop 'readloop' (bla/src/toplevel.cpp:18) in function 'toplevel' completely.
+@I [XFORM-501] Unrolling loop 'addloop' (bla/src/toplevel.cpp:32) in function 'toplevel' completely.
+@I [XFORM-501] Unrolling loop 'subloop' (bla/src/toplevel.cpp:42) in function 'toplevel' completely.
+@I [XFORM-101] Partitioning array 'inputdata.V'  in dimension 1 completely.
+@I [HLS-0] Presyn 1 time: 2 seconds per iteration
+@I [HLS-0] presyn 2: transform -hls -keep-callgraph -scalarrepl -mem2reg  -port-alignment -attach-range -dce  -pipe-mux-gen  -indvars -loop-bound  -inst-simplify -instcombine -dce  -merge-array-access -mem2reg -dce  -clean-region -mergereturn -if-conv  -instcombine -dce -constprop  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce  -scalarrepl -mem2reg  -global-constprop -deadargelim -deadargelim  -instcombine -dce -simplifycfg    -ptrArgReplace -mem2reg -function-inline  -globaldce -mem2reg -instcombine -dce -expr-balance  -instcombine -dce  -bitwidthmin  -directive-preproc  -inst-rectify -instcombine -dce  -functionattrs  -constprop -instcombine -bit-constprop  -simplify-global-access  -globalopt -globaldce  -inst-simplify -instcombine -elimdeaddata -dce  -loop-delete -simplifycfg   -norm-name /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.o.1.tmp.bc -o /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.o.2.bc -f  -phase presyn
+@I [XFORM-11] Balancing expressions in function 'toplevel' (bla/src/toplevel.cpp:11)...39 expression(s) balanced.
+@I [HLS-0] Presyn 2 time: 0 seconds per iteration
+@I [HLS-100] Command "is_encrypted /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.o.2.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.000316Total elapsed time: 24.994 sec.
+@I [HLS-0] build ssdm: transform -hls  -function-uniquify -auto-function-inline -globaldce  -ptrArgReplace -mem2reg -instcombine -dce  -reset-lda  -loop-simplify -indvars -licm -loop-dep  -loop-bound -licm -loop-simplify -flattenloopnest  -array-flatten -gvn -instcombine -dce  -array-map -dce -func-legal  -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify   -array-burst -promote-global-argument -dce  -axi4-lower -array-seg-normalize  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm  -inst-simplify -dce  -globaldce -array-stream -eliminate-keepreads -instcombine  -dce   -deadargelim -doublePtrSimplify  -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer  -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg  -instcombine  -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine  -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound  -loop-simplify -loop-preproc  -constprop -global-constprop -gvn -mem2reg -instcombine -dce  -loop-merge -dce  -bitwidthmin  -deadargelim -dce  -scalar-propagation -deadargelim -globaldce -mem2reg  -interface-preproc -interface-gen  -deadargelim -directive-preproc -inst-simplify -dce  -gvn -mem2reg -instcombine -dce -adse  -loop-bound  -instcombine -cfgopt -simplifycfg -loop-simplify  -clean-region -io-protocol  -find-region -mem2reg  -bitop-raise  -inst-simplify -inst-rectify -instcombine -adce -deadargelim  -loop-simplify -phi-opt -bitop-raise  -cfgopt -simplifycfg -strip-dead-prototypes  -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline  -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa  -inst-simplify -simplifycfg   -mergereturn -inst-simplify -inst-rectify  -dce -bitop-lower  -loop-rewind -pointer-simplify -dce -cfgopt  -read-loop-dep -dce -bitwidth -norm-name -legalize    -cdfg-build  /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.o.2.bc -o /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.o.3.bc -f  -phase build-ssdm
+@I [HLS-0] Build ssdm time: 0 seconds per iteration
+@I [HLS-100] Command "is_encrypted /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.o.3.bc "
+@I [HLS-100] Command 'is_encrypted' returned 0; elapsed 0.000342Total elapsed time: 25.551 sec.
+@I [HLS-0] Finish building internal data model.
+@I [HLS-100] Command 'opt_and_import_c' returned 0; elapsed 3.16982Total elapsed time: 25.653 sec.
+@I [HLS-111] Elapsed time: 6.16867 seconds; current memory usage: 67 MB.
+@I [HLS-100] Command 'elaborate' returned 0; elapsed 5.33382Total elapsed time: 25.653 sec.
+@I [HLS-100] Command "autosyn "
+@I [HLS-10] Starting hardware synthesis ...
+@0 [HLS-0] Starting hardware synthesis ...
+@I [HLS-0] Synthesizing C/C++ design ...
+@I [HLS-10] Synthesizing 'toplevel' ...
+@0 [HLS-0] Synthesizing 'toplevel' ...
+@I [HLS-100] Command "ap_set_top_model toplevel "
+@I [HLS-100] Command 'ap_set_top_model' returned 0; elapsed 8.7e-05Total elapsed time: 25.654 sec.
+@I [HLS-100] Command "get_model_list toplevel -filter all-wo-channel -topdown "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 3.5e-05Total elapsed time: 25.654 sec.
+@I [HLS-100] Command "preproc_iomode -model toplevel "
+@I [HLS-100] Command 'preproc_iomode' returned 0; elapsed 0.000753Total elapsed time: 25.655 sec.
+@I [HLS-100] Command "get_model_list toplevel -filter all-wo-channel "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 1.7e-05Total elapsed time: 25.655 sec.
+@I [HLS-0] Model list for configure: toplevel
+@I [HLS-0] Configuring Module : toplevel ...
+@I [HLS-100] Command "set_default_model toplevel "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 5.8e-05Total elapsed time: 25.656 sec.
+@I [HLS-100] Command "apply_spec_resource_limit toplevel "
+@I [HLS-100] Command 'apply_spec_resource_limit' returned 0; elapsed 4e-05Total elapsed time: 25.656 sec.
+@I [HLS-0] Model list for preprocess: toplevel
+@I [HLS-0] Preprocessing Module: toplevel ...
+@I [HLS-100] Command "set_default_model toplevel "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 3.5e-05Total elapsed time: 25.656 sec.
+@I [HLS-100] Command "cdfg_preprocess -model toplevel "
+@I [HLS-100] Command 'cdfg_preprocess' returned 0; elapsed 0.020569Total elapsed time: 25.677 sec.
+@I [HLS-100] Command "rtl_gen_preprocess toplevel "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.000566Total elapsed time: 25.677 sec.
+@I [HLS-0] Model list for synthesis: toplevel
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'toplevel' 
+@0 [HLS-0] -- Scheduling module 'toplevel' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model toplevel "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 2.6e-05Total elapsed time: 25.678 sec.
+@I [HLS-100] Command "schedule -model toplevel "
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-100] Command 'schedule' returned 0; elapsed 0.095643Total elapsed time: 25.780 sec.
+@I [HLS-111] Elapsed time: 0.120505 seconds; current memory usage: 67.8 MB.
+@I [HLS-100] Command "report -o /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.verbose.sched.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.011162Total elapsed time: 25.800 sec.
+@I [HLS-100] Command "db_write -o /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.sched.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.015311Total elapsed time: 25.854 sec.
+@I [HLS-0] Finish scheduling toplevel.
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'toplevel' 
+@0 [HLS-0] -- Exploring micro-architecture for module 'toplevel' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "set_default_model toplevel "
+@I [HLS-100] Command 'set_default_model' returned 0; elapsed 0.000101Total elapsed time: 25.881 sec.
+@I [HLS-100] Command "bind -model toplevel "
+@I [BIND-110] clear=
+@I [BIND-110] debug=
+@I [BIND-110] drf=
+@I [BIND-110] effort=
+@I [BIND-110] fast_refine=
+@I [BIND-110] fu_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] global_opt=
+@I [BIND-110] gsearch=
+@I [BIND-110] help=
+@I [BIND-110] help-hidden=
+@I [BIND-110] min_mem_port=
+@I [BIND-110] min_op=
+@I [BIND-110] minreg=
+@I [BIND-110] ml=
+@I [BIND-110] model=toplevel
+@I [BIND-110] no_false_path=
+@I [BIND-110] no_min_op=
+@I [BIND-110] normalize=
+@I [BIND-110] quiet=
+@I [BIND-110] refine=
+@I [BIND-110] reg_weight=[ 0.0 -- 1.0 ]
+@I [BIND-110] search=
+@I [BIND-110] tight_delay=
+@I [BIND-110] verbose=
+@I [BIND-110] wFF=
+@I [BIND-110] wFU=
+@I [BIND-110] wMUX=
+@I [BIND-110] wNET=
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-100] Command 'bind' returned 0; elapsed 0.034117Total elapsed time: 25.915 sec.
+@I [HLS-111] Elapsed time: 0.062708 seconds; current memory usage: 68.4 MB.
+@I [HLS-100] Command "report -o /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.verbose.bind.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.027103Total elapsed time: 25.960 sec.
+@I [HLS-100] Command "db_write -o /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.bind.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.02728Total elapsed time: 26.534 sec.
+@I [HLS-0] Finish binding toplevel.
+@I [HLS-100] Command "get_model_list toplevel -filter all-wo-channel "
+@I [HLS-100] Command 'get_model_list' returned 0; elapsed 7.3e-05Total elapsed time: 26.534 sec.
+@I [HLS-0] Preprocessing for RTLGen ...
+@I [HLS-100] Command "rtl_gen_preprocess toplevel "
+@I [HLS-100] Command 'rtl_gen_preprocess' returned 0; elapsed 0.001447Total elapsed time: 26.536 sec.
+@I [HLS-0] Model list for RTL generation: toplevel
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'toplevel' 
+@0 [HLS-0] -- Generating RTL for module 'toplevel' 
+@I [HLS-10] ----------------------------------------------------------------
+@0 [HLS-0] ----------------------------------------------------------------
+@I [HLS-100] Command "create_rtl_model toplevel -vendor xilinx -mg_file /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.compgen.tcl "
+@I [RTGEN-500] Setting interface mode on port 'toplevel/input_V_V' to 'ap_fifo'.
+@I [RTGEN-500] Setting interface mode on port 'toplevel/output_V_V' to 'ap_fifo'.
+@I [RTGEN-500] Setting interface mode on function 'toplevel' to 'ap_ctrl_none'.
+@W [RTGEN-101] Global scalar 'inputdata_V_0' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_1' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_2' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_3' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_4' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_5' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_6' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_7' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_8' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_9' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_10' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_11' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_12' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_13' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_14' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_15' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_16' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_17' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_18' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_19' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_20' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_21' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_22' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_23' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_24' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_25' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_26' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_27' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_28' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_29' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_30' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_31' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_32' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_33' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_34' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_35' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_36' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_37' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_38' will not be exposed as RTL port.
+@W [RTGEN-101] Global scalar 'inputdata_V_39' will not be exposed as RTL port.
+@I [RTGEN-100] Finished creating RTL model for 'toplevel'.
+@I [HLS-100] Command 'create_rtl_model' returned 0; elapsed 0.079792Total elapsed time: 26.631 sec.
+@I [HLS-111] Elapsed time: 0.139048 seconds; current memory usage: 69.5 MB.
+@I [HLS-100] Command "source /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000672Total elapsed time: 26.640 sec.
+@I [HLS-100] Command "gen_rtl toplevel -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /usr/userfs/a/az579/bla/solution1/syn/systemc/toplevel -synmodules toplevel "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.006082Total elapsed time: 26.666 sec.
+@I [HLS-100] Command "gen_rtl toplevel -istop -style xilinx -f -lang vhdl -o /usr/userfs/a/az579/bla/solution1/syn/vhdl/toplevel "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.024757Total elapsed time: 26.705 sec.
+@I [HLS-100] Command "gen_rtl toplevel -istop -style xilinx -f -lang vlog -o /usr/userfs/a/az579/bla/solution1/syn/verilog/toplevel "
+@I [HLS-100] Command 'gen_rtl' returned 0; elapsed 0.014424Total elapsed time: 26.744 sec.
+@I [HLS-100] Command "export_constraint_db -o /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.constraint.tcl -f -tool general "
+@I [HLS-100] Command 'export_constraint_db' returned 0; elapsed 0.000286Total elapsed time: 26.749 sec.
+@I [HLS-100] Command "report -model toplevel -o /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.design.xml -verbose -f -dv "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.021252Total elapsed time: 26.776 sec.
+@I [HLS-100] Command "report -model toplevel -o /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.sdaccel.xml -verbose -f -sdaccel "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.026333Total elapsed time: 26.809 sec.
+@I [HLS-100] Command "gen_tb_info toplevel -o /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel -p /usr/userfs/a/az579/bla/solution1/.autopilot/db "
+@I [HLS-100] Command 'gen_tb_info' returned 0; elapsed 0.00229Total elapsed time: 26.840 sec.
+@I [HLS-100] Command "report -model toplevel -o /usr/userfs/a/az579/bla/solution1/syn/report/toplevel_csynth.rpt -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.012589Total elapsed time: 26.862 sec.
+@I [HLS-100] Command "report -model toplevel -o /usr/userfs/a/az579/bla/solution1/syn/report/toplevel_csynth.xml -f -x "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.010506Total elapsed time: 26.879 sec.
+@I [HLS-100] Command "report -model toplevel -o /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.verbose.rpt -verbose -f "
+@I [HLS-100] Command 'report' returned 0; elapsed 0.054602Total elapsed time: 26.957 sec.
+@I [HLS-100] Command "db_write -model toplevel -o /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.adb -f "
+@I [HLS-100] Command 'db_write' returned 0; elapsed 0.037464Total elapsed time: 27.54 sec.
+@I [HLS-100] Command "sc_get_clocks toplevel "
+@I [HLS-100] Command 'sc_get_clocks' returned 0; elapsed 1.4e-05Total elapsed time: 27.160 sec.
+@I [HLS-100] Command "sc_get_portdomain toplevel "
+@I [HLS-100] Command 'sc_get_portdomain' returned 0; elapsed 6e-06Total elapsed time: 27.160 sec.
+@I [HLS-0] Model list for RTL component generation: toplevel
+@I [HLS-0] Handling components in module [toplevel] ... 
+@I [HLS-100] Command "source /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000519Total elapsed time: 27.171 sec.
+@I [HLS-0] Append model toplevel
+@I [HLS-0] Generating RTL model list ...
+@I [HLS-0] All models in this session: toplevel
+@I [HLS-0] To file: write model toplevel
+@I [HLS-0] Finished generating RTL model list.
+
+
+@I [HLS-0] RTL Generation done.
+@I [HLS-0] CAS Generation done.
+@I [HLS-0] CBC Generation done.
+@I [HLS-100] Command "export_ssdm /usr/userfs/a/az579/bla/solution1/.autopilot/db/a.export.ll "
+@I [HLS-100] Command 'export_ssdm' returned 0; elapsed 0.000874Total elapsed time: 27.185 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/bla/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000493Total elapsed time: 27.198 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001115Total elapsed time: 27.216 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002289Total elapsed time: 27.217 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00077Total elapsed time: 27.223 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001321Total elapsed time: 27.232 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000388Total elapsed time: 27.236 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/bla/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.0003Total elapsed time: 27.238 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002023Total elapsed time: 27.254 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000827Total elapsed time: 27.258 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002982Total elapsed time: 27.264 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005092Total elapsed time: 27.276 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.006441Total elapsed time: 27.285 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01208Total elapsed time: 27.285 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008162Total elapsed time: 27.297 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009728Total elapsed time: 27.311 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.006101Total elapsed time: 27.321 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000598Total elapsed time: 27.325 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.097193Total elapsed time: 27.425 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.032101Total elapsed time: 27.461 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.173425Total elapsed time: 27.461 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000614Total elapsed time: 27.466 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.176146Total elapsed time: 27.466 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.176584Total elapsed time: 27.466 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e_fpv5.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_fpv5.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001415Total elapsed time: 27.475 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001878Total elapsed time: 27.475 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/bla/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000595Total elapsed time: 27.478 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/bla/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00056Total elapsed time: 27.481 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/bla/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000552Total elapsed time: 27.484 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/bla/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00049Total elapsed time: 27.491 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/bla/solution1/.autopilot/db/toplevel.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000564Total elapsed time: 27.496 sec.
+@I [HLS-10] Finished generating all RTL models.
+@0 [HLS-0] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'toplevel'.
+@I [WVHDL-304] Generating RTL VHDL for 'toplevel'.
+@I [WVLOG-307] Generating RTL Verilog for 'toplevel'.
+@I [HLS-100] Command 'autosyn' returned 0; elapsed 0.789503Total elapsed time: 27.510 sec.
+@I [HLS-100] Command 'csynth_design' returned 0; elapsed 6.12357Total elapsed time: 27.510 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 6.43441Total elapsed time: 27.510 sec.
+@I [HLS-100] Command "cleanup_all "
+@I [HLS-100] Command 'cleanup_all' returned 0; elapsed 0.008815Total elapsed time: 27.519 sec.

@@ -1,0 +1,97 @@
+11:19:53.273 INFO  - Processing command line option -hwspec /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/SDK/SDK_Export/hw/P6.xml. 
+12:36:16.778 INFO  - Successfully generated /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/firmware/src/lscript.ld. 
+12:36:16.784 INFO  - Applying linker script to all configurations of project firmware. 
+12:36:16.787 INFO  - Setting rebuild state to true for all configurations of project firmware. 
+12:36:45.847 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+12:37:18.834 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+12:39:35.717 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+12:40:37.103 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+12:41:08.515 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+14:55:44.604 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+14:56:30.223 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+14:57:27.310 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+14:57:36.938 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+14:58:26.423 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+14:59:42.480 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+15:00:25.002 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+15:03:29.576 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+15:03:47.484 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+15:04:12.490 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+15:17:12.596 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+10:24:30.667 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+10:37:26.203 INFO  - Project P6_hw_platform's source hardware specification located at /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/SDK/SDK_Export/hw/P6.xml is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated. 
+10:46:18.841 INFO  - Copied contents of /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/SDK/SDK_Export/hw/P6.xml into /P6_hw_platform/system.xml. 
+10:46:18.877 INFO  - Copied contents of /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/SDK/SDK_Export/hw/P6.bit into /P6_hw_platform/system.bit. 
+10:46:18.891 INFO  - Copied contents of /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/SDK/SDK_Export/hw/P6_bd.bmm into /P6_hw_platform/system_bd.bmm. 
+10:46:19.762 INFO  - Synchronizing projects in the workspace with the hardware platform specification changes. 
+10:46:22.887 INFO  - Updating hardware inferred compiler options for firmware. 
+10:46:22.907 INFO  - Clearing existing target manager status. 
+10:46:23.911 INFO  - Workspace synchronized with the new hardware specification file. Cleaning dependent projects... 
+10:47:03.318 INFO  - Successfully generated /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/firmware/src/lscript.ld. 
+10:47:03.320 INFO  - Applying linker script to all configurations of project firmware. 
+10:47:03.324 INFO  - Setting rebuild state to true for all configurations of project firmware. 
+10:47:11.628 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+10:47:49.998 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+10:50:57.637 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/P6_hw_platform/download.bit" 
+10:54:40.767 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+15:10:13.279 INFO  - Processing command line option -hwspec /usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/SDK/SDK_Export/hw/P6.xml. 
+15:10:18.390 INFO  - Updating .bit and .bmm files from XPS's export folder. 
+15:10:43.324 INFO  - Copied contents of /usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/SDK/SDK_Export/hw/P6.bit into /P6_hw_platform/system.bit. 
+15:10:43.349 INFO  - Copied contents of /usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/SDK/SDK_Export/hw/P6_bd.bmm into /P6_hw_platform/system_bd.bmm. 
+15:11:03.141 INFO  - Successfully generated /usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/firmware/src/lscript.ld. 
+15:11:03.144 INFO  - Applying linker script to all configurations of project firmware. 
+15:11:03.154 INFO  - Setting rebuild state to true for all configurations of project firmware. 
+16:29:40.653 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+16:30:34.785 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+16:33:06.139 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+16:33:56.397 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:35:36.317 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+16:37:28.401 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+16:38:07.412 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+16:38:15.847 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+16:38:45.103 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+16:39:28.821 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+16:39:53.009 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+16:40:36.971 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+16:50:00.333 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+16:50:47.342 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+16:51:56.457 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+16:53:59.446 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+16:54:34.812 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+17:00:50.732 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+17:01:17.567 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+17:02:32.669 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+17:04:28.643 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+17:05:04.578 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+17:06:02.357 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+17:10:13.599 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+11:48:44.847 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+11:52:56.780 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+11:55:23.060 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+12:16:43.983 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+12:30:09.640 INFO  - Updating .bit and .bmm files from XPS's export folder. 
+12:30:22.465 INFO  - Copied contents of /usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/SDK/SDK_Export/hw/P6.bit into /P6_hw_platform/system.bit. 
+12:30:23.124 INFO  - Copied contents of /usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/SDK/SDK_Export/hw/P6_bd.bmm into /P6_hw_platform/system_bd.bmm. 
+12:30:31.701 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+12:31:14.393 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+12:40:05.174 INFO  - Updating .bit and .bmm files from XPS's export folder. 
+12:40:10.682 INFO  - Copied contents of /usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/SDK/SDK_Export/hw/P6.bit into /P6_hw_platform/system.bit. 
+12:40:10.693 INFO  - Copied contents of /usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/SDK/SDK_Export/hw/P6_bd.bmm into /P6_hw_platform/system_bd.bmm. 
+12:40:21.617 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/P6_hw_platform/download.bit" 
+12:46:32.868 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+13:44:42.191 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/P6_hw_platform/download.bit" 
+13:45:03.480 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/P6_hw_platform/download.bit" 
+13:46:11.571 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/P6_hw_platform/download.bit" 
+13:46:33.941 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/P6_hw_platform/download.bit" 
+16:05:39.940 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:07:26.676 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/P6_hw_platform/download.bit" 
+16:07:54.385 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/P6_hw_platform/download.bit" 
+16:09:13.502 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+16:09:29.229 INFO  - Processing command line option -hwspec /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/SDK/SDK_Export/hw/P6.xml. 
+16:09:36.707 INFO  - Updating .bit and .bmm files from XPS's export folder. 
+16:09:38.721 INFO  - Copied contents of /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/SDK/SDK_Export/hw/P6.bit into /P6_hw_platform/system.bit. 
+16:09:38.730 INFO  - Copied contents of /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/SDK/SDK_Export/hw/P6_bd.bmm into /P6_hw_platform/system_bd.bmm. 
+16:09:39.682 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/P6_hw_platform/download.bit" 
+16:09:46.738 INFO  - FPGA configured successfully with bitstream "/usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/P6_hw_platform/download.bit" 
+16:37:32.999 ERROR - Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

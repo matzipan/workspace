@@ -1,0 +1,15 @@
+!SESSION 2016-03-09 13:43:33.537 -----------------------------------------------
+eclipse.buildId=Release 14.7 Build SDK_P.20131013
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_GB
+Command-line arguments:  -data /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/ -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-03-09 13:44:13.133
+!MESSAGE Indexed 'standalone_bsp_0' (59 sources, 106 headers) in 2.72 sec: 2,374 declarations; 10,477 references; 40 unresolved inclusions; 12 syntax errors; 94 unresolved names (0.73%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2016-03-09 13:44:13.852
+!MESSAGE Indexed 'firmware' (3 sources, 35 headers) in 0.69 sec: 1,540 declarations; 1,820 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.core.jobs 2 2 2016-03-09 16:05:42.886
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.xilinx.sdk.hw.sync.HwPlatformMonitorUtils$1

@@ -1,0 +1,20 @@
+15:45:26 **** Auto Build of configuration Debug for project firmware ****
+make all 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../standalone_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:218:3: warning: implicit declaration of function 'hex_to_binary' [-Wimplicit-function-declaration]
+Finished building: ../src/main.c
+ 
+Building target: firmware.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.c -mno-xl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "firmware.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P3/firmware/Debug/../src/main.c:218: undefined reference to `hex_to_binary'
+/usr/userfs/a/az579/Workspace/EMBS/FPGA/P3/firmware/Debug/../src/main.c:222: undefined reference to `hex_to_binary'
+collect2: ld returned 1 exit status
+make: *** [firmware.elf] Error 1
+
+15:45:27 Build Finished (took 846ms)
+

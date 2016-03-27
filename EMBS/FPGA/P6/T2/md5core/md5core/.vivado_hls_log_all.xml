@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [RTGEN-101] Global scalar 'offset_V' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:47.049+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'w_V' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:47.011+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'f_V' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.995+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'f_V' is power-on initialization." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.983+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'temp_V' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.970+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'g_V' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.958+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'd_V' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.949+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'd_V' is power-on initialization." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.938+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'c_V' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.929+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'c_V' is power-on initialization." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.919+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'b_V' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.910+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'b_V' is power-on initialization." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.899+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'a_V' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.889+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'a_V' is power-on initialization." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.877+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'msg_V_3' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.866+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'msg_V_2' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.852+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'msg_V_1' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.839+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'msg_V_0' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.827+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'new_length_V' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.816+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'h3_V' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.808+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'h3_V' is power-on initialization." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.798+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'h2_V' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.787+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'h2_V' is power-on initialization." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.770+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'h1_V' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.753+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'h1_V' is power-on initialization." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.743+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'h0_V' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.729+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'h0_V' is power-on initialization." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.715+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'initial_length_V' will not be exposed as RTL port." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.700+0000" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'initial_length_V' is power-on initialization." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:46.669+0000" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 3, distance = 1)&#xA;   between 'store' operation (md5core/solution1/src/toplevel.cpp:99) of variable 'tmp_6', md5core/solution1/src/toplevel.cpp:84 on array 'msg_V_0' and 'store' operation (md5core/solution1/src/toplevel.cpp:85) of variable 'phitmp1', md5core/solution1/src/toplevel.cpp:85 on array 'msg_V_0'." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:45.294+0000" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 2, distance = 1)&#xA;   between 'store' operation (md5core/solution1/src/toplevel.cpp:95) of variable 'phitmp', md5core/solution1/src/toplevel.cpp:95 on array 'msg_V_0' and 'store' operation (md5core/solution1/src/toplevel.cpp:85) of variable 'phitmp1', md5core/solution1/src/toplevel.cpp:85 on array 'msg_V_0'." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:45.284+0000" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)&#xA;   between 'store' operation (md5core/solution1/src/toplevel.cpp:90) of variable 'phitmp2', md5core/solution1/src/toplevel.cpp:90 on array 'msg_V_0' and 'store' operation (md5core/solution1/src/toplevel.cpp:85) of variable 'phitmp1', md5core/solution1/src/toplevel.cpp:85 on array 'msg_V_0'." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:45.272+0000" type="Warning"/>
+        <logs message="@W [HLS-41] Resource core 'AXI4Stream' on port 'output' is deprecated. Please use the interface directive to specify the AXI interface." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:39.513+0000" type="Warning"/>
+        <logs message="@W [HLS-41] Resource core 'AXI4Stream' on port 'input' is deprecated. Please use the interface directive to specify the AXI interface." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:37.565+0000" type="Warning"/>
+        <logs message="@W [HLS-40] This current release of Vivado HLS is the last one supporting the following device families including any of their associated derivatives: Virtex-6, Virtex-5, Virtex-4, Spartan-6 and Spartan-3. These families will still be supported in the future but will require this current version of Vivado HLS or a previous one." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:21.304+0000" type="Warning"/>
+        <logs message="@W [HLS-40] This current release of Vivado HLS is the last one supporting the following device families including any of their associated derivatives: Virtex-6, Virtex-5, Virtex-4, Spartan-6 and Spartan-3. These families will still be supported in the future but will require this current version of Vivado HLS or a previous one." projectName="md5core" solutionName="solution1" date="2016-03-09T15:36:21.249+0000" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="@W [HLS-40] This current release of Vivado HLS is the last one supporting the following device families including any of their associated derivatives: Virtex-6, Virtex-5, Virtex-4, Spartan-6 and Spartan-3. These families will still be supported in the future but will require this current version of Vivado HLS or a previous one." projectName="md5core" solutionName="solution1" date="2016-03-09T15:42:04.278+0000" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

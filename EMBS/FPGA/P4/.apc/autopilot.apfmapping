@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="toplevel.cpp" path="/usr/userfs/a/az579/bla/src/toplevel.cpp"/>
+    <originFiles name="toplevel.h" path="/usr/userfs/a/az579/bla/src/toplevel.h"/>
+  </source>
+  <testbench>
+    <originFiles name="testbench.cpp" path="/usr/userfs/a/az579/bla/src/testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

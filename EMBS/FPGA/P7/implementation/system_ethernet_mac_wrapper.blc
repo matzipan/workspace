@@ -1,0 +1,50 @@
+Release 14.7 ngcbuild P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line:
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/bin/lin6
+4/unwrapped/ngcbuild -p xc3s500efg320-4 -intstyle silent -i -sd ..
+system_ethernet_mac_wrapper.ngc ../system_ethernet_mac_wrapper
+
+Reading NGO file
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/implementation/ethernet_mac_wrapper/
+system_ethernet_mac_wrapper.ngc" ...
+Executing edif2ngd -noa
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/implementation/system_ethernet_mac_w
+rapper_fifo_generator_v4_3.edn"
+"system_ethernet_mac_wrapper_fifo_generator_v4_3.ngo"
+Release 14.7 - edif2ngd P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+INFO:NgdBuild - Release 14.7 edif2ngd P.20131013 (lin64)
+INFO:NgdBuild - Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/data/ed
+if2ngd.pfd> with local file
+</opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/ISE/data/ed
+if2ngd.pfd>
+Writing module to "system_ethernet_mac_wrapper_fifo_generator_v4_3.ngo"...
+Loading design module
+"/usr/userfs/a/az579/Workspace/EMBS/FPGA/P7/implementation/ethernet_mac_wrapper/
+system_ethernet_mac_wrapper_fifo_generator_v4_3.ngo"...
+Loading design module
+"../system_ethernet_mac_wrapper_fifo_generator_v4_3_fifo_generator_v4_3_xst_1.ng
+c"...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGCBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 384712 kilobytes
+
+Writing NGC file "../system_ethernet_mac_wrapper.ngc" ...
+Total REAL time to NGCBUILD completion:  6 sec
+Total CPU time to NGCBUILD completion:   2 sec
+
+Writing NGCBUILD log file "../system_ethernet_mac_wrapper.blc"...

@@ -1,0 +1,651 @@
+@I [HLS-0] Workspace /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1 opened at Wed Mar 09 15:42:03 GMT 2016
+@I [HLS-100] Command "config_clock -quiet -name default -period 20 -default=false "
+@I [SYN-201] Setting up clock 'default' with a period of 20ns.
+@I [HLS-100] Command 'config_clock' returned 0; elapsed 0.000131Total elapsed time: 2.98 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 6e-05Total elapsed time: 2.103 sec.
+@I [HLS-100] Command "import_lib /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx.lib "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/xilinx_interface.lib "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/plb46.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001133Total elapsed time: 2.133 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/fsl.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000859Total elapsed time: 2.139 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/axi4.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000916Total elapsed time: 2.146 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/maxi.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000777Total elapsed time: 2.153 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/saxilite.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000605Total elapsed time: 2.164 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005801Total elapsed time: 2.164 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/dsp48.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000649Total elapsed time: 2.169 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/dds_compiler.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000635Total elapsed time: 2.179 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfft.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000545Total elapsed time: 2.184 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfir.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000573Total elapsed time: 2.189 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.014709Total elapsed time: 2.194 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_old.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00136Total elapsed time: 2.201 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx.hlp "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/target_info.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000698Total elapsed time: 2.216 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/xilinx_interface.hlp "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/maxi.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000592Total elapsed time: 2.236 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/saxilite.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000457Total elapsed time: 2.240 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001875Total elapsed time: 2.240 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/dsp48.hlp "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001527Total elapsed time: 2.249 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.006459Total elapsed time: 2.249 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 1.4e-05Total elapsed time: 2.249 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 8672} {LUT 17344}  {FF 17344} {MULT18x18 28} {BRAM 28}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 3.3e-05Total elapsed time: 2.250 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed medium "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 8e-06Total elapsed time: 2.250 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.029084Total elapsed time: 2.252 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001938Total elapsed time: 2.271 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001033Total elapsed time: 2.276 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003749Total elapsed time: 2.285 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005353Total elapsed time: 2.299 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.015395Total elapsed time: 2.320 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.021563Total elapsed time: 2.320 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009795Total elapsed time: 2.335 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.010491Total elapsed time: 2.349 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.007043Total elapsed time: 2.364 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000672Total elapsed time: 2.369 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.102975Total elapsed time: 2.475 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/tps/tcl/tcllib1.11.1/struct/list.tcl "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002166Total elapsed time: 2.517 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004835Total elapsed time: 2.518 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/tps/tcl/tcllib1.11.1/math/bignum.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001363Total elapsed time: 2.537 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.051545Total elapsed time: 2.546 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.212458Total elapsed time: 2.546 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000781Total elapsed time: 2.553 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.215417Total elapsed time: 2.553 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.215848Total elapsed time: 2.553 sec.
+@I [HLS-100] Command "open_platform DefaultPlatform "
+@I [HLS-100] Command 'open_platform' returned 0; elapsed 1.5e-05Total elapsed time: 2.554 sec.
+@I [HLS-100] Command "import_lib /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e_fpv5 "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_fpv5_old.lib "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_fpv5.lib "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002611Total elapsed time: 2.580 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004204Total elapsed time: 2.581 sec.
+@I [HLS-100] Command 'import_lib' returned 0; elapsed 0.010031Total elapsed time: 2.592 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e_fpv5.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_fpv5.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002132Total elapsed time: 2.611 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002844Total elapsed time: 2.611 sec.
+@I [HLS-100] Command "set_part xc3s500efg320-4 "
+@W [HLS-40] This current release of Vivado HLS is the last one supporting the following device families including any of their associated derivatives: Virtex-6, Virtex-5, Virtex-4, Spartan-6 and Spartan-3. These families will still be supported in the future but will require this current version of Vivado HLS or a previous one.
+@I [HLS-100] Command "add_library xilinx/spartan3e/spartan3e:xc3s500e:fg320:-4 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 6e-06Total elapsed time: 2.620 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 9e-06Total elapsed time: 2.626 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 4656} {LUT 9312}    {FF 9312}  {MULT18x18 20} {BRAM 20}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 3.6e-05Total elapsed time: 2.627 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed medium "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 1.2e-05Total elapsed time: 2.627 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.003605Total elapsed time: 2.633 sec.
+@I [HLS-100] Command "add_library xilinx/spartan3e/spartan3e_fpv5 "
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 4e-06Total elapsed time: 2.634 sec.
+@I [HLS-100] Command 'add_library' returned 0; elapsed 0.002214Total elapsed time: 2.640 sec.
+@I [HLS-10] Setting target device to 'xc3s500efg320-4'
+@I [HLS-100] Command 'set_part' returned 0; elapsed 0.01156Total elapsed time: 2.640 sec.
+@I [HLS-100] Command "get_default_platform "
+@I [HLS-100] Command 'get_default_platform' returned 0; elapsed 4e-06Total elapsed time: 2.640 sec.
+@I [HLS-100] Command "config_chip_info -quiet -resource  {SLICE 4656} {LUT 9312}    {FF 9312}  {MULT18x18 20} {BRAM 20}  "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 1.8e-05Total elapsed time: 2.640 sec.
+@I [HLS-100] Command "config_chip_info -quiet -speed medium "
+@I [HLS-100] Command 'config_chip_info' returned 0; elapsed 8e-06Total elapsed time: 2.640 sec.
+@I [HLS-100] Command 'open_solution' returned 0; elapsed 0.286938Total elapsed time: 2.643 sec.
+@I [HLS-100] Command "export_design -format pcore -use_netlist none "
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000544Total elapsed time: 2.655 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001706Total elapsed time: 2.683 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003311Total elapsed time: 2.684 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001181Total elapsed time: 2.689 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002422Total elapsed time: 2.697 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000636Total elapsed time: 2.702 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000468Total elapsed time: 2.704 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003698Total elapsed time: 2.726 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001085Total elapsed time: 2.730 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004188Total elapsed time: 2.738 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.007163Total elapsed time: 2.752 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009094Total elapsed time: 2.765 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.017003Total elapsed time: 2.765 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.010734Total elapsed time: 2.779 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01005Total elapsed time: 2.792 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008179Total elapsed time: 2.805 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000668Total elapsed time: 2.809 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.100203Total elapsed time: 2.914 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.033257Total elapsed time: 2.953 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.190955Total elapsed time: 2.953 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00066Total elapsed time: 2.959 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.194005Total elapsed time: 2.959 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.194599Total elapsed time: 2.959 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e_fpv5.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_fpv5.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002087Total elapsed time: 2.968 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002679Total elapsed time: 2.969 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00073Total elapsed time: 2.972 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000615Total elapsed time: 2.989 sec.
+@I [IMPL-8] Exporting the design as a Pcore for EDK.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000526Total elapsed time: 2.992 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000722Total elapsed time: 3.12 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001522Total elapsed time: 3.22 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002969Total elapsed time: 3.23 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000755Total elapsed time: 3.28 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001522Total elapsed time: 3.34 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000426Total elapsed time: 3.38 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000493Total elapsed time: 3.41 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002297Total elapsed time: 3.61 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001275Total elapsed time: 3.67 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004099Total elapsed time: 3.76 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.006246Total elapsed time: 3.89 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009161Total elapsed time: 3.102 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016042Total elapsed time: 3.102 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.013658Total elapsed time: 3.119 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.010287Total elapsed time: 3.135 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003564Total elapsed time: 3.143 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000497Total elapsed time: 3.147 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.100848Total elapsed time: 3.251 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.033661Total elapsed time: 3.290 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.187863Total elapsed time: 3.290 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000566Total elapsed time: 3.297 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.190953Total elapsed time: 3.297 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.191422Total elapsed time: 3.297 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e_fpv5.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_fpv5.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001778Total elapsed time: 3.306 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002106Total elapsed time: 3.306 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000955Total elapsed time: 3.310 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000615Total elapsed time: 3.312 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/toplevel.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00121Total elapsed time: 3.322 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000704Total elapsed time: 3.675 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000606Total elapsed time: 3.679 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/toplevel.compgen.tcl "
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/toplevel.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002296Total elapsed time: 3.694 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/toplevel.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001658Total elapsed time: 3.699 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/toplevel.rtl_wrap.cfg.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001264Total elapsed time: 3.703 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/toplevel.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000499Total elapsed time: 3.707 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/toplevel.tbgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000427Total elapsed time: 3.712 sec.
+@I [IMPL-200] Port 'input_V_V' is mapped to 'TDATA' by default.
+@I [IMPL-200] Port 'output_V_V' is mapped to 'TDATA' by default.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.060277Total elapsed time: 4.299 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000551Total elapsed time: 4.408 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000426Total elapsed time: 4.410 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/toplevel.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000746Total elapsed time: 4.413 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000493Total elapsed time: 5.84 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/toplevel.constraint.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000446Total elapsed time: 5.102 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000601Total elapsed time: 5.504 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00072Total elapsed time: 5.592 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/toplevel.constraint.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000497Total elapsed time: 5.601 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/toplevel.constraint.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000481Total elapsed time: 5.606 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001633Total elapsed time: 5.748 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003272Total elapsed time: 5.749 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001054Total elapsed time: 5.754 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002431Total elapsed time: 5.762 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000455Total elapsed time: 5.767 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000652Total elapsed time: 5.769 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002441Total elapsed time: 5.791 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001293Total elapsed time: 5.796 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004557Total elapsed time: 5.804 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005132Total elapsed time: 5.817 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009107Total elapsed time: 5.835 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.014872Total elapsed time: 5.835 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008859Total elapsed time: 5.849 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.011313Total elapsed time: 5.865 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.0049Total elapsed time: 5.876 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000461Total elapsed time: 5.880 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.099148Total elapsed time: 5.983 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.032773Total elapsed time: 6.20 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.182315Total elapsed time: 6.20 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000592Total elapsed time: 6.25 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.185104Total elapsed time: 6.25 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.18562Total elapsed time: 6.25 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e_fpv5.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_fpv5.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001308Total elapsed time: 6.35 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001844Total elapsed time: 6.35 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000766Total elapsed time: 6.183 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001129Total elapsed time: 6.213 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002409Total elapsed time: 6.214 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000994Total elapsed time: 6.220 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002481Total elapsed time: 6.226 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00045Total elapsed time: 6.230 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000577Total elapsed time: 6.232 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002498Total elapsed time: 6.251 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00138Total elapsed time: 6.256 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004555Total elapsed time: 6.264 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008397Total elapsed time: 6.279 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009013Total elapsed time: 6.292 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.017993Total elapsed time: 6.292 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.010952Total elapsed time: 6.306 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.010472Total elapsed time: 6.320 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005218Total elapsed time: 6.330 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000548Total elapsed time: 6.334 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.097716Total elapsed time: 6.435 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.032994Total elapsed time: 6.472 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.186066Total elapsed time: 6.472 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000591Total elapsed time: 6.478 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.188896Total elapsed time: 6.478 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.189427Total elapsed time: 6.478 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e_fpv5.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_fpv5.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001897Total elapsed time: 6.487 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002461Total elapsed time: 6.487 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000729Total elapsed time: 6.489 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000721Total elapsed time: 6.499 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000531Total elapsed time: 6.514 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001658Total elapsed time: 6.544 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003367Total elapsed time: 6.545 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000994Total elapsed time: 6.549 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002361Total elapsed time: 6.555 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00044Total elapsed time: 6.560 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000645Total elapsed time: 6.562 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002352Total elapsed time: 6.580 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00099Total elapsed time: 6.585 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002958Total elapsed time: 6.591 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00701Total elapsed time: 6.605 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008761Total elapsed time: 6.617 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.016331Total elapsed time: 6.617 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01086Total elapsed time: 6.631 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01034Total elapsed time: 6.646 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008557Total elapsed time: 6.659 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000561Total elapsed time: 6.663 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.099398Total elapsed time: 6.765 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.033707Total elapsed time: 6.804 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.187769Total elapsed time: 6.805 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000513Total elapsed time: 6.811 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.190512Total elapsed time: 6.811 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.191001Total elapsed time: 6.811 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e_fpv5.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_fpv5.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002014Total elapsed time: 6.827 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002536Total elapsed time: 6.827 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000719Total elapsed time: 6.830 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000591Total elapsed time: 6.833 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/toplevel.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001093Total elapsed time: 6.840 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000582Total elapsed time: 7.88 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/toplevel.constraint.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000435Total elapsed time: 7.107 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001564Total elapsed time: 7.146 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003204Total elapsed time: 7.147 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000974Total elapsed time: 7.193 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002586Total elapsed time: 7.200 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000417Total elapsed time: 7.205 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000687Total elapsed time: 7.206 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002461Total elapsed time: 7.226 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001469Total elapsed time: 7.256 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003824Total elapsed time: 7.264 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00798Total elapsed time: 7.282 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.0091Total elapsed time: 7.295 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.017751Total elapsed time: 7.295 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.014148Total elapsed time: 7.335 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.007728Total elapsed time: 7.347 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.006356Total elapsed time: 7.377 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000675Total elapsed time: 7.382 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.100981Total elapsed time: 7.487 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.032909Total elapsed time: 7.524 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.190145Total elapsed time: 7.524 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000628Total elapsed time: 7.536 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.193152Total elapsed time: 7.537 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.193637Total elapsed time: 7.537 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e_fpv5.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_fpv5.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002589Total elapsed time: 7.550 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003242Total elapsed time: 7.550 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000576Total elapsed time: 7.739 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001618Total elapsed time: 7.789 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003365Total elapsed time: 7.790 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001113Total elapsed time: 7.799 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001686Total elapsed time: 7.808 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000449Total elapsed time: 7.818 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00055Total elapsed time: 7.823 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00131Total elapsed time: 7.854 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001374Total elapsed time: 7.860 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004381Total elapsed time: 7.868 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005182Total elapsed time: 7.901 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00895Total elapsed time: 7.915 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.014568Total elapsed time: 7.915 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.010978Total elapsed time: 7.929 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.013379Total elapsed time: 7.962 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008067Total elapsed time: 7.974 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000551Total elapsed time: 7.979 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.101519Total elapsed time: 8.96 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.035568Total elapsed time: 8.152 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.193162Total elapsed time: 8.152 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000666Total elapsed time: 8.176 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.195769Total elapsed time: 8.176 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.196341Total elapsed time: 8.177 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e_fpv5.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_fpv5.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002077Total elapsed time: 8.198 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002866Total elapsed time: 8.198 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00045Total elapsed time: 8.200 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000394Total elapsed time: 8.206 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000408Total elapsed time: 8.219 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00063Total elapsed time: 8.244 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001503Total elapsed time: 8.245 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000555Total elapsed time: 8.249 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001213Total elapsed time: 8.253 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000372Total elapsed time: 8.258 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00051Total elapsed time: 8.259 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002562Total elapsed time: 8.302 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001517Total elapsed time: 8.308 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002549Total elapsed time: 8.319 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.005302Total elapsed time: 8.336 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.011616Total elapsed time: 8.352 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.017657Total elapsed time: 8.352 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008533Total elapsed time: 8.364 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008477Total elapsed time: 8.377 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004936Total elapsed time: 8.387 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00068Total elapsed time: 8.393 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.097596Total elapsed time: 8.494 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.031857Total elapsed time: 8.529 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.178184Total elapsed time: 8.530 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000711Total elapsed time: 8.536 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.181343Total elapsed time: 8.537 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.181765Total elapsed time: 8.537 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e_fpv5.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_fpv5.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000919Total elapsed time: 8.546 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001612Total elapsed time: 8.546 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000339Total elapsed time: 8.548 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.00036Total elapsed time: 8.550 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/toplevel.compgen.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000596Total elapsed time: 8.554 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000503Total elapsed time: 8.788 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/toplevel.constraint.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000315Total elapsed time: 8.802 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/common.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/APCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001657Total elapsed time: 8.849 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.003353Total elapsed time: 8.849 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000616Total elapsed time: 8.854 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/op_simcore.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.0025Total elapsed time: 8.860 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/generic/autopilot/interface.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000531Total elapsed time: 8.864 sec.
+@I [HLS-100] Command "source /usr/userfs/a/az579/Workspace/EMBS/FPGA/P6/T2/md5core/md5core/solution1/.autopilot/db/global.setting.tcl "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000472Total elapsed time: 8.866 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/virtex.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/plb46.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001292Total elapsed time: 8.883 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/fsl.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000925Total elapsed time: 8.887 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/axi4.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.004838Total elapsed time: 8.895 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/nativeAXI4.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/saxilite.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.006702Total elapsed time: 8.910 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/maxi.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.010713Total elapsed time: 8.924 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.018114Total elapsed time: 8.924 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/scripts/xilinxcoregen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.01131Total elapsed time: 8.940 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/interface/XilEDKCoreGen.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.009827Total elapsed time: 8.953 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/dds_compiler.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.008553Total elapsed time: 8.967 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/util.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000507Total elapsed time: 8.971 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfft.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.102043Total elapsed time: 9.78 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/ip/xfir.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.032834Total elapsed time: 9.114 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.191978Total elapsed time: 9.114 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/dsp48.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.000615Total elapsed time: 9.121 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.194579Total elapsed time: 9.121 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.195212Total elapsed time: 9.121 sec.
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/spartan3e/spartan3e_fpv5.gen "
+@I [HLS-100] Command "source /usr/local/pkg/xilinx_vivado-2015.4_ise-14.7_x86-64-1/Vivado_HLS/2015.4/common/technology/xilinx/common/xilinx_fpv5.gen "
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.001646Total elapsed time: 9.130 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 0.002268Total elapsed time: 9.130 sec.
+@I [HLS-100] Command 'export_design' returned 0; elapsed 2.43471Total elapsed time: 9.266 sec.
+@I [HLS-100] Command 'ap_source' returned 0; elapsed 2.72701Total elapsed time: 9.266 sec.
+@I [HLS-100] Command "cleanup_all "
+@I [HLS-100] Command 'cleanup_all' returned 0; elapsed 0.000314Total elapsed time: 9.266 sec.

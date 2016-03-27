@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "xparameters.h"
+#include "xtmrctr.h"
+
+#define NUMTESTS 10
+
+int main(void) {
+	XTmrCtr timer;
+	XTmrCtr_Initialize(&timer, XPAR_TMRCTR_0_DEVICE_ID);
+
+	XTmrCtr_SetResetValue(&timer, 0, 0); // Set the value that the timer resets to (in this case, 0 -second value-)
+	XTmrCtr_Reset(&timer, 0); // Reset timer 0
+	XTmrCtr_Start(&timer, 0); // Start timer 0
+
+    int i;
+    volatile uint testdata[NUMTESTS*2] = {20, 2, 28, 7, 10034, 23, 3861, 235, 39316, 384, 20106, 395, 5721, 944, 25, 1, 738, 346, 50205, 19};
+    volatile uint output[NUMTESTS];
+    uint expectedresults[NUMTESTS] = {10, 4, 436, 16, 102, 50, 6, 25, 2, 2642};
+
+
+    uint init_val = XTmrCtr_GetValue(&timer, 0);
+    for(i = 0; i < NUMTESTS; i++) {
+    	output[i] = testdata[i*2] / testdata[i*2+1];
+    }
+    uint final_val = XTmrCtr_GetValue(&timer, 0);
+
+    xil_printf("Took %d ns \n\r", (final_val-init_val)/NUMTESTS*20);
+
+    //Check and print out the results
+    for(i = 0; i < NUMTESTS; i++) {
+        xil_printf("%d / %d = %d\n\r", testdata[i*2], testdata[i*2+1], output[i]);
+        if(output[i] != expectedresults[i]) {
+            xil_printf("ERROR: Expected %d. Calculated %d.", expectedresults[i], output[i]);
+        }
+    }
+    /*
+Once you have built and tested your design in HLS, export it and connect it into your XPS system, using the instructions in the Vivado HLS Knowledge Base.
+Once you have completed this task notify a demonstrator who will mark it in your logbook. Show the demonstrator the timing you obtained with only the MicroBlaze and the timing with your HLS design.
+     */
+    return 0;
+}
