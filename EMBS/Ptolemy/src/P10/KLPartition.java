@@ -44,7 +44,7 @@ public class KLPartition {
                 for (int i = 0; i < a.size(); i++) {
                     double deltaT;
 
-                    Hashtable<Character, Integer> difference = new Hashtable<>();
+                    Hashtable<Character, Double> difference = new Hashtable<>();
 
                     difference.putAll(calculateDifference(a, b));
                     difference.putAll(calculateDifference(b, a));
@@ -111,7 +111,7 @@ public class KLPartition {
                 }
             } while(sumDeltaTMax > 0);
 
-            System.out.println("KL - Post: "+ a + " " + b);
+            System.out.println("KL - Post: "+ a + " " + b + " with external cost " + getExternalCost(a, b));
 
             int setSize = a.size();
             optimizePartitions(a.subList(0, setSize / 2), a.subList(setSize / 2, setSize), levels - 1);
@@ -119,12 +119,12 @@ public class KLPartition {
         }
     }
 
-    public Hashtable<Character, Integer> calculateDifference(List<Character> a, List<Character> b) {
-        Hashtable<Character, Integer> difference = new Hashtable<>();
+    public Hashtable<Character, Double> calculateDifference(List<Character> a, List<Character> b) {
+        Hashtable<Character, Double> difference = new Hashtable<>();
 
         // for each node, calculate internal/external cost  and then store difference E - I for both outward and inward edges
         for(Character c : a) {
-            int D = 0;
+            double D = 0;
             for(int i=0; i<orderedSet.size(); i++) {
                 char iChar = KLWeights.intToChar(i);
                 if(a.contains(iChar)) { // internal
@@ -139,6 +139,23 @@ public class KLPartition {
         }
 
         return difference;
+    }
+
+    public double getExternalCost(List<Character> a, List<Character> b) {
+        int externalCost = 0;
+
+        // for each node, calculate internal/external cost  and then store difference E - I for both outward and inward edges
+        for(Character c : a) {
+            for(int i=0; i<orderedSet.size(); i++) {
+                char iChar = KLWeights.intToChar(i);
+                if(b.contains(KLWeights.intToChar(i))) { // external
+                    externalCost += weights.getWeight(c,iChar);
+                    externalCost += weights.getWeight(iChar, c);
+                }
+            }
+        }
+
+        return externalCost;
     }
 
     public List<Character> getOrderedSet() {
