@@ -1,0 +1,11 @@
+-p
+xc3s500efg320-4
+-lang
+vhdl
+-intstyle
+default
+-lp
+solvercore/solvercore/solvercore/
+-msg
+__xps/ise/xmsgprops.lst
+assesment.mhs

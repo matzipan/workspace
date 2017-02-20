@@ -1,0 +1,159 @@
+#include "draw.h"
+#include "bitmap_font.h"
+
+extern u8 distances[12][12];
+
+void inline draw_character(unsigned int x, unsigned int y, char character, u8 colour) {
+	int i,j;
+	char *map = bitmap_font[character];
+
+	for(j = 0; j < BITMAP_WIDTH; j++) {
+		char current_column = map[j];
+
+		for(i = 0; i < BITMAP_HEIGHT; i++) {
+			if((current_column >> (i)) & 1) {
+				vga_set_pixel(x + i, y + j, colour);
+			}
+		}
+	}
+}
+
+
+int draw_path(struct world_state* state, int square_width, int square_height, int source, int destination, struct pos current) {
+	int cursor;
+
+	const int dot_size = (square_width % 2 == 0) ? 2 : 3;
+
+	if(current.x == state->waypoints[source].x && current.y == state->waypoints[source].y) {
+		xil_printf("Return 1\n\r");
+		return 1;
+	}
+
+	cursor = 0;
+
+	while (path_available(state, current, source, cursor)) {
+		struct pos new = new_path(state, current, source, cursor);
+
+		xil_printf("X %d, Y %d, Cost %d\n\r", current.x, current.y, state->paths[destination][current.x][current.y]);
+
+
+		int ret = draw_path(state, square_width, square_height, source, destination, new);
+
+		if(ret == 1) {
+			xil_printf("Return branch 1\n\r");
+
+			vga_draw_rect(square_width * current.x + square_width / 2 - 1,
+									square_height * current.y + square_height / 2 - 1,
+									dot_size, dot_size, VGA_YELLOW, VGA_FILL_SOLID);
+
+			return 1;
+		} else {
+			xil_printf("Else branch\n\r");
+
+			cursor++;
+		}
+	}
+
+	return -1;
+}
+
+void inline draw_world(struct world_state* state) {
+	int i, j;
+
+	xil_printf("Drawing\n\r");
+
+	vga_clear_screen();
+
+	int square_width = VGA_WIDTH/state->width;
+	int square_height = VGA_HEIGHT/state->height;
+
+	for(i = 0; i < state->waypoints_count; i++) {
+		draw_character(state->waypoints[i].x * square_width + square_width/2 - 4, state->waypoints[i].y * square_height + square_height/2 -4, i%10, i == 0 ? VGA_GREEN : VGA_RED);
+	}
+
+	for(i = 0; i < state->walls_count; i++) {
+		int x = state->walls[i].x * square_width;
+		int y = state->walls[i].y * square_height;
+
+		for(j = 0; j < state->walls[i].length; j++) {
+			if (state->walls[i].direction == WALL_DIRECTION_HORIZONTAL) {
+				if(state->walls[i].x + j >= state->width) {
+					break;
+				}
+				
+				x = state->walls[i].x * square_width + j * square_width;
+			} else {
+				if(state->walls[i].y + j >= state->height) {
+					break;
+				}
+				
+				y = state->walls[i].y * square_height + j * square_height;
+			}
+
+			vga_draw_rect(x , y, square_width, square_height, VGA_MAGENTA, VGA_FILL_CHEQUERS);
+		}
+	}
+
+	vga_set_pixel(0, 0, VGA_CYAN);
+
+	for(i = 0; i < state->width; i++) {
+		vga_set_pixel(square_width * (i + 1) -1, 0, VGA_CYAN);
+		
+		draw_character(i * square_width, 1, i%10, VGA_WHITE);
+
+		for(j = 0; j < state->height; j++) {
+			if(i == 0) {
+				vga_set_pixel(0, square_height * (j + 1) -1, VGA_CYAN);
+			}
+
+			if(j != 0) {
+				draw_character(1, j * square_height, j%10 , VGA_WHITE);
+			}
+
+			vga_set_pixel(square_width * (i + 1) -1, square_height * (j + 1) -1, VGA_CYAN);
+		}
+	}
+
+	for(i = 40; i< 60; i++) {
+		for(j = 40; j < 60; j++) {
+			xil_printf("%3d ", state->paths[9][j][i]);
+		}
+		xil_printf("\n\r");
+	}
+	xil_printf("\n\r");
+
+	for(i = 40; i< 60; i++) {
+		for(j = 40; j < 60; j++) {
+			xil_printf("%3d ", state->paths[10][j][i]);
+		}
+		xil_printf("\n\r");
+	}
+	xil_printf("\n\r");
+
+	for(i = 40; i< 60; i++) {
+		for(j = 40; j < 60; j++) {
+			xil_printf("%3d ", state->paths[11][j][i]);
+		}
+		xil_printf("\n\r");
+	}
+	xil_printf("\n\r");
+
+	for(i = 0; i < state->waypoints_count - 1; i++) {
+		int source = state->route[i];
+		int destination = state->route[i+1];
+		struct pos first = { state->waypoints[destination].x, state->waypoints[destination].y, 0 };
+
+		xil_printf("From %d to %d\n\r", source, destination);
+		draw_path(state, square_width, square_height, source, destination, first);
+	}
+
+	int source = state->route[state->waypoints_count - 1];
+	int destination = state->route[0];
+	struct pos first = { state->waypoints[0].x, state->waypoints[0].y, 0 };
+
+	draw_path(state, square_width, square_height, source, destination, first);
+
+}
+
+
+

@@ -1,0 +1,883 @@
+Archive member included because of file (symbol)
+
+../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_printf.o)
+                              ./src/drivers/core.o (xil_printf)
+../../standalone_bsp_0/microblaze_0/lib/libxil.a(_exception_handler.o)
+                              /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o (_exception_handler)
+../../standalone_bsp_0/microblaze_0/lib/libxil.a(_program_clean.o)
+                              /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o (_program_clean)
+../../standalone_bsp_0/microblaze_0/lib/libxil.a(_program_init.o)
+                              /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o (_program_init)
+../../standalone_bsp_0/microblaze_0/lib/libxil.a(hw_exception_handler.o)
+                              /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o (_hw_exception_handler)
+../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupt_handler.o)
+                              /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o (_interrupt_handler)
+../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupts_g.o)
+                              ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupt_handler.o) (MB_InterruptVectorTable)
+../../standalone_bsp_0/microblaze_0/lib/libxil.a(outbyte.o)
+                              ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_printf.o) (outbyte)
+../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+                              ./src/drivers/eth.o (XEmacLite_CfgInitialize)
+../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_l.o)
+                              ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o) (XEmacLite_AlignedWrite)
+../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_sinit.o)
+                              ./src/drivers/eth.o (XEmacLite_LookupConfig)
+../../standalone_bsp_0/microblaze_0/lib/libxil.a(xuartlite_l.o)
+                              ./src/drivers/eth.o (XUartLite_SendByte)
+../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+                              ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupts_g.o) (XNullHandler)
+../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+                              ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o) (Xil_Assert)
+../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_g.o)
+                              ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_sinit.o) (XEmacLite_ConfigTable)
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(divsi3.o)
+                              ./src/lib/draw.o (__divsi3)
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(modsi3.o)
+                              ./src/lib/draw.o (__modsi3)
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(udivsi3.o)
+                              ./src/util.o (__udivsi3)
+/opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(umodsi3.o)
+                              ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_printf.o) (__umodsi3)
+../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-ctype_.o)
+                              ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_printf.o) (__ctype_ptr__)
+../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-exit.o)
+                              /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o (exit)
+../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-impure.o)
+                              ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-exit.o) (_global_impure_ptr)
+../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-memset.o)
+                              ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o) (memset)
+../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-strlen.o)
+                              ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_printf.o) (strlen)
+../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-__call_atexit.o)
+                              ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-exit.o) (__call_exitprocs)
+
+Allocating common symbols
+Common symbol       size              file
+
+ether               0x28              ./src/drivers/eth.o
+XAssertStatus       0x4               ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+state               0xa943            ./src/main.o
+comm_buffer         0x5ee             ./src/main.o
+vga_frame_buffer    0x75300           ./src/drivers/vga.o
+comm_state_ref      0x4               ./src/lib/comm.o
+Xil_AssertStatus    0x4               ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+distances           0x90              ./src/util.o
+
+Discarded input sections
+
+ .data          0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .bss           0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .text          0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crti.o
+ .data          0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crti.o
+ .bss           0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crti.o
+ .data          0x00000000        0x8 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtbegin.o
+ .data          0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o
+ .bss           0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o
+ .text          0x00000000        0x0 ./src/lib/comm.o
+ .data          0x00000000        0x0 ./src/lib/comm.o
+ .bss           0x00000000        0x0 ./src/lib/comm.o
+ .text          0x00000000        0x0 ./src/lib/draw.o
+ .data          0x00000000        0x0 ./src/lib/draw.o
+ .bss           0x00000000        0x0 ./src/lib/draw.o
+ .text.draw_character
+                0x00000000       0xe0 ./src/lib/draw.o
+ .text          0x00000000        0x0 ./src/drivers/core.o
+ .data          0x00000000        0x0 ./src/drivers/core.o
+ .bss           0x00000000        0x0 ./src/drivers/core.o
+ .text          0x00000000        0x0 ./src/drivers/eth.o
+ .data          0x00000000        0x0 ./src/drivers/eth.o
+ .bss           0x00000000        0x0 ./src/drivers/eth.o
+ .rodata        0x00000000       0x97 ./src/drivers/eth.o
+ .text.eth_debug_frame
+                0x00000000      0x14c ./src/drivers/eth.o
+ .text.eth_is_frame_broadcast
+                0x00000000       0x44 ./src/drivers/eth.o
+ .text.eth_is_frame_for_self
+                0x00000000       0x54 ./src/drivers/eth.o
+ .text.eth_print_recieved_frame
+                0x00000000       0xac ./src/drivers/eth.o
+ .text          0x00000000        0x0 ./src/drivers/led.o
+ .data          0x00000000        0x0 ./src/drivers/led.o
+ .bss           0x00000000        0x0 ./src/drivers/led.o
+ .text.led_set_value
+                0x00000000       0x58 ./src/drivers/led.o
+ .text.led_get_value
+                0x00000000       0x14 ./src/drivers/led.o
+ .text.led_clear_all
+                0x00000000       0x18 ./src/drivers/led.o
+ .bss.current_state
+                0x00000000        0x4 ./src/drivers/led.o
+ .text          0x00000000        0x0 ./src/drivers/vga.o
+ .data          0x00000000        0x0 ./src/drivers/vga.o
+ .bss           0x00000000        0x0 ./src/drivers/vga.o
+ .text.vga_disable_output
+                0x00000000       0x10 ./src/drivers/vga.o
+ .text.vga_draw_screen_border
+                0x00000000       0x6c ./src/drivers/vga.o
+ .text          0x00000000        0x0 ./src/main.o
+ .data          0x00000000        0x0 ./src/main.o
+ .bss           0x00000000        0x0 ./src/main.o
+ .text          0x00000000        0x0 ./src/util.o
+ .data          0x00000000        0x0 ./src/util.o
+ .bss           0x00000000        0x0 ./src/util.o
+ .text.hex_to_binary
+                0x00000000       0x5c ./src/util.o
+ .text          0x00000000        0x0 ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o
+ .data          0x00000000        0x0 ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o
+ .bss           0x00000000        0x0 ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_printf.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_printf.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(_exception_handler.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(_exception_handler.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(_program_clean.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(_program_clean.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(_program_init.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(_program_init.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(hw_exception_handler.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(hw_exception_handler.o)
+ .text          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupt_handler.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupt_handler.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupt_handler.o)
+ .text.microblaze_register_handler
+                0x00000000       0x14 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupt_handler.o)
+ .text          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupts_g.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupts_g.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupts_g.o)
+ .text          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(outbyte.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(outbyte.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(outbyte.o)
+ .text          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+ .text.XEmacLite_TxBufferAvailable
+                0x00000000       0x9c ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+ .text.XEmacLite_PhyRead
+                0x00000000      0x1bc ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+ .text.XEmacLite_PhyWrite
+                0x00000000      0x184 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+ .text.XEmacLite_EnableLoopBack
+                0x00000000       0x90 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+ .text.XEmacLite_DisableLoopBack
+                0x00000000       0x90 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+ .text          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_l.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_l.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_l.o)
+ .text.XEmacLite_SendFrame
+                0x00000000       0x64 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_l.o)
+ .text.XEmacLite_RecvFrame
+                0x00000000       0x74 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_l.o)
+ .text          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_sinit.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_sinit.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_sinit.o)
+ .rodata        0x00000000       0x12 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_sinit.o)
+ .text.XEmacLite_Initialize
+                0x00000000       0x8c ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_sinit.o)
+ .text          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xuartlite_l.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xuartlite_l.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xuartlite_l.o)
+ .text          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+ .text.XAssert  0x00000000       0x38 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+ .text.XAssertSetCallback
+                0x00000000       0x10 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+ .data.XWaitInAssert
+                0x00000000        0x4 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+ .bss.XAssertCallbackRoutine
+                0x00000000        0x4 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+ COMMON         0x00000000        0x4 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+ .text          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+ .text.Xil_AssertSetCallback
+                0x00000000       0x10 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+ .text          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_g.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_g.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_g.o)
+ .data          0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(divsi3.o)
+ .bss           0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(divsi3.o)
+ .data          0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(modsi3.o)
+ .bss           0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(modsi3.o)
+ .data          0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(udivsi3.o)
+ .bss           0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(udivsi3.o)
+ .data          0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(umodsi3.o)
+ .bss           0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(umodsi3.o)
+ .text          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-ctype_.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-ctype_.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-exit.o)
+ .text          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-impure.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-memset.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-strlen.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-strlen.o)
+ .data          0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-__call_atexit.o)
+ .bss           0x00000000        0x0 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-__call_atexit.o)
+ .data          0x00000000        0x4 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtend.o
+ .bss           0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtend.o
+ .eh_frame      0x00000000        0x4 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtend.o
+ .jcr           0x00000000        0x4 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtend.o
+ .text          0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtn.o
+ .data          0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtn.o
+ .bss           0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+ilmb_cntlr_dlmb_cntlr 0x00000050         0x00003fb0
+ddr_sdram_MPMC_BASEADDR 0x8c000000         0x04000000
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+LOAD /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crti.o
+LOAD /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtbegin.o
+LOAD /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o
+                0x00002800                _STACK_SIZE = DEFINED (_STACK_SIZE)?_STACK_SIZE:0x2800
+                0x00000400                _HEAP_SIZE = DEFINED (_HEAP_SIZE)?_HEAP_SIZE:0x400
+
+.vectors.reset  0x00000000        0x8
+ *(.vectors.reset)
+ .vectors.reset
+                0x00000000        0x8 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+                0x00000000                _start
+
+.vectors.sw_exception
+                0x00000008        0x8
+ *(.vectors.sw_exception)
+ .vectors.sw_exception
+                0x00000008        0x8 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+
+.vectors.interrupt
+                0x00000010        0x8
+ *(.vectors.interrupt)
+ .vectors.interrupt
+                0x00000010        0x8 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+
+.vectors.hw_exception
+                0x00000020        0x8
+ *(.vectors.hw_exception)
+ .vectors.hw_exception
+                0x00000020        0x8 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+
+.text           0x00000050     0x331c
+ *(.text)
+ .text          0x00000050       0x34 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+                0x00000050                _start1
+                0x00000080                _exit
+ .text          0x00000084      0x118 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtbegin.o
+ .text          0x0000019c       0xb0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crtinit.o
+                0x0000019c                _crtinit
+ .text          0x0000024c      0x604 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_printf.o)
+                0x00000438                xil_printf
+ .text          0x00000850        0x8 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(_exception_handler.o)
+                0x00000850                _exception_handler
+ .text          0x00000858        0x8 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(_program_clean.o)
+                0x00000858                _program_clean
+ .text          0x00000860        0x8 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(_program_init.o)
+                0x00000860                _program_init
+ .text          0x00000868        0x4 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(hw_exception_handler.o)
+                0x00000868                _hw_exception_handler
+ .text          0x0000086c       0x9c /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(divsi3.o)
+                0x0000086c                __divsi3
+ .text          0x00000908       0x9c /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(modsi3.o)
+                0x00000908                __modsi3
+ .text          0x000009a4       0xa8 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(udivsi3.o)
+                0x000009a4                __udivsi3
+ .text          0x00000a4c       0xbc /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(umodsi3.o)
+                0x00000a4c                __umodsi3
+ .text          0x00000b08       0x40 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-exit.o)
+                0x00000b08                exit
+ .text          0x00000b48      0x1e0 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-memset.o)
+                0x00000b48                memset
+ .text          0x00000d28       0x5c ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-strlen.o)
+                0x00000d28                strlen
+ .text          0x00000d84      0x2e4 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-__call_atexit.o)
+                0x00000d84                __call_exitprocs
+ .text          0x00001068       0x4c /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtend.o
+ *(.text.*)
+ .text.comm_set_reply_state_reference
+                0x000010b4       0x10 ./src/lib/comm.o
+                0x000010b4                comm_set_reply_state_reference
+ .text.comm_set_request_world_message
+                0x000010c4       0x34 ./src/lib/comm.o
+                0x000010c4                comm_set_request_world_message
+ .text.comm_get_reply_world_frame
+                0x000010f8      0x120 ./src/lib/comm.o
+                0x000010f8                comm_get_reply_world_frame
+ .text.comm_set_solve_world_message
+                0x00001218       0x70 ./src/lib/comm.o
+                0x00001218                comm_set_solve_world_message
+ .text.comm_get_solution_reply_frame
+                0x00001288       0x74 ./src/lib/comm.o
+                0x00001288                comm_get_solution_reply_frame
+ .text.draw_path
+                0x000012fc      0x194 ./src/lib/draw.o
+                0x000012fc                draw_path
+ .text.draw_world
+                0x00001490      0x4b0 ./src/lib/draw.o
+                0x00001490                draw_world
+ .text.draw_solution
+                0x00001940      0x12c ./src/lib/draw.o
+                0x00001940                draw_solution
+ .text.send_to_core
+                0x00001a6c      0x144 ./src/drivers/core.o
+                0x00001a6c                send_to_core
+ .text.get_from_core
+                0x00001bb0      0x2b4 ./src/drivers/core.o
+                0x00001bb0                get_from_core
+ .text.eth_poll_for_frame
+                0x00001e64       0x90 ./src/drivers/eth.o
+                0x00001e64                eth_poll_for_frame
+ .text.eth_filter_recieved_frame
+                0x00001ef4       0xa4 ./src/drivers/eth.o
+                0x00001ef4                eth_filter_recieved_frame
+ .text.eth_configure_frame
+                0x00001f98       0x54 ./src/drivers/eth.o
+                0x00001f98                eth_configure_frame
+ .text.eth_get_message_pos
+                0x00001fec        0x8 ./src/drivers/eth.o
+                0x00001fec                eth_get_message_pos
+ .text.eth_send_frame
+                0x00001ff4       0x2c ./src/drivers/eth.o
+                0x00001ff4                eth_send_frame
+ .text.eth_setup
+                0x00002020       0x54 ./src/drivers/eth.o
+                0x00002020                eth_setup
+ .text.eth_clear_recieve_buffer
+                0x00002074       0x28 ./src/drivers/eth.o
+                0x00002074                eth_clear_recieve_buffer
+ .text.vga_init
+                0x0000209c       0x18 ./src/drivers/vga.o
+                0x0000209c                vga_init
+ .text.vga_enable_output
+                0x000020b4       0x14 ./src/drivers/vga.o
+                0x000020b4                vga_enable_output
+ .text.vga_draw_rect
+                0x000020c8       0xd8 ./src/drivers/vga.o
+                0x000020c8                vga_draw_rect
+ .text.vga_clear_screen
+                0x000021a0       0x34 ./src/drivers/vga.o
+                0x000021a0                vga_clear_screen
+ .text.vga_set_pixel
+                0x000021d4       0x18 ./src/drivers/vga.o
+                0x000021d4                vga_set_pixel
+ .text.startup.main
+                0x000021ec      0x1cc ./src/main.o
+                0x000021ec                main
+ .text.get_world_id_parameter
+                0x000023b8      0x118 ./src/util.o
+                0x000023b8                get_world_id_parameter
+ .text.get_world_size_parameter
+                0x000024d0       0xdc ./src/util.o
+                0x000024d0                get_world_size_parameter
+ .text.get_ignores_walls_parameter
+                0x000025ac       0xdc ./src/util.o
+                0x000025ac                get_ignores_walls_parameter
+ .text.write_response
+                0x00002688       0xb0 ./src/util.o
+                0x00002688                write_response
+ .text.new_path
+                0x00002738      0x190 ./src/util.o
+                0x00002738                new_path
+ .text.path_available
+                0x000028c8      0x134 ./src/util.o
+                0x000028c8                path_available
+ .text.__interrupt_handler
+                0x000029fc       0xa4 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupt_handler.o)
+                0x000029fc                _interrupt_handler
+                0x000029fc                __interrupt_handler
+ .text.outbyte  0x00002aa0       0x2c ../../standalone_bsp_0/microblaze_0/lib/libxil.a(outbyte.o)
+                0x00002aa0                outbyte
+ .text.StubHandler
+                0x00002acc       0x34 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+                0x00002acc                StubHandler
+ .text.XEmacLite_CfgInitialize
+                0x00002b00      0x11c ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+                0x00002b00                XEmacLite_CfgInitialize
+ .text.XEmacLite_Send
+                0x00002c1c      0x138 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+                0x00002c1c                XEmacLite_Send
+ .text.XEmacLite_Recv
+                0x00002d54      0x16c ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+                0x00002d54                XEmacLite_Recv
+ .text.XEmacLite_SetMacAddress
+                0x00002ec0       0x98 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+                0x00002ec0                XEmacLite_SetMacAddress
+ .text.XEmacLite_FlushReceive
+                0x00002f58       0x74 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+                0x00002f58                XEmacLite_FlushReceive
+ .text.XEmacLite_AlignedWrite
+                0x00002fcc      0x190 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_l.o)
+                0x00002fcc                XEmacLite_AlignedWrite
+ .text.XEmacLite_AlignedRead
+                0x0000315c      0x174 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_l.o)
+                0x0000315c                XEmacLite_AlignedRead
+ .text.XEmacLite_LookupConfig
+                0x000032d0       0x24 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_sinit.o)
+                0x000032d0                XEmacLite_LookupConfig
+ .text.XUartLite_SendByte
+                0x000032f4       0x1c ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xuartlite_l.o)
+                0x000032f4                XUartLite_SendByte
+ .text.XUartLite_RecvByte
+                0x00003310       0x1c ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xuartlite_l.o)
+                0x00003310                XUartLite_RecvByte
+ .text.XNullHandler
+                0x0000332c        0x8 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+                0x0000332c                XNullHandler
+ .text.Xil_Assert
+                0x00003334       0x38 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+                0x00003334                Xil_Assert
+ *(.gnu.linkonce.t.*)
+
+.init           0x0000336c       0x3c
+ *(.init)
+ .init          0x0000336c       0x18 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crti.o
+                0x0000336c                __init
+ .init          0x00003384        0xc /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtbegin.o
+ .init          0x00003390        0xc /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtend.o
+ .init          0x0000339c        0xc /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtn.o
+
+.fini           0x000033a8       0x20
+ *(.fini)
+ .fini          0x000033a8        0x8 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crti.o
+                0x000033a8                __fini
+ .fini          0x000033b0        0xc /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtbegin.o
+ .fini          0x000033bc        0xc /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtn.o
+
+.ctors          0x000033c8        0x8
+                0x000033c8                __CTOR_LIST__ = .
+                0x000033c8                ___CTORS_LIST___ = .
+ *crtbegin.o(.ctors)
+ .ctors         0x000033c8        0x4 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtbegin.o
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ .ctors         0x000033cc        0x4 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtend.o
+                0x000033d0                __CTOR_END__ = .
+                0x000033d0                ___CTORS_END___ = .
+
+.dtors          0x000033d0        0x8
+                0x000033d0                __DTOR_LIST__ = .
+                0x000033d0                ___DTORS_LIST___ = .
+ *crtbegin.o(.dtors)
+ .dtors         0x000033d0        0x4 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtbegin.o
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ .dtors         0x000033d4        0x4 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtend.o
+                0x000033d4                __DTOR_END__
+                0x000033d8                PROVIDE (__DTOR_END__, .)
+                0x000033d8                PROVIDE (___DTORS_END___, .)
+
+.rodata         0x000033d8      0x676
+                0x000033d8                __rodata_start = .
+ *(.rodata)
+ .rodata        0x000033d8      0x112 ./src/drivers/core.o
+ *fill*         0x000034ea        0x2 
+ .rodata        0x000034ec      0x15d ./src/util.o
+ *fill*         0x00003649        0x3 
+ .rodata        0x0000364c      0x164 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_printf.o)
+ .rodata        0x000037b0        0xc ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+ .rodata        0x000037bc      0x284 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-ctype_.o)
+                0x000037bc                _ctype_
+ .rodata        0x00003a40        0x6 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-impure.o)
+                0x00003a40                _global_impure_ptr
+ *(.rodata.*)
+ *fill*         0x00003a46        0x2 
+ .rodata.eth_destination_mac_address
+                0x00003a48        0x6 ./src/drivers/eth.o
+ *(.gnu.linkonce.r.*)
+                0x00003a4e                __rodata_end = .
+
+.rela.dyn       0x00003a50        0x0
+ .rela.text     0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.vectors.sw_exception
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.vectors.interrupt
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.vectors.hw_exception
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.comm_set_reply_state_reference
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.comm_get_reply_world_frame
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.comm_get_solution_reply_frame
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.draw_character
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.draw_path
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.draw_world
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.draw_solution
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.get_from_core
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.eth_debug_frame
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.eth_poll_for_frame
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.eth_print_recieved_frame
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.eth_send_frame
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.eth_setup
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.eth_clear_recieve_buffer
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.vga_init
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.vga_draw_rect
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.vga_draw_screen_border
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.vga_set_pixel
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.startup.main
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.get_world_id_parameter
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.get_world_size_parameter
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.get_ignores_walls_parameter
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.write_response
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.__interrupt_handler
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.microblaze_register_handler
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.data.MB_InterruptVectorTable
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.outbyte
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.StubHandler
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.XEmacLite_CfgInitialize
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.XEmacLite_Send
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.XEmacLite_Recv
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.XEmacLite_SetMacAddress
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.XEmacLite_TxBufferAvailable
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.XEmacLite_FlushReceive
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.XEmacLite_PhyRead
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.XEmacLite_PhyWrite
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.XEmacLite_EnableLoopBack
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.XEmacLite_DisableLoopBack
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.XEmacLite_LookupConfig
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.text.XEmacLite_Initialize
+                0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+ .rela.data     0x00000000        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/../../../../microblaze-xilinx-elf/lib/bs/m/crt0.o
+
+.sdata2         0x00003a4e        0x2
+                0x00003a50                . = ALIGN (0x8)
+ *fill*         0x00003a4e        0x2 
+                0x00003a50                __sdata2_start = .
+ *(.sdata2)
+ *(.sdata2.*)
+ *(.gnu.linkonce.s2.*)
+                0x00003a50                . = ALIGN (0x8)
+                0x00003a50                __sdata2_end = .
+
+.sbss2          0x00003a50        0x0
+                0x00003a50                __sbss2_start = .
+ *(.sbss2)
+ *(.sbss2.*)
+ *(.gnu.linkonce.sb2.*)
+                0x00003a50                __sbss2_end = .
+
+.data           0x00003a50      0x168
+                0x00003a50                . = ALIGN (0x4)
+                0x00003a50                __data_start = .
+ *(.data)
+ .data          0x00003a50        0x4 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-ctype_.o)
+                0x00003a50                __ctype_ptr__
+ .data          0x00003a54       0xf4 ../../standalone_bsp_0/microblaze_0/lib/libc.a(lib_a-impure.o)
+                0x00003a54                _impure_ptr
+ *(.data.*)
+ .data.bitmap_font
+                0x00003b48       0x50 ./src/lib/draw.o
+                0x00003b48                bitmap_font
+ .data.eth_mac_address
+                0x00003b98        0x6 ./src/drivers/eth.o
+ *fill*         0x00003b9e        0x2 
+ .data.MB_InterruptVectorTable
+                0x00003ba0        0x8 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupts_g.o)
+                0x00003ba0                MB_InterruptVectorTable
+ .data.Xil_AssertWait
+                0x00003ba8        0x4 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+                0x00003ba8                Xil_AssertWait
+ .data.XEmacLite_ConfigTable
+                0x00003bac        0xc ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_g.o)
+                0x00003bac                XEmacLite_ConfigTable
+ *(.gnu.linkonce.d.*)
+                0x00003bb8                __data_end = .
+
+.got
+ *(.got)
+
+.got1
+ *(.got1)
+
+.got2
+ *(.got2)
+
+.eh_frame       0x00003bb8        0x0
+ *(.eh_frame)
+ .eh_frame      0x00003bb8        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtbegin.o
+
+.jcr            0x00003bb8        0x0
+ *(.jcr)
+ .jcr           0x00003bb8        0x0 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtbegin.o
+
+.gcc_except_table
+ *(.gcc_except_table)
+
+.sdata          0x00003bb8        0x0
+                0x00003bb8                . = ALIGN (0x8)
+                0x00003bb8                __sdata_start = .
+ *(.sdata)
+ *(.sdata.*)
+ *(.gnu.linkonce.s.*)
+                0x00003bb8                __sdata_end = .
+
+.sbss           0x00003bb8        0x0
+                0x00003bb8                . = ALIGN (0x4)
+                0x00003bb8                __sbss_start = .
+ *(.sbss)
+ *(.sbss.*)
+ *(.gnu.linkonce.sb.*)
+                0x00003bb8                . = ALIGN (0x8)
+                0x00003bb8                __sbss_end = .
+
+.tdata          0x00003bb8        0x0
+                0x00003bb8                __tdata_start = .
+ *(.tdata)
+ *(.tdata.*)
+ *(.gnu.linkonce.td.*)
+                0x00003bb8                __tdata_end = .
+
+.tbss           0x8c000000        0x0
+                0x8c000000                __tbss_start = .
+ *(.tbss)
+ *(.tbss.*)
+ *(.gnu.linkonce.tb.*)
+                0x8c000000                __tbss_end = .
+
+.bss            0x8c000000    0x80318
+                0x8c000000                . = ALIGN (0x4)
+                0x8c000000                __bss_start = .
+ *(.bss)
+ .bss           0x8c000000       0x20 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtbegin.o
+ *(.bss.*)
+ .bss.Xil_AssertCallbackRoutine
+                0x8c000020        0x4 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+ *(.gnu.linkonce.b.*)
+ *(COMMON)
+ COMMON         0x8c000024        0x4 ./src/lib/comm.o
+                0x8c000024                comm_state_ref
+ COMMON         0x8c000028       0x28 ./src/drivers/eth.o
+                0x8c000028                ether
+ COMMON         0x8c000050    0x75300 ./src/drivers/vga.o
+                0x8c000050                vga_frame_buffer
+ COMMON         0x8c075350     0xaf32 ./src/main.o
+                0x8c075350                state
+                0x8c07fc94                comm_buffer
+ *fill*         0x8c080282        0x2 
+ COMMON         0x8c080284       0x90 ./src/util.o
+                0x8c080284                distances
+ COMMON         0x8c080314        0x4 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+                0x8c080314                Xil_AssertStatus
+                0x8c080318                . = ALIGN (0x4)
+                0x8c080318                __bss_end = .
+
+.COMMON         0x8c080318        0x0
+                0x8c080318                __COMMON_start = .
+ *(.COMMON)
+                0x8c080318                __COMMON_end = .
+                0x00003bb8                _SDA_BASE_ = (__sdata_start + ((__sbss_end - __sdata_start) / 0x2))
+                0x00003a50                _SDA2_BASE_ = (__sdata2_start + ((__sbss2_end - __sdata2_start) / 0x2))
+
+.heap           0x8c080318      0x400
+                0x8c080318                . = ALIGN (0x8)
+                0x8c080318                _heap = .
+                0x8c080318                _heap_start = .
+                0x8c080718                . = (. + _HEAP_SIZE)
+ *fill*         0x8c080318      0x400 
+                0x8c080718                _heap_end = .
+
+.stack          0x8c080718     0x2800
+                0x8c080718                _stack_end = .
+                0x8c082f18                . = (. + _STACK_SIZE)
+ *fill*         0x8c080718     0x2800 
+                0x8c082f18                . = ALIGN (0x8)
+                0x8c082f18                _stack = .
+                0x8c082f18                __stack = _stack
+                0x8c082f18                _end = .
+LOAD ./src/lib/comm.o
+LOAD ./src/lib/draw.o
+LOAD ./src/drivers/core.o
+LOAD ./src/drivers/eth.o
+LOAD ./src/drivers/led.o
+LOAD ./src/drivers/vga.o
+LOAD ./src/main.o
+LOAD ./src/util.o
+LOAD ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o
+START GROUP
+LOAD ../../standalone_bsp_0/microblaze_0/lib/libxil.a
+LOAD /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a
+LOAD ../../standalone_bsp_0/microblaze_0/lib/libc.a
+END GROUP
+LOAD /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a
+START GROUP
+LOAD ../../standalone_bsp_0/microblaze_0/lib/libxil.a
+LOAD ../../standalone_bsp_0/microblaze_0/lib/libc.a
+LOAD ../../standalone_bsp_0/microblaze_0/lib/libm.a
+END GROUP
+LOAD /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a
+LOAD /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtend.o
+LOAD /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/crtn.o
+OUTPUT(firmware.elf elf32-microblaze)
+
+.debug_line     0x00000000     0x14d2
+ .debug_line    0x00000000       0x47 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(hw_exception_handler.o)
+ .debug_line    0x00000047       0xea ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupt_handler.o)
+ .debug_line    0x00000131       0x81 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupts_g.o)
+ .debug_line    0x000001b2       0x63 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(outbyte.o)
+ .debug_line    0x00000215      0x8bd ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+ .debug_line    0x00000ad2      0x3e3 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_l.o)
+ .debug_line    0x00000eb5       0xff ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_sinit.o)
+ .debug_line    0x00000fb4       0xb9 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xuartlite_l.o)
+ .debug_line    0x0000106d       0xc6 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+ .debug_line    0x00001133       0xa8 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+ .debug_line    0x000011db       0x67 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_g.o)
+ .debug_line    0x00001242       0xa1 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(divsi3.o)
+ .debug_line    0x000012e3       0xa1 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(modsi3.o)
+ .debug_line    0x00001384       0xa5 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(udivsi3.o)
+ .debug_line    0x00001429       0xa9 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(umodsi3.o)
+
+.debug_info     0x00000000     0x174f
+ .debug_info    0x00000000       0xad ../../standalone_bsp_0/microblaze_0/lib/libxil.a(hw_exception_handler.o)
+ .debug_info    0x000000ad      0x10d ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupt_handler.o)
+ .debug_info    0x000001ba       0xdd ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupts_g.o)
+ .debug_info    0x00000297       0x9a ../../standalone_bsp_0/microblaze_0/lib/libxil.a(outbyte.o)
+ .debug_info    0x00000331      0x606 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+ .debug_info    0x00000937      0x33e ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_l.o)
+ .debug_info    0x00000c75      0x2f0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_sinit.o)
+ .debug_info    0x00000f65       0xe5 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xuartlite_l.o)
+ .debug_info    0x0000104a      0x153 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+ .debug_info    0x0000119d      0x130 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+ .debug_info    0x000012cd      0x14c ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_g.o)
+ .debug_info    0x00001419       0xcd /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(divsi3.o)
+ .debug_info    0x000014e6       0xcd /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(modsi3.o)
+ .debug_info    0x000015b3       0xce /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(udivsi3.o)
+ .debug_info    0x00001681       0xce /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(umodsi3.o)
+
+.debug_abbrev   0x00000000      0x865
+ .debug_abbrev  0x00000000       0x14 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(hw_exception_handler.o)
+ .debug_abbrev  0x00000014       0xc1 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupt_handler.o)
+ .debug_abbrev  0x000000d5       0x96 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupts_g.o)
+ .debug_abbrev  0x0000016b       0x50 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(outbyte.o)
+ .debug_abbrev  0x000001bb      0x1a5 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+ .debug_abbrev  0x00000360       0xd1 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_l.o)
+ .debug_abbrev  0x00000431      0x161 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_sinit.o)
+ .debug_abbrev  0x00000592       0x76 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xuartlite_l.o)
+ .debug_abbrev  0x00000608       0xc5 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+ .debug_abbrev  0x000006cd       0xc5 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+ .debug_abbrev  0x00000792       0x83 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_g.o)
+ .debug_abbrev  0x00000815       0x14 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(divsi3.o)
+ .debug_abbrev  0x00000829       0x14 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(modsi3.o)
+ .debug_abbrev  0x0000083d       0x14 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(udivsi3.o)
+ .debug_abbrev  0x00000851       0x14 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(umodsi3.o)
+
+.debug_aranges  0x00000000      0x238
+ .debug_aranges
+                0x00000000       0x20 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(hw_exception_handler.o)
+ .debug_aranges
+                0x00000020       0x28 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupt_handler.o)
+ .debug_aranges
+                0x00000048       0x20 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(outbyte.o)
+ .debug_aranges
+                0x00000068       0x70 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+ .debug_aranges
+                0x000000d8       0x38 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_l.o)
+ .debug_aranges
+                0x00000110       0x28 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_sinit.o)
+ .debug_aranges
+                0x00000138       0x28 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xuartlite_l.o)
+ .debug_aranges
+                0x00000160       0x30 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+ .debug_aranges
+                0x00000190       0x28 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+ .debug_aranges
+                0x000001b8       0x20 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(divsi3.o)
+ .debug_aranges
+                0x000001d8       0x20 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(modsi3.o)
+ .debug_aranges
+                0x000001f8       0x20 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(udivsi3.o)
+ .debug_aranges
+                0x00000218       0x20 /opt/york/cs/net/xilinx_vivado-2015.4_ise-14.7_x86-64-1/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin/../lib/gcc/microblaze-xilinx-elf/4.6.4/bs/m/libgcc.a(umodsi3.o)
+
+.debug_frame    0x00000000      0x30c
+ .debug_frame   0x00000000       0x54 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupt_handler.o)
+ .debug_frame   0x00000054       0x28 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(outbyte.o)
+ .debug_frame   0x0000007c      0x130 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+ .debug_frame   0x000001ac       0x78 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_l.o)
+ .debug_frame   0x00000224       0x38 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_sinit.o)
+ .debug_frame   0x0000025c       0x30 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xuartlite_l.o)
+ .debug_frame   0x0000028c       0x48 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+ .debug_frame   0x000002d4       0x38 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+
+.debug_loc      0x00000000     0x1430
+ .debug_loc     0x00000000       0x21 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupt_handler.o)
+ .debug_loc     0x00000021       0x3e ../../standalone_bsp_0/microblaze_0/lib/libxil.a(outbyte.o)
+ .debug_loc     0x0000005f      0x9fd ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+ .debug_loc     0x00000a5c      0x83b ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_l.o)
+ .debug_loc     0x00001297      0x10d ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_sinit.o)
+ .debug_loc     0x000013a4       0x46 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+ .debug_loc     0x000013ea       0x46 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+
+.debug_ranges   0x00000000      0x198
+ .debug_ranges  0x00000000       0x18 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupt_handler.o)
+ .debug_ranges  0x00000018       0x10 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(outbyte.o)
+ .debug_ranges  0x00000028       0xb0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+ .debug_ranges  0x000000d8       0x28 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_l.o)
+ .debug_ranges  0x00000100       0x48 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_sinit.o)
+ .debug_ranges  0x00000148       0x18 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xuartlite_l.o)
+ .debug_ranges  0x00000160       0x20 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+ .debug_ranges  0x00000180       0x18 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+
+.debug_str      0x00000000      0x83e
+ .debug_str     0x00000000      0x186 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupt_handler.o)
+                                0x1b6 (size before relaxing)
+ .debug_str     0x00000186       0x1a ../../standalone_bsp_0/microblaze_0/lib/libxil.a(microblaze_interrupts_g.o)
+                                0x186 (size before relaxing)
+ .debug_str     0x000001a0       0x37 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(outbyte.o)
+                                0x13b (size before relaxing)
+ .debug_str     0x000001d7      0x329 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite.o)
+                                0x41c (size before relaxing)
+ .debug_str     0x00000500       0xb8 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_l.o)
+                                0x232 (size before relaxing)
+ .debug_str     0x000005b8       0x72 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_sinit.o)
+                                0x2be (size before relaxing)
+ .debug_str     0x0000062a       0xa0 ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xuartlite_l.o)
+                                0x16c (size before relaxing)
+ .debug_str     0x000006ca       0xfc ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xbasic_types.o)
+                                0x1a7 (size before relaxing)
+ .debug_str     0x000007c6       0x6a ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xil_assert.o)
+                                0x1b6 (size before relaxing)
+ .debug_str     0x00000830        0xe ../../standalone_bsp_0/microblaze_0/lib/libxil.a(xemaclite_g.o)
+                                0x1cc (size before relaxing)

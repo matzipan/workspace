@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="@W [RTGEN-101] Global array 'current_route_V' will not be exposed as RTL port." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:51.245+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'best_distance_V' will not be exposed as RTL port." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:51.069+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'best_distance_V' is power-on initialization." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:51.035+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'waypoint_y_V' will not be exposed as RTL port." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:51.011+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'waypoint_x_V' will not be exposed as RTL port." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:50.986+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global array 'bla' will not be exposed as RTL port." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:50.963+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'ignore_walls_V' will not be exposed as RTL port." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:50.943+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'ignore_walls_V' is power-on initialization." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:50.919+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'waypoints_count_V' will not be exposed as RTL port." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:50.902+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'waypoints_count_V' is power-on initialization." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:50.882+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'world_height_V' will not be exposed as RTL port." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:50.857+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'world_height_V' is power-on initialization." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:50.835+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Global scalar 'world_width_V' will not be exposed as RTL port." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:50.819+0100" type="Warning"/>
+        <logs message="@W [RTGEN-101] Register 'world_width_V' is power-on initialization." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:50.794+0100" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 2, distance = 1)&#xA;   between 'store' operation (solvercore/src/toplevel.cpp:147->solvercore/src/toplevel.cpp:230) of variable 'aux.V', solvercore/src/toplevel.cpp:145->solvercore/src/toplevel.cpp:230 on array 'current_route_V' and 'load' operation ('current_route_V_load_13', solvercore/src/toplevel.cpp:146->solvercore/src/toplevel.cpp:230) on array 'current_route_V'." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:49.431+0100" type="Warning"/>
+        <logs message="@W [SCHED-68] Unable to enforce a carried dependency constraint (II = 1, distance = 1)&#xA;   between 'store' operation (solvercore/src/toplevel.cpp:146->solvercore/src/toplevel.cpp:230) of variable 'current_route_V_load_13', solvercore/src/toplevel.cpp:146->solvercore/src/toplevel.cpp:230 on array 'current_route_V' and 'load' operation ('aux.V', solvercore/src/toplevel.cpp:145->solvercore/src/toplevel.cpp:230) on array 'current_route_V'." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:49.399+0100" type="Warning"/>
+        <logs message="@W [XFORM-562] Loop 'walls_loop_inner' (solvercore/src/toplevel.cpp:179) in function 'toplevel' has unknown bound because it has multiple exiting blocks." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:49.013+0100" type="Warning"/>
+        <logs message="@W [XFORM-542] Cannot flatten a loop nest 'Loop-8' (solvercore/src/toplevel.cpp:119:39) in function 'toplevel' : &#xA;               more than one sub loop." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:46.999+0100" type="Warning"/>
+        <logs message="@W [HLS-40] Directive 'ARRAY_PARTITION' cannot be applied: Variable 'permutation' is not declared in 'permute'." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:42.673+0100" type="Warning"/>
+        <logs message="@W [HLS-41] Resource core 'AXI4Stream' on port 'input' is deprecated. Please use the interface directive to specify the AXI interface." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:41.340+0100" type="Warning"/>
+        <logs message="@W [HLS-41] Resource core 'AXI4Stream' on port 'output' is deprecated. Please use the interface directive to specify the AXI interface." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:39.302+0100" type="Warning"/>
+        <logs message="@W [HLS-40] This current release of Vivado HLS is the last one supporting the following device families including any of their associated derivatives: Virtex-6, Virtex-5, Virtex-4, Spartan-6 and Spartan-3. These families will still be supported in the future but will require this current version of Vivado HLS or a previous one." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:16.372+0100" type="Warning"/>
+        <logs message="@W [HLS-40] This current release of Vivado HLS is the last one supporting the following device families including any of their associated derivatives: Virtex-6, Virtex-5, Virtex-4, Spartan-6 and Spartan-3. These families will still be supported in the future but will require this current version of Vivado HLS or a previous one." projectName="solvercore" solutionName="solvercore" date="2016-05-04T04:02:16.341+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

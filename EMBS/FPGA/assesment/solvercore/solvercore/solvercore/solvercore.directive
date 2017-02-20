@@ -1,0 +1,81 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="toplevel" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="ap_ctrl_none" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+            </pragma>
+        </directive>
+        <directive functionName="toplevel" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="input" positionalBoolean="4"/>
+                <option name="core" value="AXI4Stream"/>
+            </pragma>
+        </directive>
+        <directive functionName="toplevel" label="" functionLabel="">
+            <pragma name="RESOURCE">
+                <option name="variable" value="output" positionalBoolean="4"/>
+                <option name="core" value="AXI4Stream"/>
+            </pragma>
+        </directive>
+        <directive functionName="calculate_distances" label="" functionLabel="">
+            <pragma name="STREAM">
+                <option name="variable" value="visit_queue" positionalBoolean="4"/>
+                <option name="depth" value="500"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="toplevel" label="" functionLabel="">
+            <pragma name="INLINE">
+                <option name="recursive" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="permute" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" value="permutation" positionalBoolean="4"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="factor" value="4"/>
+                <option name="dim" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="toplevel" label="" functionLabel="">
+            <pragma name="ARRAY_MAP">
+                <option name="variable" value="waypoint_distances" positionalBoolean="4"/>
+                <option name="instance" value="bla"/>
+                <option name="horizontal" value="" positionalBoolean="mode"/>
+            </pragma>
+        </directive>
+        <directive functionName="toplevel" label="" functionLabel="">
+            <pragma name="ARRAY_MAP">
+                <option name="variable" value="world" positionalBoolean="4"/>
+                <option name="instance" value="bla"/>
+                <option name="horizontal" value="" positionalBoolean="mode"/>
+            </pragma>
+        </directive>
+        <directive functionName="toplevel" label="" functionLabel="">
+            <pragma name="ARRAY_MAP">
+                <option name="variable" value="best_route" positionalBoolean="4"/>
+                <option name="instance" value="bla"/>
+                <option name="horizontal" value="" positionalBoolean="mode"/>
+            </pragma>
+        </directive>
+        <directive functionName="check_route" label="summing_loop" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="11"/>
+            </pragma>
+        </directive>
+        <directive functionName="permute" label="k_find" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="permute" label="l_find" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="permute" label="reverse" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="permute" label="permutation_init" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

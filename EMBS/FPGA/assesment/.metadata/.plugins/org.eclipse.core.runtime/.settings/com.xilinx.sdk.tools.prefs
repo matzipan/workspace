@@ -1,0 +1,16 @@
+com.xilinx.sdk.linkgen.prefs.firmware\:-userSections-=.COMMON\#
+com.xilinx.sdk.linkgen.prefs.firmware\:.COMMON=ddr_sdram_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.firmware\:.bss=ddr_sdram_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.firmware\:.data=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.firmware\:.rodata=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.firmware\:.sbss=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.firmware\:.sbss2=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.firmware\:.sdata=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.firmware\:.sdata2=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.firmware\:.text=ilmb_cntlr_dlmb_cntlr
+com.xilinx.sdk.linkgen.prefs.firmware\:.vga_buffer=ddr_sdram_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.firmware\:Heap=ddr_sdram_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.firmware\:Heap-size=1024
+com.xilinx.sdk.linkgen.prefs.firmware\:Stack=ddr_sdram_MPMC_BASEADDR
+com.xilinx.sdk.linkgen.prefs.firmware\:Stack-size=10240
+eclipse.preferences.version=1
